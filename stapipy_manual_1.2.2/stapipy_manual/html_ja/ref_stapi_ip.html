@@ -1,0 +1,2595 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>画像処理の関数とクラス &#8212; StApi Python 1.2.2 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="GenICam GenApiクラス" href="ref_genicam.html" />
+    <link rel="prev" title="Transport Layerクラス" href="ref_stapi_tl.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="ref_genicam.html" title="GenICam GenApiクラス"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="ref_stapi_tl.html" title="Transport Layerクラス"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reference.html" accesskey="U">StApi Python(stapipy)リファレンス</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">画像処理の関数とクラス</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="image-processing-functions-and-classes">
+<h1>画像処理の関数とクラス<a class="headerlink" href="#image-processing-functions-and-classes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="functions">
+<h2>関数<a class="headerlink" href="#functions" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="create-converter">
+<h3>create_converter<a class="headerlink" href="#create-converter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="stapipy.create_converter">
+<span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">create_converter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">converter_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.create_converter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>画像コンバータークラスのインスタンスを作成します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>converter_type</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStConverterType" title="stapipy.EStConverterType"><em>EStConverterType</em></a>) -- 作成するコンバータータイプ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>コンバーターオブジェクト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStPixelFormatConverter" title="stapipy.PyStPixelFormatConverter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStPixelFormatConverter</span></code></a> or <a class="reference internal" href="#stapipy.PyStReverseConverter" title="stapipy.PyStReverseConverter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStReverseConverter</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="create-filer">
+<h3>create_filer<a class="headerlink" href="#create-filer" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="stapipy.create_filer">
+<span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">create_filer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filer_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.create_filer" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ファイラークラスのインすタスを作成します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>filer_type</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStFilerType" title="stapipy.EStFilerType"><em>EStFilerType</em></a>) -- 作成するファイラータイプ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>ファイラーオブジェクト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStStillImageFiler" title="stapipy.PyStStillImageFiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStStillImageFiler</span></code></a> or <a class="reference internal" href="#stapipy.PyStVideoFiler" title="stapipy.PyStVideoFiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStVideoFiler</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="create-filter">
+<h3>create_filter<a class="headerlink" href="#create-filter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="stapipy.create_filter">
+<span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">create_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.create_filter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>画像フィルタークラスのインスタンスを作成します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>filter_type</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStFilterType" title="stapipy.EStFilterType"><em>EStFilterType</em></a>) -- 作成するフィルタータイプ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>フィルターオブジェクト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStBalanceRatioFilter" title="stapipy.PyStBalanceRatioFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStBalanceRatioFilter</span></code></a> or 
+<a class="reference internal" href="#stapipy.PyStChromaSuppressionFilter" title="stapipy.PyStChromaSuppressionFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStChromaSuppressionFilter</span></code></a> or 
+<a class="reference internal" href="#stapipy.PyStColorTransformationFilter" title="stapipy.PyStColorTransformationFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStColorTransformationFilter</span></code></a> or 
+<a class="reference internal" href="#stapipy.PyStEdgeEnhancementFilter" title="stapipy.PyStEdgeEnhancementFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStEdgeEnhancementFilter</span></code></a> or 
+<a class="reference internal" href="#stapipy.PyStFlatFieldCorrectionFilter" title="stapipy.PyStFlatFieldCorrectionFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFlatFieldCorrectionFilter</span></code></a> or 
+<a class="reference internal" href="#stapipy.PyStGammaCorrectionFilter" title="stapipy.PyStGammaCorrectionFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStGammaCorrectionFilter</span></code></a> or 
+<a class="reference internal" href="#stapipy.PyStNoiseReductionFilter" title="stapipy.PyStNoiseReductionFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStNoiseReductionFilter</span></code></a> or  
+<a class="reference internal" href="#stapipy.PyStSNMeasurementFilter" title="stapipy.PyStSNMeasurementFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStSNMeasurementFilter</span></code></a> or
+<a class="reference internal" href="#stapipy.PyStGraphDataFilter" title="stapipy.PyStGraphDataFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStGraphDataFilter</span></code></a> or
+<a class="reference internal" href="#stapipy.PyStImageAveragingFilter" title="stapipy.PyStImageAveragingFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStImageAveragingFilter</span></code></a> or
+<a class="reference internal" href="#stapipy.PyStDefectivePixelDetectionFilter" title="stapipy.PyStDefectivePixelDetectionFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStDefectivePixelDetectionFilter</span></code></a> or
+<a class="reference internal" href="#stapipy.PyStLevelAdjustmentFilter" title="stapipy.PyStLevelAdjustmentFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStLevelAdjustmentFilter</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="get-filter-info">
+<h3>get_filter_info<a class="headerlink" href="#get-filter-info" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="stapipy.get_filter_info">
+<span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">get_filter_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filter_type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStFilterInfo" title="stapipy.PyStFilterInfo"><span class="pre">PyStFilterInfo</span></a></span></span><a class="headerlink" href="#stapipy.get_filter_info" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定したフィルター情報を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>filter_type</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStFilterType" title="stapipy.EStFilterType"><em>EStFilterType</em></a>) -- フィルタータイプ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>フィルター情報クラスのオブジェクト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStFilterInfo" title="stapipy.PyStFilterInfo">PyStFilterInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+<section id="converter-classes">
+<h2>コンバータークラス<a class="headerlink" href="#converter-classes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="pystconverter">
+<h3>PyStConverter<a class="headerlink" href="#pystconverter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStConverter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStConverter</span></span><a class="headerlink" href="#stapipy.PyStConverter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>コンバーター基本クラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStConverter.convert">
+<span class="sig-name descname"><span class="pre">convert</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStImage</span> <span class="pre">src</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage"><span class="pre">PyStImage</span></a></span></span><a class="headerlink" href="#stapipy.PyStConverter.convert" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>画像変換処理を行います。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>src</strong> (<a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage"><em>PyStImage</em></a>) -- 入力画像</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>出力画像（変換後の画像オブジェクト）</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage">PyStImage</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStConverter.copy_settings">
+<span class="sig-name descname"><span class="pre">copy_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStConverter</span> <span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStConverter.copy_settings" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>コンバーターの設定値をコピーします。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>src</strong> (<a class="reference internal" href="#stapipy.PyStConverter" title="stapipy.PyStConverter"><em>PyStConverter</em></a>) -- 設定のコピー元コンバーター</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStConverter.info">
+<span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#stapipy.PyStConverter.info" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStConverter.info: PyStConverterInfo</p>
+<p>プロパティー：コンバーター情報</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStConverterInfo" title="stapipy.PyStConverterInfo">PyStConverterInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStConverter.line_pitch_alignment">
+<span class="sig-name descname"><span class="pre">line_pitch_alignment</span></span><a class="headerlink" href="#stapipy.PyStConverter.line_pitch_alignment" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStConverter.line_pitch_alignment: int</p>
+<p>プロパティー：画像のラインピッチ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStConverter.nodemap">
+<span class="sig-name descname"><span class="pre">nodemap</span></span><a class="headerlink" href="#stapipy.PyStConverter.nodemap" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStConverter.nodemap: PyNodeMap</p>
+<p>プロパティー：コンバーターのノードマップ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードマップを返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="ref_genicam.html#stapipy.PyNodeMap" title="stapipy.PyNodeMap">PyNodeMap</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystconverterinfo">
+<h3>PyStConverterInfo<a class="headerlink" href="#pystconverterinfo" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStConverterInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStConverterInfo</span></span><a class="headerlink" href="#stapipy.PyStConverterInfo" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>コンバーター情報クラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStConverterInfo.converter_name">
+<span class="sig-name descname"><span class="pre">converter_name</span></span><a class="headerlink" href="#stapipy.PyStConverterInfo.converter_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStConverterInfo.converter_name: str</p>
+<p>プロパティー：コンバーター名</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStConverterInfo.converter_type">
+<span class="sig-name descname"><span class="pre">converter_type</span></span><a class="headerlink" href="#stapipy.PyStConverterInfo.converter_type" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStConverterInfo.converter_type: EStConverterType</p>
+<p>プロパティー：コンバータータイプ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EStConverterType" title="stapipy.EStConverterType">EStConverterType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStConverterInfo.is_supported">
+<span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pfnc</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyStConverterInfo.is_supported" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定したピクセルフォーマットの変換に対応しているかを確認します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>pfnc</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelFormatNamingConvention" title="stapipy.EStPixelFormatNamingConvention"><em>EStPixelFormatNamingConvention</em></a>) -- ピクセルフォーマット</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>対応している場合、 <cite>True</cite> を返します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystpixelformatconverter">
+<h3>PyStPixelFormatConverter<a class="headerlink" href="#pystpixelformatconverter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatConverter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStPixelFormatConverter</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatConverter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStConverter" title="stapipy.PyStConverter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStConverter</span></code></a></p>
+<p>ピクセルフォーマット コンバータークラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatConverter.bayer_interpolation_method">
+<span class="sig-name descname"><span class="pre">bayer_interpolation_method</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatConverter.bayer_interpolation_method" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStPixelFormatConverter.bayer_interpolation_method: EStBayerInterpolationMethod</p>
+<p>プロパティー：ベイヤー変換処理設定</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStBayerInterpolationMethod" title="stapipy.EStBayerInterpolationMethod">EStBayerInterpolationMethod</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatConverter.destination_pixel_format">
+<span class="sig-name descname"><span class="pre">destination_pixel_format</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatConverter.destination_pixel_format" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStPixelFormatConverter.destination_pixel_format: EStPixelFormatNamingConvention</p>
+<p>プロパティー：変換先のピクセルフォーマット値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStPixelFormatNamingConvention" title="stapipy.EStPixelFormatNamingConvention">EStPixelFormatNamingConvention</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatConverter.destination_pixel_format_node_lock">
+<span class="sig-name descname"><span class="pre">destination_pixel_format_node_lock</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatConverter.destination_pixel_format_node_lock" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStPixelFormatConverter.destination_pixel_format_node_lock: bool</p>
+<p>プロパティー：変換先のピクセルフォーマットノードのロック状態設定</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatConverter.gamma_value">
+<span class="sig-name descname"><span class="pre">gamma_value</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatConverter.gamma_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStPixelFormatConverter.gamma_value: float</p>
+<p>プロパティー：ガンマ補正値設定</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatConverter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStPixelFormatConverter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リソースを解放します。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatConverter.reverse_y">
+<span class="sig-name descname"><span class="pre">reverse_y</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatConverter.reverse_y" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStPixelFormatConverter.reverse_y: bool</p>
+<p>プロパティー：上下反転設定</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystreverseconverter">
+<h3>PyStReverseConverter<a class="headerlink" href="#pystreverseconverter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStReverseConverter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStReverseConverter</span></span><a class="headerlink" href="#stapipy.PyStReverseConverter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStConverter" title="stapipy.PyStConverter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStConverter</span></code></a></p>
+<p>反転回転コンバータークラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStReverseConverter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStReverseConverter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>リソースを解放します。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStReverseConverter.reverse_x">
+<span class="sig-name descname"><span class="pre">reverse_x</span></span><a class="headerlink" href="#stapipy.PyStReverseConverter.reverse_x" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStReverseConverter.reverse_x: bool</p>
+<p>プロパティー：左右反転設定</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStReverseConverter.reverse_y">
+<span class="sig-name descname"><span class="pre">reverse_y</span></span><a class="headerlink" href="#stapipy.PyStReverseConverter.reverse_y" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStReverseConverter.reverse_y: bool</p>
+<p>プロパティー：上下反転設定</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStReverseConverter.rotation_mode">
+<span class="sig-name descname"><span class="pre">rotation_mode</span></span><a class="headerlink" href="#stapipy.PyStReverseConverter.rotation_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStReverseConverter.rotation_mode: EStRotationMode</p>
+<p>プロパティー：回転モード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStRotationMode" title="stapipy.EStRotationMode">EStRotationMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="filter-classes">
+<h2>フィルタークラス<a class="headerlink" href="#filter-classes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="pystfilter">
+<h3>PyStFilter<a class="headerlink" href="#pystfilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStFilter</span></span><a class="headerlink" href="#stapipy.PyStFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルター基本クラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStFilter.apply_filter">
+<span class="sig-name descname"><span class="pre">apply_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStImage</span> <span class="pre">input_image</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage"><span class="pre">PyStImage</span></a></span></span><a class="headerlink" href="#stapipy.PyStFilter.apply_filter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルター処理を実行します。GraphData以外、入力した画像は処理後の画像で上書きされます。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>input_image</strong> (<a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage"><em>PyStImage</em></a>) -- 入力画像</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>フィルター処理後の画像オブジェクト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage">PyStImage</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStFilter.copy_settings">
+<span class="sig-name descname"><span class="pre">copy_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStFilter</span> <span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStFilter.copy_settings" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターの設定値をコピーします。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>src</strong> (<a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><em>PyStFilter</em></a>) -- 設定のコピー元フィルター</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStFilter.info">
+<span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#stapipy.PyStFilter.info" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStFilter.info: PyStFilterInfo</p>
+<p>プロパティー：フィルター情報</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStFilterInfo" title="stapipy.PyStFilterInfo">PyStFilterInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStFilter.nodemap">
+<span class="sig-name descname"><span class="pre">nodemap</span></span><a class="headerlink" href="#stapipy.PyStFilter.nodemap" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStFilter.nodemap: PyNodeMap</p>
+<p>プロパティー：フィルターのノードマップ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードマップを返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="ref_genicam.html#stapipy.PyNodeMap" title="stapipy.PyNodeMap">PyNodeMap</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystfilterinfo">
+<h3>PyStFilterInfo<a class="headerlink" href="#pystfilterinfo" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStFilterInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStFilterInfo</span></span><a class="headerlink" href="#stapipy.PyStFilterInfo" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルター情報クラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStFilterInfo.filter_name">
+<span class="sig-name descname"><span class="pre">filter_name</span></span><a class="headerlink" href="#stapipy.PyStFilterInfo.filter_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStFilterInfo.filter_name: str</p>
+<p>プロパティー：フィルター名</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStFilterInfo.filter_type">
+<span class="sig-name descname"><span class="pre">filter_type</span></span><a class="headerlink" href="#stapipy.PyStFilterInfo.filter_type" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStFilterInfo.filter_type: EStFilterType</p>
+<p>プロパティー：フィルタータイプ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EStFilterType" title="stapipy.EStFilterType">EStFilterType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStFilterInfo.is_supported">
+<span class="sig-name descname"><span class="pre">is_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pfnc</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyStFilterInfo.is_supported" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定したピクセルフォーマットの変換に対応しているかを確認します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>pfnc</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelFormatNamingConvention" title="stapipy.EStPixelFormatNamingConvention"><em>EStPixelFormatNamingConvention</em></a>) -- ピクセルフォーマット</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>対応している場合、 <cite>True</cite> を返します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystbalanceratiofilter">
+<h3>PyStBalanceRatioFilter<a class="headerlink" href="#pystbalanceratiofilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStBalanceRatioFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStBalanceRatioFilter</span></span><a class="headerlink" href="#stapipy.PyStBalanceRatioFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFilter</span></code></a></p>
+<p>バランスレートフィルタークラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStBalanceRatioFilter.balance_white_auto">
+<span class="sig-name descname"><span class="pre">balance_white_auto</span></span><a class="headerlink" href="#stapipy.PyStBalanceRatioFilter.balance_white_auto" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStBalanceRatioFilter.balance_white_auto: EStBalanceWhiteAuto</p>
+<p>プロパティー：オートホワイトバランス</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStBalanceWhiteAuto" title="stapipy.EStBalanceWhiteAuto">EStBalanceWhiteAuto</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStBalanceRatioFilter.get_balance_ratio">
+<span class="sig-name descname"><span class="pre">get_balance_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">double</span></span></span><a class="headerlink" href="#stapipy.PyStBalanceRatioFilter.get_balance_ratio" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ホワイトバランスゲインの値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>selector</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStBalanceRatioSelector" title="stapipy.EStBalanceRatioSelector"><em>EStBalanceRatioSelector</em></a>) -- 対象を指定します。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>ホワイトバランスゲインの値</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStBalanceRatioFilter.get_offset_level_after_gain">
+<span class="sig-name descname"><span class="pre">get_offset_level_after_gain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int32_t</span></span></span><a class="headerlink" href="#stapipy.PyStBalanceRatioFilter.get_offset_level_after_gain" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ホワイトバランスゲイン処理後のオフセット値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>selector</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStBalanceRatioSelector" title="stapipy.EStBalanceRatioSelector"><em>EStBalanceRatioSelector</em></a>) -- 対象を指定します。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>オフセット値。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStBalanceRatioFilter.get_offset_level_before_gain">
+<span class="sig-name descname"><span class="pre">get_offset_level_before_gain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int32_t</span></span></span><a class="headerlink" href="#stapipy.PyStBalanceRatioFilter.get_offset_level_before_gain" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ホワイトバランスゲイン処理前のオフセット値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>selector</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStBalanceRatioSelector" title="stapipy.EStBalanceRatioSelector"><em>EStBalanceRatioSelector</em></a>) -- 対象を指定します。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>オフセット値。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStBalanceRatioFilter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStBalanceRatioFilter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStBalanceRatioFilter.set_balance_ratio">
+<span class="sig-name descname"><span class="pre">set_balance_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">float</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStBalanceRatioFilter.set_balance_ratio" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ホワイトバランスゲイン値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selector</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStBalanceRatioSelector" title="stapipy.EStBalanceRatioSelector"><em>EStBalanceRatioSelector</em></a>) -- 対象を指定します。</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- ホワイトバランスゲイン値(0～16.0)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStBalanceRatioFilter.set_offset_level_after_gain">
+<span class="sig-name descname"><span class="pre">set_offset_level_after_gain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int32_t</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStBalanceRatioFilter.set_offset_level_after_gain" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ホワイトバランスゲイン処理後のオフセット値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selector</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStBalanceRatioSelector" title="stapipy.EStBalanceRatioSelector"><em>EStBalanceRatioSelector</em></a>) -- 対象を指定します。</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- オフセット値。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStBalanceRatioFilter.set_offset_level_before_gain">
+<span class="sig-name descname"><span class="pre">set_offset_level_before_gain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int32_t</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStBalanceRatioFilter.set_offset_level_before_gain" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ホワイトバランスゲイン処理前のオフセット値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selector</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStBalanceRatioSelector" title="stapipy.EStBalanceRatioSelector"><em>EStBalanceRatioSelector</em></a>) -- 対象を指定します。</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- オフセット値。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystchromasuppressionfilter">
+<h3>PyStChromaSuppressionFilter<a class="headerlink" href="#pystchromasuppressionfilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStChromaSuppressionFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStChromaSuppressionFilter</span></span><a class="headerlink" href="#stapipy.PyStChromaSuppressionFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFilter</span></code></a></p>
+<p>クロマサプレスフィルタークラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStChromaSuppressionFilter.get_suppression_value">
+<span class="sig-name descname"><span class="pre">get_suppression_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">uint32_t</span></span></span><a class="headerlink" href="#stapipy.PyStChromaSuppressionFilter.get_suppression_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>抑圧値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>selector</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStChromaSuppressionPartSelector" title="stapipy.EStChromaSuppressionPartSelector"><em>EStChromaSuppressionPartSelector</em></a>) -- 設定の対象部を指定します。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>抑圧値</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStChromaSuppressionFilter.get_threshold_value">
+<span class="sig-name descname"><span class="pre">get_threshold_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">uint32_t</span></span></span><a class="headerlink" href="#stapipy.PyStChromaSuppressionFilter.get_threshold_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>スレッショルド値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>selector</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStChromaSuppressionPartSelector" title="stapipy.EStChromaSuppressionPartSelector"><em>EStChromaSuppressionPartSelector</em></a>) -- 設定の対象部を指定します。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>スレッショルド値</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStChromaSuppressionFilter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStChromaSuppressionFilter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStChromaSuppressionFilter.set_suppression_value">
+<span class="sig-name descname"><span class="pre">set_suppression_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uint32_t</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStChromaSuppressionFilter.set_suppression_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>抑圧値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selector</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStChromaSuppressionPartSelector" title="stapipy.EStChromaSuppressionPartSelector"><em>EStChromaSuppressionPartSelector</em></a>) -- 設定の対象部を指定します。</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 値(0～255)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStChromaSuppressionFilter.set_threshold_value">
+<span class="sig-name descname"><span class="pre">set_threshold_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uint32_t</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStChromaSuppressionFilter.set_threshold_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>スレッショルド値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selector</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStChromaSuppressionPartSelector" title="stapipy.EStChromaSuppressionPartSelector"><em>EStChromaSuppressionPartSelector</em></a>) -- 設定の対象部を指定します。</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 値(0～255)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystcolortransformationfilter">
+<h3>PyStColorTransformationFilter<a class="headerlink" href="#pystcolortransformationfilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStColorTransformationFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStColorTransformationFilter</span></span><a class="headerlink" href="#stapipy.PyStColorTransformationFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFilter</span></code></a></p>
+<p>色変換フィルタークラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStColorTransformationFilter.get_color_transformation_value">
+<span class="sig-name descname"><span class="pre">get_color_transformation_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">double</span></span></span><a class="headerlink" href="#stapipy.PyStColorTransformationFilter.get_color_transformation_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>色変換行列の値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>selector</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStColorTransformationValueSelector" title="stapipy.EStColorTransformationValueSelector"><em>EStColorTransformationValueSelector</em></a>) -- 対象とする行列の要素を指定します。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>色変換行列値</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStColorTransformationFilter.hue_correction">
+<span class="sig-name descname"><span class="pre">hue_correction</span></span><a class="headerlink" href="#stapipy.PyStColorTransformationFilter.hue_correction" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStColorTransformationFilter.hue_correction: float</p>
+<p>プロパティー：色相の補正値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStColorTransformationFilter.is_color_transformation_enabled">
+<span class="sig-name descname"><span class="pre">is_color_transformation_enabled</span></span><a class="headerlink" href="#stapipy.PyStColorTransformationFilter.is_color_transformation_enabled" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStColorTransformationFilter.is_color_transformation_enabled: bool</p>
+<p>プロパティー：色変換処理の有効/無効</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStColorTransformationFilter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStColorTransformationFilter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStColorTransformationFilter.saturation_correction">
+<span class="sig-name descname"><span class="pre">saturation_correction</span></span><a class="headerlink" href="#stapipy.PyStColorTransformationFilter.saturation_correction" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStColorTransformationFilter.saturation_correction: float</p>
+<p>プロパティー：彩度の補正値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します (-180.0〜180.0)</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStColorTransformationFilter.set_color_transformation_value">
+<span class="sig-name descname"><span class="pre">set_color_transformation_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">double</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStColorTransformationFilter.set_color_transformation_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>色変換行列値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>selector</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStColorTransformationValueSelector" title="stapipy.EStColorTransformationValueSelector"><em>EStColorTransformationValueSelector</em></a>) -- 対象とする行列の要素を指定します。</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 設定値</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystdefectivepixeldetectionfilter">
+<h3>PyStDefectivePixelDetectionFilter<a class="headerlink" href="#pystdefectivepixeldetectionfilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelDetectionFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStDefectivePixelDetectionFilter</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelDetectionFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFilter</span></code></a></p>
+<p>欠陥画素検出フィルタークラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelDetectionFilter.clear_detection_result">
+<span class="sig-name descname"><span class="pre">clear_detection_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDefectivePixelDetectionFilter.clear_detection_result" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>検出された欠陥ピクセル情報を削除します。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelDetectionFilter.defective_pixel_detection_averaging_area">
+<span class="sig-name descname"><span class="pre">defective_pixel_detection_averaging_area</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelDetectionFilter.defective_pixel_detection_averaging_area" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStDefectivePixelDetectionFilter.defective_pixel_detection_averaging_area: EStDefectivePixelDetectionAveragingArea</p>
+<p>プロパティー：平均画素値を算出する際のエリア</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStDefectivePixelDetectionAveragingArea" title="stapipy.EStDefectivePixelDetectionAveragingArea">EStDefectivePixelDetectionAveragingArea</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelDetectionFilter.get_detection_result">
+<span class="sig-name descname"><span class="pre">get_detection_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStDefectivePixelDetectionResult" title="stapipy.PyStDefectivePixelDetectionResult"><span class="pre">PyStDefectivePixelDetectionResult</span></a></span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelDetectionFilter.get_detection_result" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>検出結果を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>検出結果</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStDefectivePixelDetectionResult" title="stapipy.PyStDefectivePixelDetectionResult">PyStDefectivePixelDetectionResult</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelDetectionFilter.get_threshold">
+<span class="sig-name descname"><span class="pre">get_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold_target</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">double</span></span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelDetectionFilter.get_threshold" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>欠陥画素と判定する際の閾値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>threshold_target</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStDefectivePixelDetectionThresholdTarget" title="stapipy.EStDefectivePixelDetectionThresholdTarget"><em>EStDefectivePixelDetectionThresholdTarget</em></a>) -- 閾値の対象を指定します。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>最大画素値に対する比率(0.0 - 1.0)で指定された閾値を取得します。平均値からの差分が閾値よりも大きい場合、欠陥画素と判断されます。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelDetectionFilter.maximum_pixel_count">
+<span class="sig-name descname"><span class="pre">maximum_pixel_count</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelDetectionFilter.maximum_pixel_count" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStDefectivePixelDetectionFilter.maximum_pixel_count: int</p>
+<p>プロパティー：検出される欠陥画素の最大数(0～8192)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelDetectionFilter.peripheral_area_size">
+<span class="sig-name descname"><span class="pre">peripheral_area_size</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelDetectionFilter.peripheral_area_size" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStDefectivePixelDetectionFilter.peripheral_area_size: int</p>
+<p>プロパティー：平均画素値を算出する際のエリアのサイズ(0～256)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelDetectionFilter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDefectivePixelDetectionFilter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelDetectionFilter.set_threshold">
+<span class="sig-name descname"><span class="pre">set_threshold</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold_target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">double</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDefectivePixelDetectionFilter.set_threshold" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>欠陥画素と判定する際の閾値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>threshold_target</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStDefectivePixelDetectionThresholdTarget" title="stapipy.EStDefectivePixelDetectionThresholdTarget"><em>EStDefectivePixelDetectionThresholdTarget</em></a>) -- 閾値の対象を指定します。</p></li>
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 設定値</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystdefectivepixeldetectionresult">
+<h3>PyStDefectivePixelDetectionResult<a class="headerlink" href="#pystdefectivepixeldetectionresult" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelDetectionResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStDefectivePixelDetectionResult</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelDetectionResult" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>欠陥画素検出結果クラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelDetectionResult.detected_pixels">
+<span class="sig-name descname"><span class="pre">detected_pixels</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelDetectionResult.detected_pixels" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStDefectivePixelDetectionResult.detected_pixels: list</p>
+<p>プロパティー：検出された結果</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>list of PyStDefectivePixelInformation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelDetectionResult.detection_status">
+<span class="sig-name descname"><span class="pre">detection_status</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelDetectionResult.detection_status" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStDefectivePixelDetectionResult.detection_status: EStDefectivePixelDetectionStatus</p>
+<p>プロパティー：検出ステータス</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EStDefectivePixelDetectionStatus" title="stapipy.EStDefectivePixelDetectionStatus">EStDefectivePixelDetectionStatus</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystdefectivepixelinformation">
+<h3>PyStDefectivePixelInformation<a class="headerlink" href="#pystdefectivepixelinformation" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelInformation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStDefectivePixelInformation</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelInformation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>画素欠陥情報クラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelInformation.delta_ratio">
+<span class="sig-name descname"><span class="pre">delta_ratio</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelInformation.delta_ratio" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStDefectivePixelInformation.delta_ratio: float</p>
+<p>プロパティー：デルタ比</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelInformation.evaluation_value">
+<span class="sig-name descname"><span class="pre">evaluation_value</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelInformation.evaluation_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStDefectivePixelInformation.evaluation_value: float</p>
+<p>プロパティー：ピクセルの評価値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelInformation.pos_x">
+<span class="sig-name descname"><span class="pre">pos_x</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelInformation.pos_x" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStDefectivePixelInformation.pos_x: int</p>
+<p>プロパティー：横軸</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelInformation.pos_y">
+<span class="sig-name descname"><span class="pre">pos_y</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelInformation.pos_y" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStDefectivePixelInformation.pos_y: int</p>
+<p>プロパティー：縦軸</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDefectivePixelInformation.reference_value">
+<span class="sig-name descname"><span class="pre">reference_value</span></span><a class="headerlink" href="#stapipy.PyStDefectivePixelInformation.reference_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStDefectivePixelInformation.reference_value: float</p>
+<p>プロパティー：評価基準値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystedgeenhancementfilter">
+<h3>PyStEdgeEnhancementFilter<a class="headerlink" href="#pystedgeenhancementfilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStEdgeEnhancementFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStEdgeEnhancementFilter</span></span><a class="headerlink" href="#stapipy.PyStEdgeEnhancementFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFilter</span></code></a></p>
+<p>エッジ強調フィルタークラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStEdgeEnhancementFilter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStEdgeEnhancementFilter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStEdgeEnhancementFilter.strength">
+<span class="sig-name descname"><span class="pre">strength</span></span><a class="headerlink" href="#stapipy.PyStEdgeEnhancementFilter.strength" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStEdgeEnhancementFilter.strength: float</p>
+<p>プロパティー：エッジ強調フィルターの強調度</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStEdgeEnhancementFilter.threshold">
+<span class="sig-name descname"><span class="pre">threshold</span></span><a class="headerlink" href="#stapipy.PyStEdgeEnhancementFilter.threshold" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStEdgeEnhancementFilter.threshold: int</p>
+<p>プロパティー：エッジ強調フィルター用のスレッショルド値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystflatfieldcorrectionfilter">
+<h3>PyStFlatFieldCorrectionFilter<a class="headerlink" href="#pystflatfieldcorrectionfilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStFlatFieldCorrectionFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStFlatFieldCorrectionFilter</span></span><a class="headerlink" href="#stapipy.PyStFlatFieldCorrectionFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFilter</span></code></a></p>
+<p>フラットフィールド補正フィルタークラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStFlatFieldCorrectionFilter.calibration_target_value">
+<span class="sig-name descname"><span class="pre">calibration_target_value</span></span><a class="headerlink" href="#stapipy.PyStFlatFieldCorrectionFilter.calibration_target_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStFlatFieldCorrectionFilter.calibration_target_value: int</p>
+<p>プロパティー：キャリブレーション時の目標値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStFlatFieldCorrectionFilter.flat_field_correction_mode">
+<span class="sig-name descname"><span class="pre">flat_field_correction_mode</span></span><a class="headerlink" href="#stapipy.PyStFlatFieldCorrectionFilter.flat_field_correction_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStFlatFieldCorrectionFilter.flat_field_correction_mode: EStFlatFieldCorrectionMode</p>
+<p>プロパティー：フラットフィールド補正モード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStFlatFieldCorrectionMode" title="stapipy.EStFlatFieldCorrectionMode">EStFlatFieldCorrectionMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStFlatFieldCorrectionFilter.is_calibration_enabled">
+<span class="sig-name descname"><span class="pre">is_calibration_enabled</span></span><a class="headerlink" href="#stapipy.PyStFlatFieldCorrectionFilter.is_calibration_enabled" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStFlatFieldCorrectionFilter.is_calibration_enabled: bool</p>
+<p>プロパティー：キャリブレーションの有効/無効</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStFlatFieldCorrectionFilter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStFlatFieldCorrectionFilter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystgammacorrectionfilter">
+<h3>PyStGammaCorrectionFilter<a class="headerlink" href="#pystgammacorrectionfilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStGammaCorrectionFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStGammaCorrectionFilter</span></span><a class="headerlink" href="#stapipy.PyStGammaCorrectionFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFilter</span></code></a></p>
+<p>ガンマ補正フィルタークラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStGammaCorrectionFilter.gamma_value">
+<span class="sig-name descname"><span class="pre">gamma_value</span></span><a class="headerlink" href="#stapipy.PyStGammaCorrectionFilter.gamma_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStGammaCorrectionFilter.gamma_value: float</p>
+<p>プロパティー：ガンマ補正値設定</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStGammaCorrectionFilter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStGammaCorrectionFilter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystgraphdatafilter">
+<h3>PyStGraphDataFilter<a class="headerlink" href="#pystgraphdatafilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStGraphDataFilter</span></span><a class="headerlink" href="#stapipy.PyStGraphDataFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFilter</span></code></a></p>
+<p>グラフデータフィルタークラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataFilter.get_list">
+<span class="sig-name descname"><span class="pre">get_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStGraphDataList" title="stapipy.PyStGraphDataList"><span class="pre">PyStGraphDataList</span></a></span></span><a class="headerlink" href="#stapipy.PyStGraphDataFilter.get_list" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>グラフデータリストを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>グラフデータリスト</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStGraphDataList" title="stapipy.PyStGraphDataList">PyStGraphDataList</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataFilter.graph_data_type">
+<span class="sig-name descname"><span class="pre">graph_data_type</span></span><a class="headerlink" href="#stapipy.PyStGraphDataFilter.graph_data_type" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStGraphDataFilter.graph_data_type: EStGraphDataType</p>
+<p>プロパティー：グラフデータタイプ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStGraphDataType" title="stapipy.EStGraphDataType">EStGraphDataType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataFilter.height">
+<span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#stapipy.PyStGraphDataFilter.height" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStGraphDataFilter.height: int</p>
+<p>プロパティー：縦方向のサイズ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataFilter.offset_x">
+<span class="sig-name descname"><span class="pre">offset_x</span></span><a class="headerlink" href="#stapipy.PyStGraphDataFilter.offset_x" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStGraphDataFilter.offset_x: int</p>
+<p>プロパティー：横方向のオフセット値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataFilter.offset_y">
+<span class="sig-name descname"><span class="pre">offset_y</span></span><a class="headerlink" href="#stapipy.PyStGraphDataFilter.offset_y" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStGraphDataFilter.offset_y: int</p>
+<p>プロパティー：縦方向のオフセット値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataFilter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStGraphDataFilter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataFilter.roi_mode">
+<span class="sig-name descname"><span class="pre">roi_mode</span></span><a class="headerlink" href="#stapipy.PyStGraphDataFilter.roi_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStGraphDataFilter.roi_mode: EStROIMode</p>
+<p>プロパティー：ROIモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStROIMode" title="stapipy.EStROIMode">EStROIMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataFilter.width">
+<span class="sig-name descname"><span class="pre">width</span></span><a class="headerlink" href="#stapipy.PyStGraphDataFilter.width" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStGraphDataFilter.width: int</p>
+<p>プロパティー：横方向のサイズ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystgraphdatalist">
+<h3>PyStGraphDataList<a class="headerlink" href="#pystgraphdatalist" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStGraphDataList</span></span><a class="headerlink" href="#stapipy.PyStGraphDataList" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p><a class="reference internal" href="#stapipy.PyStGraphDataFilter" title="stapipy.PyStGraphDataFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyStGraphDataFilter</span></code></a> で作成されたグラフデータをアクセスするためのクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataList.count">
+<span class="sig-name descname"><span class="pre">count</span></span><a class="headerlink" href="#stapipy.PyStGraphDataList.count" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStGraphDataList.count: int</p>
+<p>プロパティー：データの数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataList.get_data_at">
+<span class="sig-name descname"><span class="pre">get_data_at</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStGraphData" title="stapipy.PyStGraphData"><span class="pre">PyStGraphData</span></a></span></span><a class="headerlink" href="#stapipy.PyStGraphDataList.get_data_at" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>インデックスで指定したグラフデータを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- グラフデータのインデックス値</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>指定したインデックスのグラフデータ</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStGraphData" title="stapipy.PyStGraphData">PyStGraphData</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataList.is_save_supported">
+<span class="sig-name descname"><span class="pre">is_save_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_format</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyStGraphDataList.is_save_supported" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定したファイルフォーマットがグラフデータの保存に対応しているかを確認します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>file_format</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStGraphDataFileFormat" title="stapipy.EStGraphDataFileFormat"><em>EStGraphDataFileFormat</em></a>) -- グラフデータファイルフォーマット</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>書き込みに対応している場合、 True が返されます。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataList.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStGraphDataList.load" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>グラフデータファイルをバッファへ読み込みます。バッファにあるデータは上書きされます。現在、読み込みに対応しているのはStApiRaw フォーマットのみとなります。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 保存先のグラフデータファイル名</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStGraphDataList.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_format</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStGraphDataList.save" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>グラフデータをファイルへ保存します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_format</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStGraphDataFileFormat" title="stapipy.EStGraphDataFileFormat"><em>EStGraphDataFileFormat</em></a>) -- グラフデータファイルフォーマット</p></li>
+<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 保存先のグラフデータファイル名</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystgraphdata">
+<h3>PyStGraphData<a class="headerlink" href="#pystgraphdata" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStGraphData">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStGraphData</span></span><a class="headerlink" href="#stapipy.PyStGraphData" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p><a class="reference internal" href="#stapipy.PyStGraphDataList" title="stapipy.PyStGraphDataList"><code class="xref py py-class docutils literal notranslate"><span class="pre">PyStGraphDataList</span></code></a> のグラフデータへアクセスするためのクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStGraphData.count">
+<span class="sig-name descname"><span class="pre">count</span></span><a class="headerlink" href="#stapipy.PyStGraphData.count" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStGraphData.count: int</p>
+<p>プロパティー：データ数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStGraphData.get_graph_data">
+<span class="sig-name descname"><span class="pre">get_graph_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStGraphData.get_graph_data" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>グラフデータを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>グラフデータ</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#memoryview" title="(in Python v3.12)">memoryview</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStGraphData.get_graph_info_float64">
+<span class="sig-name descname"><span class="pre">get_graph_info_float64</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph_info_type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">double</span></span></span><a class="headerlink" href="#stapipy.PyStGraphData.get_graph_info_float64" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>グラフデータ情報(float型)を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>graph_data_info</strong> (<em>EStGraphDataInfo</em>) -- 取得するグラフデータ情報</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>グラフデータ情報</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStGraphData.get_graph_info_uint32">
+<span class="sig-name descname"><span class="pre">get_graph_info_uint32</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">graph_info_type</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">uint32_t</span></span></span><a class="headerlink" href="#stapipy.PyStGraphData.get_graph_info_uint32" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>グラフデータ情報(int型)を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>graph_data_info</strong> (<em>EStGraphDataInfo</em>) -- 取得するグラフデータ情報</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>グラフデータ情報</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStGraphData.graph_data_bit_size">
+<span class="sig-name descname"><span class="pre">graph_data_bit_size</span></span><a class="headerlink" href="#stapipy.PyStGraphData.graph_data_bit_size" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStGraphData.graph_data_bit_size: int</p>
+<p>プロパティー：グラフデータ値のサイズ（ビット単位）</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStGraphData.graph_data_type">
+<span class="sig-name descname"><span class="pre">graph_data_type</span></span><a class="headerlink" href="#stapipy.PyStGraphData.graph_data_type" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStGraphData.graph_data_type: EStGraphDataType</p>
+<p>プロパティー：グラフデータタイプ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EStGraphDataType" title="stapipy.EStGraphDataType">EStGraphDataType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystimageaveragingfilter">
+<h3>PyStImageAveragingFilter<a class="headerlink" href="#pystimageaveragingfilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStImageAveragingFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStImageAveragingFilter</span></span><a class="headerlink" href="#stapipy.PyStImageAveragingFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFilter</span></code></a></p>
+<p>画像平均化フィルタークラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImageAveragingFilter.clear_image_data">
+<span class="sig-name descname"><span class="pre">clear_image_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStImageAveragingFilter.clear_image_data" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>積算された画像データを消去します。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStImageAveragingFilter.frame_count">
+<span class="sig-name descname"><span class="pre">frame_count</span></span><a class="headerlink" href="#stapipy.PyStImageAveragingFilter.frame_count" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStImageAveragingFilter.frame_count: int</p>
+<p>プロパティー：積算された画像の数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImageAveragingFilter.get_averaged_image">
+<span class="sig-name descname"><span class="pre">get_averaged_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">each_component_bits_count=0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage"><span class="pre">PyStImage</span></a></span></span><a class="headerlink" href="#stapipy.PyStImageAveragingFilter.get_averaged_image" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>平均化された画像データを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>each_component_bits_count</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 平均化された画像の個々の構成要素のビット数を指定します。0が指定されかつ入力画像のビット数が8以上の場合は、入力画像と同じビット数が使用されます。</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>平均化された画像オブジェクト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage">PyStImage</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImageAveragingFilter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStImageAveragingFilter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystleveladjustmentfilter">
+<h3>PyStLevelAdjustmentFilter<a class="headerlink" href="#pystleveladjustmentfilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStLevelAdjustmentFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStLevelAdjustmentFilter</span></span><a class="headerlink" href="#stapipy.PyStLevelAdjustmentFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFilter</span></code></a></p>
+<p>レベル調整フィルタークラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStLevelAdjustmentFilter.get_level_adjustment_correction_points">
+<span class="sig-name descname"><span class="pre">get_level_adjustment_correction_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixelcomponent</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyStLevelAdjustmentFilter.get_level_adjustment_correction_points" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>レベル調整点の情報を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>pixelcomponent</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelComponent" title="stapipy.EStPixelComponent"><em>EStPixelComponent</em></a>) -- 対象とするピクセル構成要素(Mono, R, G, B)</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>PyStLevelAdjustPointInfoのリスト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>list of PyStLevelAdjustPointInfo</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStLevelAdjustmentFilter.level_adjustment_correction_points_interpolation_mode">
+<span class="sig-name descname"><span class="pre">level_adjustment_correction_points_interpolation_mode</span></span><a class="headerlink" href="#stapipy.PyStLevelAdjustmentFilter.level_adjustment_correction_points_interpolation_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStLevelAdjustmentFilter.level_adjustment_correction_points_interpolation_mode: EStLevelAdjustmentCorrectionPointsInterpolationMode</p>
+<p>プロパティー：レベル調整補正点補間モード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStLevelAdjustmentCorrectionPointsInterpolationMode" title="stapipy.EStLevelAdjustmentCorrectionPointsInterpolationMode">EStLevelAdjustmentCorrectionPointsInterpolationMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStLevelAdjustmentFilter.level_adjustment_mode">
+<span class="sig-name descname"><span class="pre">level_adjustment_mode</span></span><a class="headerlink" href="#stapipy.PyStLevelAdjustmentFilter.level_adjustment_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStLevelAdjustmentFilter.level_adjustment_mode: EStLevelAdjustmentMode</p>
+<p>プロパティー：レベル調整モード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStLevelAdjustmentMode" title="stapipy.EStLevelAdjustmentMode">EStLevelAdjustmentMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStLevelAdjustmentFilter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStLevelAdjustmentFilter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStLevelAdjustmentFilter.set_level_adjustment_correction_points">
+<span class="sig-name descname"><span class="pre">set_level_adjustment_correction_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixelcomponent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_info_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStLevelAdjustmentFilter.set_level_adjustment_correction_points" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>レベル調整点の情報を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pixelcomponent</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelComponent" title="stapipy.EStPixelComponent"><em>EStPixelComponent</em></a>) -- 対象とするピクセル構成要素(Mono, R, G, B)</p></li>
+<li><p><strong>point_info_list</strong> -- PyStLevelAdjustPointInfoのリストまたはタプル</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystleveladjustpointinfo">
+<h3>PyStLevelAdjustPointInfo<a class="headerlink" href="#pystleveladjustpointinfo" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStLevelAdjustPointInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStLevelAdjustPointInfo</span></span><a class="headerlink" href="#stapipy.PyStLevelAdjustPointInfo" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>レベル調整制御点情報クラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStLevelAdjustPointInfo.input">
+<span class="sig-name descname"><span class="pre">input</span></span><a class="headerlink" href="#stapipy.PyStLevelAdjustPointInfo.input" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStLevelAdjustPointInfo.input: float</p>
+<p>制御点の入力値 (0 - 1.0)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStLevelAdjustPointInfo.output">
+<span class="sig-name descname"><span class="pre">output</span></span><a class="headerlink" href="#stapipy.PyStLevelAdjustPointInfo.output" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStLevelAdjustPointInfo.output: float</p>
+<p>制御点の出力値 (0 - 1.0)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystnoisereductionfilter">
+<h3>PyStNoiseReductionFilter<a class="headerlink" href="#pystnoisereductionfilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStNoiseReductionFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStNoiseReductionFilter</span></span><a class="headerlink" href="#stapipy.PyStNoiseReductionFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFilter</span></code></a></p>
+<p>ノイズ軽減フィルタークラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStNoiseReductionFilter.is_calibration_enabled">
+<span class="sig-name descname"><span class="pre">is_calibration_enabled</span></span><a class="headerlink" href="#stapipy.PyStNoiseReductionFilter.is_calibration_enabled" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStNoiseReductionFilter.is_calibration_enabled: bool</p>
+<p>プロパティー：キャリブレーションの有効/無効</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStNoiseReductionFilter.noise_reduction_mode">
+<span class="sig-name descname"><span class="pre">noise_reduction_mode</span></span><a class="headerlink" href="#stapipy.PyStNoiseReductionFilter.noise_reduction_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStNoiseReductionFilter.noise_reduction_mode: EStNoiseReductionMode</p>
+<p>プロパティー：ガンマ補正値設定</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStNoiseReductionMode" title="stapipy.EStNoiseReductionMode">EStNoiseReductionMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStNoiseReductionFilter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStNoiseReductionFilter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystsnmeasurementfilter">
+<h3>PyStSNMeasurementFilter<a class="headerlink" href="#pystsnmeasurementfilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStSNMeasurementFilter</span></span><a class="headerlink" href="#stapipy.PyStSNMeasurementFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFilter" title="stapipy.PyStFilter"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFilter</span></code></a></p>
+<p>SN測定フィルタークラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementFilter.clear_grabbed_image">
+<span class="sig-name descname"><span class="pre">clear_grabbed_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStSNMeasurementFilter.clear_grabbed_image" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>保持している画像データを破棄します。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementFilter.frame_count">
+<span class="sig-name descname"><span class="pre">frame_count</span></span><a class="headerlink" href="#stapipy.PyStSNMeasurementFilter.frame_count" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStSNMeasurementFilter.frame_count: int</p>
+<p>プロパティー：統計値算出に使用するフレーム数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementFilter.height">
+<span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#stapipy.PyStSNMeasurementFilter.height" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStSNMeasurementFilter.height: int</p>
+<p>プロパティー：縦方向のサイズ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementFilter.offset_x">
+<span class="sig-name descname"><span class="pre">offset_x</span></span><a class="headerlink" href="#stapipy.PyStSNMeasurementFilter.offset_x" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStSNMeasurementFilter.offset_x: int</p>
+<p>プロパティー：横方向のオフセット値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementFilter.offset_y">
+<span class="sig-name descname"><span class="pre">offset_y</span></span><a class="headerlink" href="#stapipy.PyStSNMeasurementFilter.offset_y" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStSNMeasurementFilter.offset_y: int</p>
+<p>プロパティー：縦方向のオフセット値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementFilter.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStSNMeasurementFilter.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>フィルターオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementFilter.retrieve_measurement_result">
+<span class="sig-name descname"><span class="pre">retrieve_measurement_result</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uint32_t</span> <span class="pre">timeout_ms</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_handling</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStSNMeasurementResult" title="stapipy.PyStSNMeasurementResult"><span class="pre">PyStSNMeasurementResult</span></a></span></span><a class="headerlink" href="#stapipy.PyStSNMeasurementFilter.retrieve_measurement_result" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>計測結果を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout_ms</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- タイムアウト時間[ms]</p></li>
+<li><p><strong>timeout_handling</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStTimeoutHandling" title="stapipy.EStTimeoutHandling"><em>EStTimeoutHandling</em></a>) -- タイムアウトへの対処</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementFilter.roi_mode">
+<span class="sig-name descname"><span class="pre">roi_mode</span></span><a class="headerlink" href="#stapipy.PyStSNMeasurementFilter.roi_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStSNMeasurementFilter.roi_mode: EStROIMode</p>
+<p>プロパティー：ROIモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStROIMode" title="stapipy.EStROIMode">EStROIMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementFilter.width">
+<span class="sig-name descname"><span class="pre">width</span></span><a class="headerlink" href="#stapipy.PyStSNMeasurementFilter.width" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStSNMeasurementFilter.width: int</p>
+<p>プロパティー：横方向のサイズ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystsnmeasurementresult">
+<h3>PyStSNMeasurementResult<a class="headerlink" href="#pystsnmeasurementresult" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementResult">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStSNMeasurementResult</span></span><a class="headerlink" href="#stapipy.PyStSNMeasurementResult" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>SN測定結果クラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementResult.component_count">
+<span class="sig-name descname"><span class="pre">component_count</span></span><a class="headerlink" href="#stapipy.PyStSNMeasurementResult.component_count" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStSNMeasurementResult.component_count: int</p>
+<p>プロパティー：コンポーネントの数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystsnmeasurementresultitem">
+<h3>PyStSNMeasurementResultItem<a class="headerlink" href="#pystsnmeasurementresultitem" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStSNMeasurementResultItem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStSNMeasurementResultItem</span></span><a class="headerlink" href="#stapipy.PyStSNMeasurementResultItem" title="この定義へのパーマリンク">¶</a></dt>
+<dd><table class="docutils align-default">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>SN測定結果へアクセスするためのクラス</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pixel_component</p></td>
+<td><p>Type: <a class="reference internal" href="enumeration.html#stapipy.EStPixelComponent" title="stapipy.EStPixelComponent"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.EStPixelComponent</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p>pixel_count</p></td>
+<td><p>Type: int</p></td>
+</tr>
+<tr class="row-even"><td><p>average</p></td>
+<td><p>Type: float</p></td>
+</tr>
+<tr class="row-odd"><td><p>temporal_standard_deviation</p></td>
+<td><p>Type: float (全画素の平均)</p></td>
+</tr>
+<tr class="row-even"><td><p>frame_standard_deviation</p></td>
+<td><p>Type: float (各フレームの平均)</p></td>
+</tr>
+</tbody>
+</table>
+<p>例：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">filter</span> <span class="o">=</span> <span class="n">stapi</span><span class="o">.</span><span class="n">create_filter</span><span class="p">(</span><span class="n">stapi</span><span class="o">.</span><span class="n">EStFilterType</span><span class="o">.</span><span class="n">SNMeasurement</span><span class="p">)</span>
+
+<span class="c1"># Other codes: set filter setting, image grabbing, etc.</span>
+<span class="c1"># ...</span>
+
+<span class="c1"># Retrieve the measurement results.</span>
+<span class="n">result</span> <span class="o">=</span> <span class="nb">filter</span><span class="o">.</span><span class="n">retrieve_measurement_result</span><span class="p">(</span>
+    <span class="n">timeout_ms</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span>
+    <span class="n">timeout_handling</span><span class="o">=</span><span class="n">stapi</span><span class="o">.</span><span class="n">EStTimeoutHandling</span><span class="o">.</span><span class="n">ThrowException</span><span class="p">)</span>
+
+<span class="c1"># Retrieve measurement results for each pixel component.</span>
+<span class="k">for</span> <span class="n">pixel_component</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">component_count</span><span class="p">):</span>
+      <span class="n">result_item</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">pixel_component</span><span class="p">]</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pixel component = &quot;</span><span class="p">,</span> <span class="n">result_item</span><span class="o">.</span><span class="n">pixel_component</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Pixel count = &quot;</span><span class="p">,</span> <span class="n">result_item</span><span class="o">.</span><span class="n">pixel_count</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Average = &quot;</span><span class="p">,</span> <span class="n">result_item</span><span class="o">.</span><span class="n">average</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Temporal standard deviation = &quot;</span><span class="p">,</span>
+          <span class="n">result_item</span><span class="o">.</span><span class="n">temporal_standard_deviation</span><span class="p">)</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Frame standard deviation = &quot;</span><span class="p">,</span>
+          <span class="n">result_item</span><span class="o">.</span><span class="n">frame_standard_deviation</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="filer-classes">
+<h2>ファイラークラス<a class="headerlink" href="#filer-classes" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="pystfiler">
+<h3>PyStFiler<a class="headerlink" href="#pystfiler" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStFiler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStFiler</span></span><a class="headerlink" href="#stapipy.PyStFiler" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ファイラー基本クラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStFiler.copy_settings">
+<span class="sig-name descname"><span class="pre">copy_settings</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStFiler</span> <span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStFiler.copy_settings" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ファイラー設定値をコピーします。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>src</strong> (<a class="reference internal" href="#stapipy.PyStFiler" title="stapipy.PyStFiler"><em>PyStFiler</em></a>) -- 設定のコピー元ファイラー</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStFiler.info">
+<span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#stapipy.PyStFiler.info" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStFiler.info: PyStFilerInfo</p>
+<p>プロパティー：ファイラー情報</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>PyStFilerInfo</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStFiler.nodemap">
+<span class="sig-name descname"><span class="pre">nodemap</span></span><a class="headerlink" href="#stapipy.PyStFiler.nodemap" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStFiler.nodemap: PyNodeMap</p>
+<p>プロパティー：ファイラーのノードマップ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードマップを返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="ref_genicam.html#stapipy.PyNodeMap" title="stapipy.PyNodeMap">PyNodeMap</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyststillimagefiler">
+<h3>PyStStillImageFiler<a class="headerlink" href="#pyststillimagefiler" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStStillImageFiler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStStillImageFiler</span></span><a class="headerlink" href="#stapipy.PyStStillImageFiler" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFiler" title="stapipy.PyStFiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFiler</span></code></a></p>
+<p>静止画ファイラークラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStillImageFiler.compression_level">
+<span class="sig-name descname"><span class="pre">compression_level</span></span><a class="headerlink" href="#stapipy.PyStStillImageFiler.compression_level" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStStillImageFiler.compression_level: int</p>
+<p>プロパティー：PNGファイル用の圧縮レベル</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStillImageFiler.is_load_supported">
+<span class="sig-name descname"><span class="pre">is_load_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_format</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_format</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyStStillImageFiler.is_load_supported" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定したピクセルフォーマットの読み込みに対応しているかを確認します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pixel_format</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelFormatNamingConvention" title="stapipy.EStPixelFormatNamingConvention"><em>EStPixelFormatNamingConvention</em></a>) -- 対象ピクセルフォーマット</p></li>
+<li><p><strong>file_format</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStStillImageFileFormat" title="stapipy.EStStillImageFileFormat"><em>EStStillImageFileFormat</em></a>) -- 静止画ファイルフォーマット</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>読み込みに対応している場合、 True が返されます。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStillImageFiler.is_save_supported">
+<span class="sig-name descname"><span class="pre">is_save_supported</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_format</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_format</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyStStillImageFiler.is_save_supported" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定したピクセルフォーマットの保存に対応しているかを確認します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pixel_format</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelFormatNamingConvention" title="stapipy.EStPixelFormatNamingConvention"><em>EStPixelFormatNamingConvention</em></a>) -- 対象ピクセルフォーマット</p></li>
+<li><p><strong>file_format</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStStillImageFileFormat" title="stapipy.EStStillImageFileFormat"><em>EStStillImageFileFormat</em></a>) -- 静止画ファイルフォーマット</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>書き込みに対応している場合、 True が返されます。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStillImageFiler.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">filename</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage"><span class="pre">PyStImage</span></a></span></span><a class="headerlink" href="#stapipy.PyStStillImageFiler.load" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>静止画ファイルを画像バッファへ読み込みます。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- ファイル名</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>画像バッファ</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage">PyStImage</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStillImageFiler.quality">
+<span class="sig-name descname"><span class="pre">quality</span></span><a class="headerlink" href="#stapipy.PyStStillImageFiler.quality" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStStillImageFiler.quality: int</p>
+<p>プロパティー：JPEGファイルの品質設定</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStillImageFiler.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStStillImageFiler.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ファイラーオブジェクトに使用されるリソースを解放します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStillImageFiler.save">
+<span class="sig-name descname"><span class="pre">save</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStImage</span> <span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_format</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStStillImageFiler.save" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>画像データを静止画ファイルへ保存します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage"><em>PyStImage</em></a>) -- 画像バッファ</p></li>
+<li><p><strong>file_format</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStStillImageFileFormat" title="stapipy.EStStillImageFileFormat"><em>EStStillImageFileFormat</em></a>) -- 静止画ファイルフォーマット</p></li>
+<li><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- ファイル名</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystvideofiler">
+<h3>PyStVideoFiler<a class="headerlink" href="#pystvideofiler" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStVideoFiler</span></span><a class="headerlink" href="#stapipy.PyStVideoFiler" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyStFiler" title="stapipy.PyStFiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStFiler</span></code></a></p>
+<p>動画ファイラークラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.deregister_callback">
+<span class="sig-name descname"><span class="pre">deregister_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStRegisteredCallback</span> <span class="pre">registered_cb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStVideoFiler.deregister_callback" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>コールバック登録を解除します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>registered_cb</strong> (<a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><em>PyStRegisteredCallback</em></a>) -- 登録されたコールバック</p></li>
+<li><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- このPyStVideoFilerのコピーモジュールを含む、全てのモジュールにコールバックが登録されていれば、その登録を解除するフラグ</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.deregister_callbacks">
+<span class="sig-name descname"><span class="pre">deregister_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStVideoFiler.deregister_callbacks" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>全てのコールバック登録を解除します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- このPyStVideoFilerのコピーモジュールを含む、全てのモジュールに登録されているコールバックの登録を解除するフラグ</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.fps">
+<span class="sig-name descname"><span class="pre">fps</span></span><a class="headerlink" href="#stapipy.PyStVideoFiler.fps" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStVideoFiler.fps: float</p>
+<p>動画ファイルのFPS</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.get_registered_callbacks">
+<span class="sig-name descname"><span class="pre">get_registered_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyStVideoFiler.get_registered_callbacks" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>登録されたコールバックを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- このPyStVideoFilerのコピーも含む、登録されたコールバックを取得するフラグ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>PyStRegisteredCallbackのリストまたはNone</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>list of PyStRegisteredCallback</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.is_stopped">
+<span class="sig-name descname"><span class="pre">is_stopped</span></span><a class="headerlink" href="#stapipy.PyStVideoFiler.is_stopped" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStVideoFiler.is_stopped: bool</p>
+<p>プロパティー：動画ファイルの生成が停止しているかどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.maximum_frame_count_per_file">
+<span class="sig-name descname"><span class="pre">maximum_frame_count_per_file</span></span><a class="headerlink" href="#stapipy.PyStVideoFiler.maximum_frame_count_per_file" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStVideoFiler.maximum_frame_count_per_file: int</p>
+<p>プロパティー：1つの動画ファイルに保存する最大フレーム数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.quality">
+<span class="sig-name descname"><span class="pre">quality</span></span><a class="headerlink" href="#stapipy.PyStVideoFiler.quality" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStVideoFiler.quality: int</p>
+<p>プロパティー：動画ファイルの品質設定</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.register_callback">
+<span class="sig-name descname"><span class="pre">register_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><span class="pre">PyStRegisteredCallback</span></a></span></span><a class="headerlink" href="#stapipy.PyStVideoFiler.register_callback" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>コールバック関数を登録します。ファイルオプーン、ファイルクローズ、エラーイベントの際、コールバック関数がトリガーされます。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback_func</strong> -- トリガーされる関数</p></li>
+<li><p><strong>user_data</strong> -- ユーザデータ（オプショナル）</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>登録されたコールバックのオブジェクト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback">PyStRegisteredCallback</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.register_filename">
+<span class="sig-name descname"><span class="pre">register_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStVideoFiler.register_filename" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>動画ファイル名を登録します。複数のファイルを予め登録しておくと、ファイルサイズやフレーム数が上限に達した際、保存中の動画ファイルがクローズされた後に、次の動画ファイルがオープンされるようになります。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 保存先の動画ファイル名</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.register_image">
+<span class="sig-name descname"><span class="pre">register_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStImage</span> <span class="pre">image</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">frame_no</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStVideoFiler.register_image" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>動画ファイルへ保存する画像データを登録します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image</strong> (<a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage"><em>PyStImage</em></a>) -- 画像バッファ</p></li>
+<li><p><strong>frame_no</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- フレーム番号</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStVideoFiler.release" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStVideoFilerのリソースを解放します。コールバック登録も解除します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.reset">
+<span class="sig-name descname"><span class="pre">reset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStVideoFiler.reset" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>生成中の動画ファイルをクローズし、ファイルリストおよび保存待機中の画像データをクリアします。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.reverse_y">
+<span class="sig-name descname"><span class="pre">reverse_y</span></span><a class="headerlink" href="#stapipy.PyStVideoFiler.reverse_y" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStVideoFiler.reverse_y: bool</p>
+<p>プロパティー：上下反転設定</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.video_file_compression">
+<span class="sig-name descname"><span class="pre">video_file_compression</span></span><a class="headerlink" href="#stapipy.PyStVideoFiler.video_file_compression" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStVideoFiler.video_file_compression: EStVideoFileCompression</p>
+<p>プロパティー：動画ファイル圧縮形式</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStVideoFileCompression" title="stapipy.EStVideoFileCompression">EStVideoFileCompression</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStVideoFiler.video_file_format">
+<span class="sig-name descname"><span class="pre">video_file_format</span></span><a class="headerlink" href="#stapipy.PyStVideoFiler.video_file_format" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyStVideoFiler.video_file_format: EStVideoFileFormat</p>
+<p>プロパティー：動画ファイルフォーマット</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値を返します。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStVideoFileFormat" title="stapipy.EStVideoFileFormat">EStVideoFileFormat</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">画像処理の関数とクラス</a><ul>
+<li><a class="reference internal" href="#functions">関数</a><ul>
+<li><a class="reference internal" href="#create-converter">create_converter</a></li>
+<li><a class="reference internal" href="#create-filer">create_filer</a></li>
+<li><a class="reference internal" href="#create-filter">create_filter</a></li>
+<li><a class="reference internal" href="#get-filter-info">get_filter_info</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#converter-classes">コンバータークラス</a><ul>
+<li><a class="reference internal" href="#pystconverter">PyStConverter</a></li>
+<li><a class="reference internal" href="#pystconverterinfo">PyStConverterInfo</a></li>
+<li><a class="reference internal" href="#pystpixelformatconverter">PyStPixelFormatConverter</a></li>
+<li><a class="reference internal" href="#pystreverseconverter">PyStReverseConverter</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#filter-classes">フィルタークラス</a><ul>
+<li><a class="reference internal" href="#pystfilter">PyStFilter</a></li>
+<li><a class="reference internal" href="#pystfilterinfo">PyStFilterInfo</a></li>
+<li><a class="reference internal" href="#pystbalanceratiofilter">PyStBalanceRatioFilter</a></li>
+<li><a class="reference internal" href="#pystchromasuppressionfilter">PyStChromaSuppressionFilter</a></li>
+<li><a class="reference internal" href="#pystcolortransformationfilter">PyStColorTransformationFilter</a></li>
+<li><a class="reference internal" href="#pystdefectivepixeldetectionfilter">PyStDefectivePixelDetectionFilter</a></li>
+<li><a class="reference internal" href="#pystdefectivepixeldetectionresult">PyStDefectivePixelDetectionResult</a></li>
+<li><a class="reference internal" href="#pystdefectivepixelinformation">PyStDefectivePixelInformation</a></li>
+<li><a class="reference internal" href="#pystedgeenhancementfilter">PyStEdgeEnhancementFilter</a></li>
+<li><a class="reference internal" href="#pystflatfieldcorrectionfilter">PyStFlatFieldCorrectionFilter</a></li>
+<li><a class="reference internal" href="#pystgammacorrectionfilter">PyStGammaCorrectionFilter</a></li>
+<li><a class="reference internal" href="#pystgraphdatafilter">PyStGraphDataFilter</a></li>
+<li><a class="reference internal" href="#pystgraphdatalist">PyStGraphDataList</a></li>
+<li><a class="reference internal" href="#pystgraphdata">PyStGraphData</a></li>
+<li><a class="reference internal" href="#pystimageaveragingfilter">PyStImageAveragingFilter</a></li>
+<li><a class="reference internal" href="#pystleveladjustmentfilter">PyStLevelAdjustmentFilter</a></li>
+<li><a class="reference internal" href="#pystleveladjustpointinfo">PyStLevelAdjustPointInfo</a></li>
+<li><a class="reference internal" href="#pystnoisereductionfilter">PyStNoiseReductionFilter</a></li>
+<li><a class="reference internal" href="#pystsnmeasurementfilter">PyStSNMeasurementFilter</a></li>
+<li><a class="reference internal" href="#pystsnmeasurementresult">PyStSNMeasurementResult</a></li>
+<li><a class="reference internal" href="#pystsnmeasurementresultitem">PyStSNMeasurementResultItem</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#filer-classes">ファイラークラス</a><ul>
+<li><a class="reference internal" href="#pystfiler">PyStFiler</a></li>
+<li><a class="reference internal" href="#pyststillimagefiler">PyStStillImageFiler</a></li>
+<li><a class="reference internal" href="#pystvideofiler">PyStVideoFiler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="ref_stapi_tl.html"
+                          title="前の章へ">Transport Layerクラス</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="ref_genicam.html"
+                          title="次の章へ">GenICam GenApiクラス</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="ref_genicam.html" title="GenICam GenApiクラス"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="ref_stapi_tl.html" title="Transport Layerクラス"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reference.html" >StApi Python(stapipy)リファレンス</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">画像処理の関数とクラス</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

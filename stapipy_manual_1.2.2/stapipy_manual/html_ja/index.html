@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>StApi Pythonドキュメントにようこそ &#8212; StApi Python 1.2.2 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="はじめに" href="introduction.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="introduction.html" title="はじめに"
+             accesskey="N">次へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">StApi Pythonドキュメントにようこそ</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="welcome-to-stapi-python-s-documentation">
+<h1>StApi Pythonドキュメントにようこそ<a class="headerlink" href="#welcome-to-stapi-python-s-documentation" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<section id="precautions-on-safety">
+<h2>[安全上のご注意]<a class="headerlink" href="#precautions-on-safety" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>本ソフトウェアを使用するパソコンにウィルス対策ソフトを導入し、パソコンがウィルスに感染するリスクを低減させてください。また、ウィルス対策ソフトは常に最新の状態にしてください。OSの脆弱性に起因するセキュリティリスクを回避するために、本ソフトウェアを使用するパソコンのOSを常に最新の状態にしてください。機能の追加や操作性の改善、セキュリティの強化のため、本ソフトウェアは、常に最新のバージョンにアップデートしてお使いください。</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">目次</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">はじめに</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#genicam">GenICam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#stapi">StApi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#stapi-python">StApi Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="introduction.html#genicampython">GenICamのPythonバインディング</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="programmersguide.html">プログラマーズガイド</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="programmersguide.html#stapi-python-stapipy">StApi Python (stapipy)の構造</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programmersguide.html#id2">対応環境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programmersguide.html#stapi-sentech-sdk">StApi (Sentech SDK)のインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programmersguide.html#stapipy">stapipyのインストール</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programmersguide.html#id3">エラー処理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programmersguide.html#id4">画像データの取得までの流れ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programmersguide.html#genapi">GenApiノードのアクセス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="programmersguide.html#numpy">取得画像データからNumPy配列を取得する方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="samples.html">サンプルプログラム</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="samples.html#list-of-samples">サンプル一覧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="samples.html#source-codes">ソースコード</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">StApi Python(stapipy)リファレンス</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_common.html">基本関数とクラス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_tl.html">Transport Layerクラス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_ip.html">画像処理の関数とクラス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html">GenICam GenApiクラス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enumeration.html">列挙型リファレンス</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">ライセンス情報</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="license.html#eula">EULA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html#third-party">サードパティー</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">リリースノート</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="history.html#id1">リリース: 2024.05.31 (バージョン: 1.2.2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#id2">リリース: 2023.04.14 (バージョン: 1.2.1.1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#id3">リリース: 2022.12.16 (バージョン: 1.2.1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#id4">リリース: 2022.09.16 (バージョン: 1.1.2.4)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#id5">リリース: 2022.05.20 (バージョン: 1.1.2.3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#id6">リリース: 2021.12.03 (バージョン: 1.1.2.2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#id7">リリース: 2021.10.08 (バージョン: 1.1.2.1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#id8">リリース: 2020.07.31 (バージョン: 1.1.2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#id9">リリース: 2019.08.30 (バージョン: 1.0.8)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#id10">リリース: 2019.05.31 (バージョン: 1.0.7)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#rc3">リリース：2019.05.17 (バージョン1.0.7rc3)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#rc2">リリース：2019.04.15 (バージョン1.0.7rc2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="history.html#rc1">リリース：2019.04.11 (バージョン1.0.7rc1)</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="indices-and-tables">
+<h2>Indices and tables<a class="headerlink" href="#indices-and-tables" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></p></li>
+</ul>
+</section>
+<section id="document-number">
+<h2>Document number<a class="headerlink" href="#document-number" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<blockquote>
+<div><p>No.22S100</p>
+</div></blockquote>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="#">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">StApi Pythonドキュメントにようこそ</a><ul>
+<li><a class="reference internal" href="#precautions-on-safety">[安全上のご注意]</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#document-number">Document number</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="introduction.html"
+                          title="次の章へ">はじめに</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="introduction.html" title="はじめに"
+             >次へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">StApi Pythonドキュメントにようこそ</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

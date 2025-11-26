@@ -1,0 +1,3430 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>列挙型リファレンス &#8212; StApi Python 1.2.2 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="ライセンス情報" href="license.html" />
+    <link rel="prev" title="GenICam GenApiクラス" href="ref_genicam.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="license.html" title="ライセンス情報"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="ref_genicam.html" title="GenICam GenApiクラス"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reference.html" accesskey="U">StApi Python(stapipy)リファレンス</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">列挙型リファレンス</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="enumeration-reference">
+<h1>列挙型リファレンス<a class="headerlink" href="#enumeration-reference" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="genicam-related">
+<h2>GenICam関連の列挙型<a class="headerlink" href="#genicam-related" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="egcaccessmode">
+<h3>EGCAccessMode<a class="headerlink" href="#egcaccessmode" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCAccessMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCAccessMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCAccessMode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ノードのアクセスモード</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NI = 0</p></td>
+<td><p>実装されていません</p></td>
+</tr>
+<tr class="row-odd"><td><p>NA = 1</p></td>
+<td><p>利用不可</p></td>
+</tr>
+<tr class="row-even"><td><p>WO = 2</p></td>
+<td><p>書き込み専用</p></td>
+</tr>
+<tr class="row-odd"><td><p>RO = 3</p></td>
+<td><p>読み取り専用</p></td>
+</tr>
+<tr class="row-even"><td><p>RW = 4</p></td>
+<td><p>読み書き可能</p></td>
+</tr>
+<tr class="row-odd"><td><p>UndefinedAccessMode = 5</p></td>
+<td><p>未定義</p></td>
+</tr>
+<tr class="row-even"><td><p>CycleDetectAccessMode = 6</p></td>
+<td><p>AccessModeサイクル検出のために内部的に使用されます</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egccachingmode">
+<h3>EGCCachingMode<a class="headerlink" href="#egccachingmode" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCCachingMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCCachingMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCCachingMode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：レジスタのキャッシングモード</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NoCache = 0</p></td>
+<td><p>キャッシュを使いません</p></td>
+</tr>
+<tr class="row-odd"><td><p>WriteThrough = 1</p></td>
+<td><p>キャッシュとレジスターへの書き込み</p></td>
+</tr>
+<tr class="row-even"><td><p>WriteAround = 2</p></td>
+<td><p>レジスタへの書き込み、読み込み時にキャッシュへの書き込み</p></td>
+</tr>
+<tr class="row-odd"><td><p>UndefinedCachingMode = 3</p></td>
+<td><p>未定義</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egccallbacksuppressmode">
+<h3>EGCCallbackSuppressMode<a class="headerlink" href="#egccallbacksuppressmode" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCCallbackSuppressMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCCallbackSuppressMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCCallbackSuppressMode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：コールバック抑制モード</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Off = 0</p></td>
+<td><p>抑制モード：オフ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Active = 1</p></td>
+<td><p>抑制モード：アクティブ</p></td>
+</tr>
+<tr class="row-even"><td><p>Once = 2</p></td>
+<td><p>抑制モード：1回使用</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egccallbacktype">
+<h3>EGCCallbackType<a class="headerlink" href="#egccallbacktype" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCCallbackType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCCallbackType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCCallbackType" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：コールバックの種類</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>InsideLock = 1</p></td>
+<td><p>コールバックは、ロックされた領域の内側にツリーを離れると発生します</p></td>
+</tr>
+<tr class="row-odd"><td><p>OutsideLock = 2</p></td>
+<td><p>コールバックは、ロックされた領域の外側にツリーを離れると発生します</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egcdisplaynotation">
+<h3>EGCDisplayNotation<a class="headerlink" href="#egcdisplaynotation" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCDisplayNotation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCDisplayNotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCDisplayNotation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：floatの表示表記</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Automatic = 0</p></td>
+<td><p>より短いものに応じて科学的または固定されている場合の表記</p></td>
+</tr>
+<tr class="row-odd"><td><p>Fixed = 1</p></td>
+<td><p>表記法は固定   例：123.4</p></td>
+</tr>
+<tr class="row-even"><td><p>Scientific = 2</p></td>
+<td><p>表記は科学的  例：1.234e2</p></td>
+</tr>
+<tr class="row-odd"><td><p>UndefinedEDisplayNotation = 3</p></td>
+<td><p>未定義</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egcendianess">
+<h3>EGCEndianess<a class="headerlink" href="#egcendianess" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCEndianess">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCEndianess</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCEndianess" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙：レジスタ内の値のエンディアン</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BigEndian = 0</p></td>
+<td><p>ビッグエンディアン</p></td>
+</tr>
+<tr class="row-odd"><td><p>LittleEndian = 1</p></td>
+<td><p>リトルエンディアン</p></td>
+</tr>
+<tr class="row-even"><td><p>UndefinedEndian = 2</p></td>
+<td><p>未定義</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egcincmode">
+<h3>EGCIncMode<a class="headerlink" href="#egcincmode" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCIncMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCIncMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCIncMode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：インクリメントモード</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NoIncrement = 0</p></td>
+<td><p>インクリメントモードなし</p></td>
+</tr>
+<tr class="row-odd"><td><p>FixedIncrement = 1</p></td>
+<td><p>一定のインクリメントがあります</p></td>
+</tr>
+<tr class="row-even"><td><p>ListIncrement = 2</p></td>
+<td><p>有効な値のリストがあります</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egcinterfacetype">
+<h3>EGCInterfaceType<a class="headerlink" href="#egcinterfacetype" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCInterfaceType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCInterfaceType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCInterfaceType" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：インターフェース型</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IValue = 0</p></td>
+<td><p>IValueインターフェース</p></td>
+</tr>
+<tr class="row-odd"><td><p>IBase = 1</p></td>
+<td><p>IBaseインターフェース</p></td>
+</tr>
+<tr class="row-even"><td><p>IInteger = 2</p></td>
+<td><p>IIntegerインターフェース</p></td>
+</tr>
+<tr class="row-odd"><td><p>IBoolean = 3</p></td>
+<td><p>IBooleanインターフェース</p></td>
+</tr>
+<tr class="row-even"><td><p>ICommand = 4</p></td>
+<td><p>ICommandインターフェース</p></td>
+</tr>
+<tr class="row-odd"><td><p>IFloat = 5</p></td>
+<td><p>IFloatインターフェース</p></td>
+</tr>
+<tr class="row-even"><td><p>IString = 6</p></td>
+<td><p>IStringインターフェース</p></td>
+</tr>
+<tr class="row-odd"><td><p>IRegister = 7</p></td>
+<td><p>IRegisterインターフェース</p></td>
+</tr>
+<tr class="row-even"><td><p>ICategory = 8</p></td>
+<td><p>ICategoryインターフェース</p></td>
+</tr>
+<tr class="row-odd"><td><p>IEnumeration = 9</p></td>
+<td><p>IEnumerationインターフェース</p></td>
+</tr>
+<tr class="row-even"><td><p>IEnumEntry = 10</p></td>
+<td><p>IEnumEntryインターフェース</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPort = 11</p></td>
+<td><p>IPortインターフェース</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egclinktype">
+<h3>EGCLinkType<a class="headerlink" href="#egclinktype" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCLinkType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCLinkType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCLinkType" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：リンクタイプ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ParentNodes = 0</p></td>
+<td><p>All nodes for which this node is at least an
+invalidating child</p></td>
+</tr>
+<tr class="row-odd"><td><p>ReadingChildren = 1</p></td>
+<td><p>All nodes which can be read from</p></td>
+</tr>
+<tr class="row-even"><td><p>WritingChildren = 2</p></td>
+<td><p>All nodes which can write a value further
+down the node stack</p></td>
+</tr>
+<tr class="row-odd"><td><p>InvalidatingChildren = 3</p></td>
+<td><p>All directly connected nodes which invalidate
+this node</p></td>
+</tr>
+<tr class="row-even"><td><p>DependingNodes = 4</p></td>
+<td><p>All directly or indirectly connected nodes
+which are invalidated by this nodes
+(i.e.which are dependent on this node)</p></td>
+</tr>
+<tr class="row-odd"><td><p>TerminalNodes = 5</p></td>
+<td><p>All indirectly connected terminal nodes</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egcnamespace">
+<h3>EGCNamespace<a class="headerlink" href="#egcnamespace" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCNamespace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCNamespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCNamespace" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ノード名が標準かカスタムかを定義します</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Custom = 0</p></td>
+<td><p>カスタムネームスペース</p></td>
+</tr>
+<tr class="row-odd"><td><p>Standard = 1</p></td>
+<td><p>標準のネームスペース</p></td>
+</tr>
+<tr class="row-even"><td><p>UndefinedNamespace = 2</p></td>
+<td><p>未定義</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egcrepresentation">
+<h3>EGCRepresentation<a class="headerlink" href="#egcrepresentation" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCRepresentation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCRepresentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCRepresentation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ノード値の推奨表現</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Linear = 0</p></td>
+<td><p>線形動作のスライダー</p></td>
+</tr>
+<tr class="row-odd"><td><p>Logarithmic = 1</p></td>
+<td><p>対数的な振る舞いをするスライダー</p></td>
+</tr>
+<tr class="row-even"><td><p>Boolean = 2</p></td>
+<td><p>チェックボックス</p></td>
+</tr>
+<tr class="row-odd"><td><p>PureNumber = 3</p></td>
+<td><p>エディットコントロールに10進数</p></td>
+</tr>
+<tr class="row-even"><td><p>HexNumber = 4</p></td>
+<td><p>エディットコントロールに16進数</p></td>
+</tr>
+<tr class="row-odd"><td><p>IPV4Address = 5</p></td>
+<td><p>IPアドレス</p></td>
+</tr>
+<tr class="row-even"><td><p>MACAddress = 6</p></td>
+<td><p>MACアドレス</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egcsign">
+<h3>EGCSign<a class="headerlink" href="#egcsign" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCSign">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCSign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCSign" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：符号付きまたは符号なし整数</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Signed = 0</p></td>
+<td><p>符号付き整数</p></td>
+</tr>
+<tr class="row-odd"><td><p>Unsigned = 1</p></td>
+<td><p>符号なし整数</p></td>
+</tr>
+<tr class="row-even"><td><p>UndefinedSign = 2</p></td>
+<td><p>未定義</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egcstandardnamespace">
+<h3>EGCStandardNamespace<a class="headerlink" href="#egcstandardnamespace" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCStandardNamespace">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCStandardNamespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCStandardNamespace" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ノード名がどのネームスペースから来るかを定義します</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NoStandardNameSpace = 0</p></td>
+<td><p>カスタムネームスペース</p></td>
+</tr>
+<tr class="row-odd"><td><p>GEV = 1</p></td>
+<td><p>GigE Visionネームスペース</p></td>
+</tr>
+<tr class="row-even"><td><p>IIDC = 2</p></td>
+<td><p>1394 IIDCネームスペース</p></td>
+</tr>
+<tr class="row-odd"><td><p>CL = 3</p></td>
+<td><p>カメラリンクネームスペース</p></td>
+</tr>
+<tr class="row-even"><td><p>USB = 4</p></td>
+<td><p>USBネームスペース</p></td>
+</tr>
+<tr class="row-odd"><td><p>UndefinedStandardNamespace = 5</p></td>
+<td><p>未定義</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egcvisibility">
+<h3>EGCVisibility<a class="headerlink" href="#egcvisibility" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCVisibility">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCVisibility</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCVisibility" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ノードの推奨される可視性</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Beginner = 0</p></td>
+<td><p>Always visible</p></td>
+</tr>
+<tr class="row-odd"><td><p>Expert = 1</p></td>
+<td><p>Visible for experts or Gurus</p></td>
+</tr>
+<tr class="row-even"><td><p>Guru = 2</p></td>
+<td><p>Visible for Gurus</p></td>
+</tr>
+<tr class="row-odd"><td><p>Invisible = 3</p></td>
+<td><p>Not Visible</p></td>
+</tr>
+<tr class="row-even"><td><p>UndefinedVisibility = 4</p></td>
+<td><p>未定義</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="egcyesno">
+<h3>EGCYesNo<a class="headerlink" href="#egcyesno" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EGCYesNo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EGCYesNo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EGCYesNo" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：「Yes」/「No」の選択肢を定義します</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>No = 0</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p>Yes = 1</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>UndefinedYesNo = 2</p></td>
+<td><p>未定義</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+</section>
+<section id="gentl-related">
+<h2>GenTL関連の列挙型<a class="headerlink" href="#gentl-related" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="etlacqstartflags">
+<h3>ETLAcqStartFlags<a class="headerlink" href="#etlacqstartflags" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.ETLAcqStartFlags">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">ETLAcqStartFlags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.ETLAcqStartFlags" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：取得エンジンの開始フラグ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Default = 0</p></td>
+<td><p>デフォルトの動作</p></td>
+</tr>
+<tr class="row-odd"><td><p>CustomID = 1000</p></td>
+<td><p>カスタム（予備）</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="etlacqstopflags">
+<h3>ETLAcqStopFlags<a class="headerlink" href="#etlacqstopflags" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.ETLAcqStopFlags">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">ETLAcqStopFlags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.ETLAcqStopFlags" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：取得エンジンの停止フラグ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Default = 0</p></td>
+<td><p>現在実行中のタスクが完了したら取得を停止します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kill = 1</p></td>
+<td><p>直ちに取得を中止します。</p></td>
+</tr>
+<tr class="row-even"><td><p>CustomID = 1000</p></td>
+<td><p>カスタム（予備）</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="etlcharencoding">
+<h3>ETLCharEncoding<a class="headerlink" href="#etlcharencoding" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.ETLCharEncoding">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">ETLCharEncoding</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.ETLCharEncoding" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：GenTLプロデューサーの文字エンコーディング</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>EncodingAscii = 0</p></td>
+<td><p>ASCII</p></td>
+</tr>
+<tr class="row-odd"><td><p>EncodingUtf8 = 1</p></td>
+<td><p>UTF-8</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="etldeviceaccessflags">
+<h3>ETLDeviceAccessFlags<a class="headerlink" href="#etldeviceaccessflags" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.ETLDeviceAccessFlags">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">ETLDeviceAccessFlags</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.ETLDeviceAccessFlags" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：デバイスアクセスフラグ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AccessUnknown = 0</p></td>
+<td><p>コマンドでは使用されません。</p></td>
+</tr>
+<tr class="row-odd"><td><p>AccessNone = 1</p></td>
+<td><p>デバイスがオープンされていません。</p></td>
+</tr>
+<tr class="row-even"><td><p>AccessReadOnly = 2</p></td>
+<td><p>デバイスを読み取り専用でオープンします。</p></td>
+</tr>
+<tr class="row-odd"><td><p>AccessControl = 3</p></td>
+<td><p>他のホストが読み取り専用アクセスができるようにデバイスをオープンします。</p></td>
+</tr>
+<tr class="row-even"><td><p>AccessExclusive = 4</p></td>
+<td><p>このホストだけがデバイスにアクセスできるようにデバイスをオープンします。</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="etldeviceaccessstatus">
+<h3>ETLDeviceAccessStatus<a class="headerlink" href="#etldeviceaccessstatus" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.ETLDeviceAccessStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">ETLDeviceAccessStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.ETLDeviceAccessStatus" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：デバイスアクセスステータス</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>StatusUnknown = 0</p></td>
+<td><p>現在の状況は不明です。</p></td>
+</tr>
+<tr class="row-odd"><td><p>StatusReadWrite = 1</p></td>
+<td><p>読み取りと書き込みアクセス用にオープンすることができます。 現在オープンされていません。</p></td>
+</tr>
+<tr class="row-even"><td><p>StatusReadOnly = 2</p></td>
+<td><p>読み取りアクセス用にオープンすることができます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>StatusNoAccess = 3</p></td>
+<td><p>アクセスできません。</p></td>
+</tr>
+<tr class="row-even"><td><p>StatusBusy = 4</p></td>
+<td><p>別のプロセスが既に開かれています。</p></td>
+</tr>
+<tr class="row-odd"><td><p>StatusOpenReadWrite = 5</p></td>
+<td><p>読み書きアクセスでこのGenTLが既にオープンされています。</p></td>
+</tr>
+<tr class="row-even"><td><p>StatusOpenRead = 6</p></td>
+<td><p>読み取り専用アクセスでこのGenTLが既にオープンされています。</p></td>
+</tr>
+<tr class="row-odd"><td><p>StatusCustomID = 1000</p></td>
+<td><p>カスタム（予備）</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="etlerror">
+<h3>ETLError<a class="headerlink" href="#etlerror" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.ETLError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">ETLError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.ETLError" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：GenTLエラーコード（詳細はGenTLのドキュメントを参照）</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ErrSuccess = 0</p></td>
+<td><p>Operation was successful. No error
+occurred.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrError = -1001</p></td>
+<td><p>Unspecified runtime error.</p></td>
+</tr>
+<tr class="row-even"><td><p>ErrNotInitialized = -1002</p></td>
+<td><p>Module or resource not initialized.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrNotImplemented = -1003</p></td>
+<td><p>Requested operation not implemented.</p></td>
+</tr>
+<tr class="row-even"><td><p>ErrResourceInUse = -1004</p></td>
+<td><p>Requested resource is already in use.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrAccessDenied = -1005</p></td>
+<td><p>Requested operation is not allowed.</p></td>
+</tr>
+<tr class="row-even"><td><p>ErrInvalidHandle = -1006</p></td>
+<td><p>Given handle does not support the
+operation.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrInvalidID = -1007</p></td>
+<td><p>ID could not be connected to a resource.</p></td>
+</tr>
+<tr class="row-even"><td><p>ErrNoData = -1008</p></td>
+<td><p>The function has no data to work on.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrInvalidParameter = -1009</p></td>
+<td><p>One of the parameter given was not valid.</p></td>
+</tr>
+<tr class="row-even"><td><p>ErrIO = -1010</p></td>
+<td><p>Communication error has occurred.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrTimeout = -1011</p></td>
+<td><p>An operation's timeout time expired
+before it could be completed.</p></td>
+</tr>
+<tr class="row-even"><td><p>ErrAbort = -1012</p></td>
+<td><p>An operation has been aborted before
+it could be completed.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrInvalidBuffer = -1013</p></td>
+<td><p>The GenTL consumer has not announced
+enough buffer.</p></td>
+</tr>
+<tr class="row-even"><td><p>ErrNotAvailable = -1014</p></td>
+<td><p>Resource or information is not available.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrInvalidAddress = -1015</p></td>
+<td><p>A given address is out of range or
+invalid.</p></td>
+</tr>
+<tr class="row-even"><td><p>ErrBufferTooSmall = -1016</p></td>
+<td><p>A provided buffer is too small.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrInvalidIndex = -1017</p></td>
+<td><p>A provided index is out of bounds.</p></td>
+</tr>
+<tr class="row-even"><td><p>ErrParsingChunkData = -1018</p></td>
+<td><p>An error occurred when parsing a buffer
+containing chunk data</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrInvalidValue = -1019</p></td>
+<td><p>A register was trying to write an
+invalid value.</p></td>
+</tr>
+<tr class="row-even"><td><p>ErrResourceExhausted = -1020</p></td>
+<td><p>A requested resource is exhausted.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrOutOfMemory = -1021</p></td>
+<td><p>The system and/or other hardware ran
+out of memory.</p></td>
+</tr>
+<tr class="row-even"><td><p>ErrBusy = -1022</p></td>
+<td><p>The required operation cannot be
+executed because the resource is busy.</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrCustomID = -10000</p></td>
+<td><p>Custom error (generic runtime error)</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="etlpayloadtypeinfoid">
+<h3>ETLPayloadTypeInfoID<a class="headerlink" href="#etlpayloadtypeinfoid" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.ETLPayloadTypeInfoID">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">ETLPayloadTypeInfoID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.ETLPayloadTypeInfoID" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ペイロードの種類</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unknown = 0</p></td>
+<td><p>ペイロードタイプが不明です。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Image = 1</p></td>
+<td><p>画像データが含まれています。</p></td>
+</tr>
+<tr class="row-even"><td><p>RawData = 2</p></td>
+<td><p>未指定の生データが含まれています。</p></td>
+</tr>
+<tr class="row-odd"><td><p>File = 3</p></td>
+<td><p>ファイルのデータが含まれています。</p></td>
+</tr>
+<tr class="row-even"><td><p>ChunkData = 4</p></td>
+<td><p>チャンクデータが含まれています。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Jpeg = 5</p></td>
+<td><p>JPEGデータが含まれています。</p></td>
+</tr>
+<tr class="row-even"><td><p>Jpeg2000 = 6</p></td>
+<td><p>JPEG2000データが含まれています。</p></td>
+</tr>
+<tr class="row-odd"><td><p>H264 = 7</p></td>
+<td><p>H264データが含まれています。</p></td>
+</tr>
+<tr class="row-even"><td><p>ChunkOnly = 8</p></td>
+<td><p>チャックデータのみがあります。</p></td>
+</tr>
+<tr class="row-odd"><td><p>DeviceSpecific = 9</p></td>
+<td><p>デバイス固有のデータが含まれています。</p></td>
+</tr>
+<tr class="row-even"><td><p>MultiPart = 10</p></td>
+<td><p>ペイロードタイプが異なる複数の部分があります。</p></td>
+</tr>
+<tr class="row-odd"><td><p>CustomID = 10000</p></td>
+<td><p>カスタム（予備）</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="etlpixelendiannessid">
+<h3>ETLPixelEndiannessID<a class="headerlink" href="#etlpixelendiannessid" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.ETLPixelEndiannessID">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">ETLPixelEndiannessID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.ETLPixelEndiannessID" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ピクセルエンディアン</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unknown = 0</p></td>
+<td><p>不明</p></td>
+</tr>
+<tr class="row-odd"><td><p>Little = 1</p></td>
+<td><p>リトルエンディアン</p></td>
+</tr>
+<tr class="row-even"><td><p>Big = 2</p></td>
+<td><p>ビッグエンディアン</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="etlpixelformatnamespaceid">
+<h3>ETLPixelFormatNamespaceID<a class="headerlink" href="#etlpixelformatnamespaceid" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.ETLPixelFormatNamespaceID">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">ETLPixelFormatNamespaceID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.ETLPixelFormatNamespaceID" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ピクセル形式のネームスペース</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unknown = 0</p></td>
+<td><p>Pixel format value is unknown.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GEV = 1</p></td>
+<td><p>Reference to GigE Vision.</p></td>
+</tr>
+<tr class="row-even"><td><p>IIDC = 2</p></td>
+<td><p>Reference to IIDC.</p></td>
+</tr>
+<tr class="row-odd"><td><p>PFNC16Bit = 3</p></td>
+<td><p>Reference to PFNC 16 bit.</p></td>
+</tr>
+<tr class="row-even"><td><p>PFNC32Bit = 4</p></td>
+<td><p>Reference to PFNC 32 bit.</p></td>
+</tr>
+<tr class="row-odd"><td><p>CustomID = 1000</p></td>
+<td><p>カスタム（予備）</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="etlurlschemeid">
+<h3>ETLURLSchemeID<a class="headerlink" href="#etlurlschemeid" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.ETLURLSchemeID">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">ETLURLSchemeID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.ETLURLSchemeID" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ポートURLスキーム</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Local = 0</p></td>
+<td><p>XMLファイルはローカルレジスタマップから取得されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Http = 1</p></td>
+<td><p>XMLファイルはhttpプロトコルで取得されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>File = 2</p></td>
+<td><p>XMLファイルはローカルハードディスクから取得されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>CustomID = 1000</p></td>
+<td><p>カスタム（予備）</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+</section>
+<section id="stapi-related-all">
+<h2>一般なStApi関連の列挙型<a class="headerlink" href="#stapi-related-all" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="estcallbacktype">
+<h3>EStCallbackType<a class="headerlink" href="#estcallbacktype" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStCallbackType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStCallbackType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStCallbackType" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：コールバックタイプ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GenTLSystemError = 0</p></td>
+<td><p>GenTLシステムモジュールエラーコールバック</p></td>
+</tr>
+<tr class="row-odd"><td><p>GenTLInterfaceError = 1</p></td>
+<td><p>GenTLインターフェイスモジュールエラーコールバック</p></td>
+</tr>
+<tr class="row-even"><td><p>GenTLDeviceError = 2</p></td>
+<td><p>GenTLデバイスモジュールエラーコールバック</p></td>
+</tr>
+<tr class="row-odd"><td><p>GenTLDataStreamError = 3</p></td>
+<td><p>GenTLデータストリームモジュールエラーコールバック</p></td>
+</tr>
+<tr class="row-even"><td><p>GenTLStreamBufferError = 4</p></td>
+<td><p>GenTL(ストリーム)バッファモジュールエラーコールバック</p></td>
+</tr>
+<tr class="row-odd"><td><p>GenTLDataStreamNewBuffer = 5</p></td>
+<td><p>GenTLNewBufferコールバック</p></td>
+</tr>
+<tr class="row-even"><td><p>StApiIPVideoFilerOpen = 6</p></td>
+<td><p>動画ファイルオープンコールバック</p></td>
+</tr>
+<tr class="row-odd"><td><p>StApiIPVideoFilerClose = 7</p></td>
+<td><p>動画ファイルクローズコールバック</p></td>
+</tr>
+<tr class="row-even"><td><p>StApiIPVideoFilerError = 8</p></td>
+<td><p>動画ファイルエラーコールバック</p></td>
+</tr>
+<tr class="row-odd"><td><p>GenTLInterfaceClosing = 14</p></td>
+<td><p>インターフェイスクロージングコールバック</p></td>
+</tr>
+<tr class="row-even"><td><p>GenTLInterfaceListUpdated = 15</p></td>
+<td><p>インターフェイスリスト更新コールバック</p></td>
+</tr>
+<tr class="row-odd"><td><p>GenTLDeviceListUpdated = 16</p></td>
+<td><p>デバイスリスト更新コールバック</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estinterfacetype">
+<h3>EStInterfaceType<a class="headerlink" href="#estinterfacetype" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStInterfaceType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStInterfaceType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStInterfaceType" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：インターフェイスの種類</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unknown = 0</p></td>
+<td><p>不正な値</p></td>
+</tr>
+<tr class="row-odd"><td><p>USB3Vision = 1</p></td>
+<td><p>USB3Vision</p></td>
+</tr>
+<tr class="row-even"><td><p>GigEVision = 2</p></td>
+<td><p>GigEVision</p></td>
+</tr>
+<tr class="row-odd"><td><p>CoaXPress = 4</p></td>
+<td><p>CoaXPress</p></td>
+</tr>
+<tr class="row-even"><td><p>CameraLink = 8</p></td>
+<td><p>CameraLink</p></td>
+</tr>
+<tr class="row-odd"><td><p>VirtualFrameGrabber = 16</p></td>
+<td><p>VirtualFrameGrabber</p></td>
+</tr>
+<tr class="row-even"><td><p>All = -1</p></td>
+<td><p>全てのインターフェイス</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estmemoryinitialization">
+<h3>EStMemoryInitialization<a class="headerlink" href="#estmemoryinitialization" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStMemoryInitialization">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStMemoryInitialization</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStMemoryInitialization" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：メモリ初期化方法</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>DoNothing = 0</p></td>
+<td><p>何もしない(初期値は不定になります)</p></td>
+</tr>
+<tr class="row-odd"><td><p>FilledWith0 = 1</p></td>
+<td><p>0で初期化します。</p></td>
+</tr>
+<tr class="row-even"><td><p>FilledWith1 = 2</p></td>
+<td><p>1(0xFF)で初期化します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chart_1 = 3</p></td>
+<td><p>対応している場合チャート1を生成します。</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 4</p></td>
+<td><p>メモリ初期化方法数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estoperationtype">
+<h3>EStOperationType<a class="headerlink" href="#estoperationtype" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStOperationType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStOperationType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStOperationType" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：演算タイプ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AbsoluteDifference = 0</p></td>
+<td><p>絶対差</p></td>
+</tr>
+<tr class="row-odd"><td><p>Subtraction = 1</p></td>
+<td><p>減算値</p></td>
+</tr>
+<tr class="row-even"><td><p>Addition = 2</p></td>
+<td><p>加算値</p></td>
+</tr>
+<tr class="row-odd"><td><p>Division = 3</p></td>
+<td><p>除算値</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 4</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estorderofpolarizedfilters">
+<h3>EStOrderOfPolarizedFilters<a class="headerlink" href="#estorderofpolarizedfilters" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStOrderOfPolarizedFilters">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStOrderOfPolarizedFilters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStOrderOfPolarizedFilters" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：偏光フィルター順</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unknown = 0</p></td>
+<td><p>Unknown</p></td>
+</tr>
+<tr class="row-odd"><td><p>_90_45_135_0 = 1</p></td>
+<td><p>90-&gt;45-&gt;135-&gt;0</p></td>
+</tr>
+<tr class="row-even"><td><p>_45_90_0_135 = 2</p></td>
+<td><p>45-&gt;90-&gt;0-&gt;135</p></td>
+</tr>
+<tr class="row-odd"><td><p>_135_0_90_45 = 3</p></td>
+<td><p>135-&gt;0-&gt;90-&gt;45</p></td>
+</tr>
+<tr class="row-even"><td><p>_0_135_45_90 = 4</p></td>
+<td><p>0-&gt;135-&gt;45-&gt;90</p></td>
+</tr>
+<tr class="row-odd"><td><p>_135_90_0_45 = 5</p></td>
+<td><p>135-&gt;90-&gt;0-&gt;45</p></td>
+</tr>
+<tr class="row-even"><td><p>_0_45_135_90 = 6</p></td>
+<td><p>0-&gt;45-&gt;135-&gt;90</p></td>
+</tr>
+<tr class="row-odd"><td><p>_90_135_45_0 = 7</p></td>
+<td><p>90-&gt;135-&gt;45-&gt;0</p></td>
+</tr>
+<tr class="row-even"><td><p>_45_0_90_135 = 8</p></td>
+<td><p>45-&gt;0-&gt;90-&gt;135</p></td>
+</tr>
+<tr class="row-odd"><td><p>Count = 9</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estpixelcolorfilter">
+<h3>EStPixelColorFilter<a class="headerlink" href="#estpixelcolorfilter" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStPixelColorFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStPixelColorFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStPixelColorFilter" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：カラーフィルターの種類</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unknown = 0</p></td>
+<td><p>Unknown</p></td>
+</tr>
+<tr class="row-odd"><td><p>ColorFilterNone = 1</p></td>
+<td><p>No color filter</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerRG = 2</p></td>
+<td><p>Bayer RG</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerGR = 3</p></td>
+<td><p>Bayer GR</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerGB = 4</p></td>
+<td><p>Bayer GB</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerBG = 5</p></td>
+<td><p>Bayer BG</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1Mono = 6</p></td>
+<td><p>Pol1Mono</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoX = 7</p></td>
+<td><p>Pol1MonoX</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoY = 8</p></td>
+<td><p>Pol1MonoY</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoXY = 9</p></td>
+<td><p>Pol1MonoXY</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRG = 10</p></td>
+<td><p>Pol1BayerRG</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGX = 11</p></td>
+<td><p>Pol1BayerRGX</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGY = 12</p></td>
+<td><p>Pol1BayerRGY</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGXY = 13</p></td>
+<td><p>Pol1BayerRGXY</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoC = 14</p></td>
+<td><p>Pol1MonoC</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoXC = 15</p></td>
+<td><p>Pol1MonoXC</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoYC = 16</p></td>
+<td><p>Pol1MonoYC</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoXYC = 17</p></td>
+<td><p>Pol1MonoXYC</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGC = 18</p></td>
+<td><p>Pol1BayerRGC</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGXC = 19</p></td>
+<td><p>Pol1BayerRGXC</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGYC = 20</p></td>
+<td><p>Pol1BayerRGYC</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGXYC = 21</p></td>
+<td><p>Pol1BayerRGXYC</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estpixelcomponent">
+<h3>EStPixelComponent<a class="headerlink" href="#estpixelcomponent" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStPixelComponent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStPixelComponent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStPixelComponent" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 56%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>画素コンポーネント</p></th>
+<th class="head"><p>値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unknown</p></td>
+<td><p>0x0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono</p></td>
+<td><p>0x1000000</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono1</p></td>
+<td><p>0x1010000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono2</p></td>
+<td><p>0x1020000</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono4</p></td>
+<td><p>0x1040000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono8</p></td>
+<td><p>0x1080000</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono8_POL_000</p></td>
+<td><p>0x1080001</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono8_POL_045</p></td>
+<td><p>0x1080002</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono8_POL_080</p></td>
+<td><p>0x1080003</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono8_POL_135</p></td>
+<td><p>0x1080004</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono10</p></td>
+<td><p>0x10a0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono10_POL_000</p></td>
+<td><p>0x10a0001</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono10_POL_045</p></td>
+<td><p>0x10a0002</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono10_POL_090</p></td>
+<td><p>0x10a0003</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono10_POL_135</p></td>
+<td><p>0x10a0004</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono12</p></td>
+<td><p>0x10c0000</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono12_POL_000</p></td>
+<td><p>0x10c0001</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono12_POL_045</p></td>
+<td><p>0x10c0002</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono12_POL_090</p></td>
+<td><p>0x10c0003</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono12_POL_135</p></td>
+<td><p>0x10c0004</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono14</p></td>
+<td><p>0x10e0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono16</p></td>
+<td><p>0x1100000</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono32</p></td>
+<td><p>0x1200000</p></td>
+</tr>
+<tr class="row-odd"><td><p>R</p></td>
+<td><p>0x2000000</p></td>
+</tr>
+<tr class="row-even"><td><p>R4</p></td>
+<td><p>0x2040000</p></td>
+</tr>
+<tr class="row-odd"><td><p>R8</p></td>
+<td><p>0x2080000</p></td>
+</tr>
+<tr class="row-even"><td><p>R8_POL_000</p></td>
+<td><p>0x2080001</p></td>
+</tr>
+<tr class="row-odd"><td><p>R8_POL_045</p></td>
+<td><p>0x2080002</p></td>
+</tr>
+<tr class="row-even"><td><p>R8_POL_090</p></td>
+<td><p>0x2080003</p></td>
+</tr>
+<tr class="row-odd"><td><p>R8_POL_135</p></td>
+<td><p>0x2080004</p></td>
+</tr>
+<tr class="row-even"><td><p>R10</p></td>
+<td><p>0x20a0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>R10_POL_000</p></td>
+<td><p>0x20a0001</p></td>
+</tr>
+<tr class="row-even"><td><p>R10_POL_045</p></td>
+<td><p>0x20a0002</p></td>
+</tr>
+<tr class="row-odd"><td><p>R10_POL_090</p></td>
+<td><p>0x20a0003</p></td>
+</tr>
+<tr class="row-even"><td><p>R10_POL_135</p></td>
+<td><p>0x20a0004</p></td>
+</tr>
+<tr class="row-odd"><td><p>R12</p></td>
+<td><p>0x20c0000</p></td>
+</tr>
+<tr class="row-even"><td><p>R12_POL_000</p></td>
+<td><p>0x20c0001</p></td>
+</tr>
+<tr class="row-odd"><td><p>R12_POL_045</p></td>
+<td><p>0x20c0002</p></td>
+</tr>
+<tr class="row-even"><td><p>R12_POL_090</p></td>
+<td><p>0x20c0003</p></td>
+</tr>
+<tr class="row-odd"><td><p>R12_POL_135</p></td>
+<td><p>0x20c0004</p></td>
+</tr>
+<tr class="row-even"><td><p>R14</p></td>
+<td><p>0x20e0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>R16</p></td>
+<td><p>0x2100000</p></td>
+</tr>
+<tr class="row-even"><td><p>G</p></td>
+<td><p>0x3000000</p></td>
+</tr>
+<tr class="row-odd"><td><p>G4</p></td>
+<td><p>0x3040000</p></td>
+</tr>
+<tr class="row-even"><td><p>G8</p></td>
+<td><p>0x3080000</p></td>
+</tr>
+<tr class="row-odd"><td><p>G10</p></td>
+<td><p>0x30a0000</p></td>
+</tr>
+<tr class="row-even"><td><p>G12</p></td>
+<td><p>0x30c0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>G14</p></td>
+<td><p>0x30e0000</p></td>
+</tr>
+<tr class="row-even"><td><p>G16</p></td>
+<td><p>0x3100000</p></td>
+</tr>
+<tr class="row-odd"><td><p>B</p></td>
+<td><p>0x4000000</p></td>
+</tr>
+<tr class="row-even"><td><p>B4</p></td>
+<td><p>0x4040000</p></td>
+</tr>
+<tr class="row-odd"><td><p>B8</p></td>
+<td><p>0x4080000</p></td>
+</tr>
+<tr class="row-even"><td><p>B8_POL_000</p></td>
+<td><p>0x4080001</p></td>
+</tr>
+<tr class="row-odd"><td><p>B8_POL_045</p></td>
+<td><p>0x4080002</p></td>
+</tr>
+<tr class="row-even"><td><p>B8_POL_090</p></td>
+<td><p>0x4080003</p></td>
+</tr>
+<tr class="row-odd"><td><p>B8_POL_135</p></td>
+<td><p>0x4080004</p></td>
+</tr>
+<tr class="row-even"><td><p>B10</p></td>
+<td><p>0x40a0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>B10_POL_000</p></td>
+<td><p>0x40a0001</p></td>
+</tr>
+<tr class="row-even"><td><p>B10_POL_045</p></td>
+<td><p>0x40a0002</p></td>
+</tr>
+<tr class="row-odd"><td><p>B10_POL_090</p></td>
+<td><p>0x40a0003</p></td>
+</tr>
+<tr class="row-even"><td><p>B10_POL_135</p></td>
+<td><p>0x40a0004</p></td>
+</tr>
+<tr class="row-odd"><td><p>B12</p></td>
+<td><p>0x40c0000</p></td>
+</tr>
+<tr class="row-even"><td><p>B12_POL_000</p></td>
+<td><p>0x40c0001</p></td>
+</tr>
+<tr class="row-odd"><td><p>B12_POL_045</p></td>
+<td><p>0x40c0002</p></td>
+</tr>
+<tr class="row-even"><td><p>B12_POL_090</p></td>
+<td><p>0x40c0003</p></td>
+</tr>
+<tr class="row-odd"><td><p>B12_POL_135</p></td>
+<td><p>0x40c0004</p></td>
+</tr>
+<tr class="row-even"><td><p>B14</p></td>
+<td><p>0x40e0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>B16</p></td>
+<td><p>0x4100000</p></td>
+</tr>
+<tr class="row-even"><td><p>Gr</p></td>
+<td><p>0x5000000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gr4</p></td>
+<td><p>0x5040000</p></td>
+</tr>
+<tr class="row-even"><td><p>Gr8</p></td>
+<td><p>0x5080000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gr8_POL_000</p></td>
+<td><p>0x5080001</p></td>
+</tr>
+<tr class="row-even"><td><p>Gr8_POL_045</p></td>
+<td><p>0x5080002</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gr8_POL_090</p></td>
+<td><p>0x5080003</p></td>
+</tr>
+<tr class="row-even"><td><p>Gr8_POL_135</p></td>
+<td><p>0x5080004</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gr10</p></td>
+<td><p>0x50a0000</p></td>
+</tr>
+<tr class="row-even"><td><p>Gr10_POL_000</p></td>
+<td><p>0x50a0001</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gr10_POL_045</p></td>
+<td><p>0x50a0002</p></td>
+</tr>
+<tr class="row-even"><td><p>Gr10_POL_090</p></td>
+<td><p>0x50a0003</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gr10_POL_135</p></td>
+<td><p>0x50a0004</p></td>
+</tr>
+<tr class="row-even"><td><p>Gr12</p></td>
+<td><p>0x50c0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gr12_POL_000</p></td>
+<td><p>0x50c0001</p></td>
+</tr>
+<tr class="row-even"><td><p>Gr12_POL_045</p></td>
+<td><p>0x50c0002</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gr12_POL_090</p></td>
+<td><p>0x50c0003</p></td>
+</tr>
+<tr class="row-even"><td><p>Gr12_POL_135</p></td>
+<td><p>0x50c0004</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gr14</p></td>
+<td><p>0x50e0000</p></td>
+</tr>
+<tr class="row-even"><td><p>Gr16</p></td>
+<td><p>0x5100000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gb</p></td>
+<td><p>0x6000000</p></td>
+</tr>
+<tr class="row-even"><td><p>Gb4</p></td>
+<td><p>0x6040000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gb8</p></td>
+<td><p>0x6080000</p></td>
+</tr>
+<tr class="row-even"><td><p>Gb8_POL_000</p></td>
+<td><p>0x6080001</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gb8_POL_045</p></td>
+<td><p>0x6080002</p></td>
+</tr>
+<tr class="row-even"><td><p>Gb8_POL_090</p></td>
+<td><p>0x6080003</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gb8_POL_135</p></td>
+<td><p>0x6080004</p></td>
+</tr>
+<tr class="row-even"><td><p>Gb10</p></td>
+<td><p>0x60a0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gb10_POL_000</p></td>
+<td><p>0x60a0001</p></td>
+</tr>
+<tr class="row-even"><td><p>Gb10_POL_045</p></td>
+<td><p>0x60a0002</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gb10_POL_090</p></td>
+<td><p>0x60a0003</p></td>
+</tr>
+<tr class="row-even"><td><p>Gb10_POL_135</p></td>
+<td><p>0x60a0004</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gb12</p></td>
+<td><p>0x60c0000</p></td>
+</tr>
+<tr class="row-even"><td><p>Gb12_POL_000</p></td>
+<td><p>0x60c0001</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gb12_POL_045</p></td>
+<td><p>0x60c0002</p></td>
+</tr>
+<tr class="row-even"><td><p>Gb12_POL_090</p></td>
+<td><p>0x60c0003</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gb12_POL_135</p></td>
+<td><p>0x60c0004</p></td>
+</tr>
+<tr class="row-even"><td><p>Gb14</p></td>
+<td><p>0x60e0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gb16</p></td>
+<td><p>0x6100000</p></td>
+</tr>
+<tr class="row-even"><td><p>Y</p></td>
+<td><p>0x7000000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Y8</p></td>
+<td><p>0x7080000</p></td>
+</tr>
+<tr class="row-even"><td><p>Cb8</p></td>
+<td><p>0x8080000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cr8</p></td>
+<td><p>0x9080000</p></td>
+</tr>
+<tr class="row-even"><td><p>U8</p></td>
+<td><p>0xa080000</p></td>
+</tr>
+<tr class="row-odd"><td><p>V8</p></td>
+<td><p>0xb080000</p></td>
+</tr>
+<tr class="row-even"><td><p>Data8</p></td>
+<td><p>0xc080000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data8s</p></td>
+<td><p>0xc080001</p></td>
+</tr>
+<tr class="row-even"><td><p>Data16</p></td>
+<td><p>0xc100000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data16s</p></td>
+<td><p>0xc100001</p></td>
+</tr>
+<tr class="row-even"><td><p>Data32</p></td>
+<td><p>0xc200000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data32f</p></td>
+<td><p>0xc200002</p></td>
+</tr>
+<tr class="row-even"><td><p>Data32s</p></td>
+<td><p>0xc200001</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data64</p></td>
+<td><p>0xc400000</p></td>
+</tr>
+<tr class="row-even"><td><p>Data64f</p></td>
+<td><p>0xc400002</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data64s</p></td>
+<td><p>0xc400001</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estpixelformatnamingconvention">
+<h3>EStPixelFormatNamingConvention<a class="headerlink" href="#estpixelformatnamingconvention" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStPixelFormatNamingConvention">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStPixelFormatNamingConvention</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStPixelFormatNamingConvention" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 69%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Pixel Format</p></th>
+<th class="head"><p>値</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unknown</p></td>
+<td><p>0xffffffff</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono1p</p></td>
+<td><p>0x1010037</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono2p</p></td>
+<td><p>0x1020038</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono4p</p></td>
+<td><p>0x1040039</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono8</p></td>
+<td><p>0x1080001</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono10</p></td>
+<td><p>0x1100003</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono10p</p></td>
+<td><p>0x10a0046</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono12</p></td>
+<td><p>0x1100005</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono12p</p></td>
+<td><p>0x10c0047</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono14</p></td>
+<td><p>0x1100025</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono14p</p></td>
+<td><p>0x10e0104</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono16</p></td>
+<td><p>0x1100007</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono32</p></td>
+<td><p>0x1200111</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerBG4p</p></td>
+<td><p>0x1040110</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerBG8</p></td>
+<td><p>0x108000b</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerBG10</p></td>
+<td><p>0x110000f</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerBG10p</p></td>
+<td><p>0x10a0052</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerBG12</p></td>
+<td><p>0x1100013</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerBG12p</p></td>
+<td><p>0x10c0053</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerBG14</p></td>
+<td><p>0x110010c</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerBG14p</p></td>
+<td><p>0x10e0108</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerBG16</p></td>
+<td><p>0x1100031</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerGB4p</p></td>
+<td><p>0x104010f</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerGB8</p></td>
+<td><p>0x108000a</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerGB10</p></td>
+<td><p>0x110000e</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerGB10p</p></td>
+<td><p>0x10a0054</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerGB12</p></td>
+<td><p>0x1100012</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerGB12p</p></td>
+<td><p>0x10c0055</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerGB14</p></td>
+<td><p>0x110010b</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerGB14p</p></td>
+<td><p>0x10e0107</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerGB16</p></td>
+<td><p>0x1100030</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerGR4p</p></td>
+<td><p>0x104010d</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerGR8</p></td>
+<td><p>0x1080008</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerGR10</p></td>
+<td><p>0x110000c</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerGR10p</p></td>
+<td><p>0x10a0056</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerGR12</p></td>
+<td><p>0x1100010</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerGR12p</p></td>
+<td><p>0x10c0057</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerGR14</p></td>
+<td><p>0x1100109</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerGR14p</p></td>
+<td><p>0x10e0105</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerGR16</p></td>
+<td><p>0x110002e</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerRG4p</p></td>
+<td><p>0x104010e</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerRG8</p></td>
+<td><p>0x1080009</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerRG10</p></td>
+<td><p>0x110000d</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerRG10p</p></td>
+<td><p>0x10a0058</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerRG12</p></td>
+<td><p>0x1100011</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerRG12p</p></td>
+<td><p>0x10c0059</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerRG14</p></td>
+<td><p>0x110010a</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerRG14p</p></td>
+<td><p>0x10e0106</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerRG16</p></td>
+<td><p>0x110002f</p></td>
+</tr>
+<tr class="row-odd"><td><p>RGBa8</p></td>
+<td><p>0x2200016</p></td>
+</tr>
+<tr class="row-even"><td><p>RGB8</p></td>
+<td><p>0x2180014</p></td>
+</tr>
+<tr class="row-odd"><td><p>RGB10p32</p></td>
+<td><p>0x220001d</p></td>
+</tr>
+<tr class="row-even"><td><p>BGRa8</p></td>
+<td><p>0x2200017</p></td>
+</tr>
+<tr class="row-odd"><td><p>BGRa10</p></td>
+<td><p>0x240004c</p></td>
+</tr>
+<tr class="row-even"><td><p>BGRa12</p></td>
+<td><p>0x240004e</p></td>
+</tr>
+<tr class="row-odd"><td><p>BGRa14</p></td>
+<td><p>0x2400050</p></td>
+</tr>
+<tr class="row-even"><td><p>BGRa16</p></td>
+<td><p>0x2400051</p></td>
+</tr>
+<tr class="row-odd"><td><p>RGBa10</p></td>
+<td><p>0x240005f</p></td>
+</tr>
+<tr class="row-even"><td><p>RGBa12</p></td>
+<td><p>0x2400061</p></td>
+</tr>
+<tr class="row-odd"><td><p>RGBa14</p></td>
+<td><p>0x2400063</p></td>
+</tr>
+<tr class="row-even"><td><p>RGBa16</p></td>
+<td><p>0x2400064</p></td>
+</tr>
+<tr class="row-odd"><td><p>BGR8</p></td>
+<td><p>0x2180015</p></td>
+</tr>
+<tr class="row-even"><td><p>BGR10</p></td>
+<td><p>0x2300019</p></td>
+</tr>
+<tr class="row-odd"><td><p>BGR12</p></td>
+<td><p>0x230001b</p></td>
+</tr>
+<tr class="row-even"><td><p>BGR14</p></td>
+<td><p>0x230004a</p></td>
+</tr>
+<tr class="row-odd"><td><p>BGR16</p></td>
+<td><p>0x230004b</p></td>
+</tr>
+<tr class="row-even"><td><p>RGB10</p></td>
+<td><p>0x2300018</p></td>
+</tr>
+<tr class="row-odd"><td><p>RGB12</p></td>
+<td><p>0x230001a</p></td>
+</tr>
+<tr class="row-even"><td><p>RGB14</p></td>
+<td><p>0x230005e</p></td>
+</tr>
+<tr class="row-odd"><td><p>RGB8_Planar</p></td>
+<td><p>0x2180021</p></td>
+</tr>
+<tr class="row-even"><td><p>RGB10_Planar</p></td>
+<td><p>0x2300022</p></td>
+</tr>
+<tr class="row-odd"><td><p>RGB12_Planar</p></td>
+<td><p>0x2300023</p></td>
+</tr>
+<tr class="row-even"><td><p>RGB16_Planar</p></td>
+<td><p>0x2300024</p></td>
+</tr>
+<tr class="row-odd"><td><p>BGR10p</p></td>
+<td><p>0x21e0048</p></td>
+</tr>
+<tr class="row-even"><td><p>BGR12p</p></td>
+<td><p>0x2240049</p></td>
+</tr>
+<tr class="row-odd"><td><p>RGB10p</p></td>
+<td><p>0x21e005c</p></td>
+</tr>
+<tr class="row-even"><td><p>RGB12p</p></td>
+<td><p>0x224005d</p></td>
+</tr>
+<tr class="row-odd"><td><p>RGB16</p></td>
+<td><p>0x2300033</p></td>
+</tr>
+<tr class="row-even"><td><p>CBGR10p32</p></td>
+<td><p>0x82200001</p></td>
+</tr>
+<tr class="row-odd"><td><p>YCbCr8</p></td>
+<td><p>0x218005b</p></td>
+</tr>
+<tr class="row-even"><td><p>YCbCr411_8</p></td>
+<td><p>0x20c005a</p></td>
+</tr>
+<tr class="row-odd"><td><p>YCbCr422_8</p></td>
+<td><p>0x210003b</p></td>
+</tr>
+<tr class="row-even"><td><p>YCbCr709_422_8</p></td>
+<td><p>0x2100041</p></td>
+</tr>
+<tr class="row-odd"><td><p>YCbCr601_422_8</p></td>
+<td><p>0x210003e</p></td>
+</tr>
+<tr class="row-even"><td><p>YCbCr411_8_CbYYCrYY</p></td>
+<td><p>0x20c003c</p></td>
+</tr>
+<tr class="row-odd"><td><p>YCbCr601_411_8_CbYYCrYY</p></td>
+<td><p>0x20c003f</p></td>
+</tr>
+<tr class="row-even"><td><p>YCbCr709_411_8_CbYYCrYY</p></td>
+<td><p>0x20c0042</p></td>
+</tr>
+<tr class="row-odd"><td><p>YCbCr422_8_CbYCrY</p></td>
+<td><p>0x2100043</p></td>
+</tr>
+<tr class="row-even"><td><p>YCbCr601_422_8_CbYCrY</p></td>
+<td><p>0x2100044</p></td>
+</tr>
+<tr class="row-odd"><td><p>YCbCr709_422_8_CbYCrY</p></td>
+<td><p>0x2100045</p></td>
+</tr>
+<tr class="row-even"><td><p>YCbCr8_CbYCr</p></td>
+<td><p>0x218003a</p></td>
+</tr>
+<tr class="row-odd"><td><p>YCbCr601_8_CbYCr</p></td>
+<td><p>0x218003d</p></td>
+</tr>
+<tr class="row-even"><td><p>YCbCr709_8_CbYCr</p></td>
+<td><p>0x2180040</p></td>
+</tr>
+<tr class="row-odd"><td><p>YUV411_8_UYYVYY</p></td>
+<td><p>0x20c001e</p></td>
+</tr>
+<tr class="row-even"><td><p>YUV422_8_UYVY</p></td>
+<td><p>0x210001f</p></td>
+</tr>
+<tr class="row-odd"><td><p>YUV8_UYV</p></td>
+<td><p>0x2180020</p></td>
+</tr>
+<tr class="row-even"><td><p>YUV422_8</p></td>
+<td><p>0x2100032</p></td>
+</tr>
+<tr class="row-odd"><td><p>Mono10Packed</p></td>
+<td><p>0x10c0004</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono12Packed</p></td>
+<td><p>0x10c0006</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerBG10Packed</p></td>
+<td><p>0x10c0029</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerBG12Packed</p></td>
+<td><p>0x10c002d</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerGB10Packed</p></td>
+<td><p>0x10c0028</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerGB12Packed</p></td>
+<td><p>0x10c002c</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerGR10Packed</p></td>
+<td><p>0x10c0026</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerGR12Packed</p></td>
+<td><p>0x10c002a</p></td>
+</tr>
+<tr class="row-odd"><td><p>BayerRG10Packed</p></td>
+<td><p>0x10c0027</p></td>
+</tr>
+<tr class="row-even"><td><p>BayerRG12Packed</p></td>
+<td><p>0x10c002b</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data8</p></td>
+<td><p>0x1080116</p></td>
+</tr>
+<tr class="row-even"><td><p>Data8s</p></td>
+<td><p>0x1080117</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data16</p></td>
+<td><p>0x1100118</p></td>
+</tr>
+<tr class="row-even"><td><p>Data16s</p></td>
+<td><p>0x1100119</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data32</p></td>
+<td><p>0x120011a</p></td>
+</tr>
+<tr class="row-even"><td><p>Data32f</p></td>
+<td><p>0x120011c</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data32s</p></td>
+<td><p>0x120011b</p></td>
+</tr>
+<tr class="row-even"><td><p>Data64</p></td>
+<td><p>0x140011d</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data64f</p></td>
+<td><p>0x140011f</p></td>
+</tr>
+<tr class="row-even"><td><p>Data64s</p></td>
+<td><p>0x140011e</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1Mono8</p></td>
+<td><p>0x81080002</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoX8</p></td>
+<td><p>0x81080003</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoY8</p></td>
+<td><p>0x81080004</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXY8</p></td>
+<td><p>0x81080005</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1Mono10</p></td>
+<td><p>0x81100006</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoX10</p></td>
+<td><p>0x81100007</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoY10</p></td>
+<td><p>0x81100008</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXY10</p></td>
+<td><p>0x81100009</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1Mono12</p></td>
+<td><p>0x8110000a</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoX12</p></td>
+<td><p>0x8110000b</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoY12</p></td>
+<td><p>0x8110000c</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXY12</p></td>
+<td><p>0x8110000d</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRG8</p></td>
+<td><p>0x8108000e</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGX8</p></td>
+<td><p>0x8108000f</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGY8</p></td>
+<td><p>0x81080010</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXY8</p></td>
+<td><p>0x81080011</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRG10</p></td>
+<td><p>0x81100012</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGX10</p></td>
+<td><p>0x81100013</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGY10</p></td>
+<td><p>0x81100014</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXY10</p></td>
+<td><p>0x81100015</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRG12</p></td>
+<td><p>0x81100016</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGX12</p></td>
+<td><p>0x81100017</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGY12</p></td>
+<td><p>0x81100018</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXY12</p></td>
+<td><p>0x81100019</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1Mono10p</p></td>
+<td><p>0x810a001a</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoX10p</p></td>
+<td><p>0x810a001b</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoY10p</p></td>
+<td><p>0x810a001c</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXY10p</p></td>
+<td><p>0x810a001d</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1Mono12p</p></td>
+<td><p>0x810c001e</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoX12p</p></td>
+<td><p>0x810c001f</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoY12p</p></td>
+<td><p>0x810c0020</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXY12p</p></td>
+<td><p>0x810c0021</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRG10p</p></td>
+<td><p>0x810a0022</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGX10p</p></td>
+<td><p>0x810a0023</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGY10p</p></td>
+<td><p>0x810a0024</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXY10p</p></td>
+<td><p>0x810a0025</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRG12p</p></td>
+<td><p>0x810c0026</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGX12p</p></td>
+<td><p>0x810c0027</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGY12p</p></td>
+<td><p>0x810c0028</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXY12p</p></td>
+<td><p>0x810c0029</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoC8</p></td>
+<td><p>0x8108002a</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXC8</p></td>
+<td><p>0x8108002b</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoYC8</p></td>
+<td><p>0x8108002c</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXYC8</p></td>
+<td><p>0x8108002d</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoC10</p></td>
+<td><p>0x8110002e</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXC10</p></td>
+<td><p>0x8110002f</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoYC10</p></td>
+<td><p>0x81100030</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXYC10</p></td>
+<td><p>0x81100031</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoC12</p></td>
+<td><p>0x81100032</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXC12</p></td>
+<td><p>0x81100033</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoYC12</p></td>
+<td><p>0x81100034</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXYC12</p></td>
+<td><p>0x81100035</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGC8</p></td>
+<td><p>0x81080036</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXC8</p></td>
+<td><p>0x81080037</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGYC8</p></td>
+<td><p>0x81080038</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXYC8</p></td>
+<td><p>0x81080039</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGC10</p></td>
+<td><p>0x8110003a</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXC10</p></td>
+<td><p>0x8110003b</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGYC10</p></td>
+<td><p>0x8110003c</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXYC10</p></td>
+<td><p>0x8110003d</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGC12</p></td>
+<td><p>0x8110003e</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXC12</p></td>
+<td><p>0x8110003f</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGYC12</p></td>
+<td><p>0x81100040</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXYC12</p></td>
+<td><p>0x81100041</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoC10p</p></td>
+<td><p>0x810a0042</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXC10p</p></td>
+<td><p>0x810a0043</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoYC10p</p></td>
+<td><p>0x810a0044</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXYC10p</p></td>
+<td><p>0x810a0045</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoC12p</p></td>
+<td><p>0x810c0046</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXC12p</p></td>
+<td><p>0x810c0047</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1MonoYC12p</p></td>
+<td><p>0x810c0048</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1MonoXYC12p</p></td>
+<td><p>0x810c0049</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGC10p</p></td>
+<td><p>0x810a004a</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXC10p</p></td>
+<td><p>0x810a004b</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGYC10p</p></td>
+<td><p>0x810a004c</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXYC10p</p></td>
+<td><p>0x810a004d</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGC12p</p></td>
+<td><p>0x810c004e</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXC12p</p></td>
+<td><p>0x810c004f</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pol1BayerRGYC12p</p></td>
+<td><p>0x810c0050</p></td>
+</tr>
+<tr class="row-even"><td><p>Pol1BayerRGXYC12p</p></td>
+<td><p>0x810c0051</p></td>
+</tr>
+<tr class="row-odd"><td><p>CYCbCr420_8_YY_Cb_Cr_Planar</p></td>
+<td><p>0x820C0152</p></td>
+</tr>
+<tr class="row-even"><td><p>CJpeg</p></td>
+<td><p>0x80080053</p></td>
+</tr>
+<tr class="row-odd"><td><p>CH264</p></td>
+<td><p>0x80080054</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estsystemvendor">
+<h3>EStSystemVendor<a class="headerlink" href="#estsystemvendor" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStSystemVendor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStSystemVendor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStSystemVendor" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：サポートされているGenTLプロデューサーベンダー</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Default = 0</p></td>
+<td><p>デフォルトシステム(USB3VisionおよびGigEVisionに対応)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sentech = 0</p></td>
+<td><p>オムロンセンテック社製(USB3VisionおよびGigEVisionに対応)</p></td>
+</tr>
+<tr class="row-even"><td><p>Euresys = 1</p></td>
+<td><p>Euresys社製(CoaXPressに対応)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kaya = 2</p></td>
+<td><p>Kaya社製(CoaXPressに対応)</p></td>
+</tr>
+<tr class="row-even"><td><p>SiliconSoftware = 3</p></td>
+<td><p>Silicon Software社製(CoaXPressに対応)</p></td>
+</tr>
+<tr class="row-odd"><td><p>ActiveSilicon = 4</p></td>
+<td><p>Active Silicon社製(CoaXPressに対応)</p></td>
+</tr>
+<tr class="row-even"><td><p>Matrox = 5</p></td>
+<td><p>Matrox社製(CoaXPressに対応)</p></td>
+</tr>
+<tr class="row-odd"><td><p>TeledyneDALSA = 6</p></td>
+<td><p>Teledyne DALSA社製(CoaXPressに対応)</p></td>
+</tr>
+<tr class="row-even"><td><p>AvalData = 7</p></td>
+<td><p>Aval Data社製(CoaXPressに対応)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Count = 8</p></td>
+<td><p>ベンダー数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="esttimeouthandling">
+<h3>EStTimeoutHandling<a class="headerlink" href="#esttimeouthandling" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStTimeoutHandling">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStTimeoutHandling</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStTimeoutHandling" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：タイムアウト処理型</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Return = 0</p></td>
+<td><p>関数から戻ります。</p></td>
+</tr>
+<tr class="row-odd"><td><p>ThrowException = 1</p></td>
+<td><p>例外を発生させます。</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 2</p></td>
+<td><p>タイムアウト対処列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+</section>
+<section id="stapi-ip-related">
+<h2>StApi IP関連の列挙型<a class="headerlink" href="#stapi-ip-related" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<section id="estbalanceratioselector">
+<h3>EStBalanceRatioSelector<a class="headerlink" href="#estbalanceratioselector" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStBalanceRatioSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStBalanceRatioSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStBalanceRatioSelector" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型： バランスレートの要素</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Red = 0</p></td>
+<td><p>赤</p></td>
+</tr>
+<tr class="row-odd"><td><p>Green = 1</p></td>
+<td><p>緑</p></td>
+</tr>
+<tr class="row-even"><td><p>Blue = 2</p></td>
+<td><p>青</p></td>
+</tr>
+<tr class="row-odd"><td><p>Y = 3</p></td>
+<td><p>Y</p></td>
+</tr>
+<tr class="row-even"><td><p>Cb = 4</p></td>
+<td><p>Cb</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cr = 5</p></td>
+<td><p>Cr</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 6</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estbalancewhiteauto">
+<h3>EStBalanceWhiteAuto<a class="headerlink" href="#estbalancewhiteauto" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStBalanceWhiteAuto">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStBalanceWhiteAuto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStBalanceWhiteAuto" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：オートホワイトバランス</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Off = 0</p></td>
+<td><p>オフ(手動/固定)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Once = 1</p></td>
+<td><p>1回のみ(一旦収束したらOFFになります)</p></td>
+</tr>
+<tr class="row-even"><td><p>Continuous = 2</p></td>
+<td><p>連続</p></td>
+</tr>
+<tr class="row-odd"><td><p>Count = 3</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estbayerinterpolationmethod">
+<h3>EStBayerInterpolationMethod<a class="headerlink" href="#estbayerinterpolationmethod" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStBayerInterpolationMethod">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStBayerInterpolationMethod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStBayerInterpolationMethod" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型： ベイヤー色補間</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Off = 0</p></td>
+<td><p>オフ：色補間処理を行わずに、ベイヤー画像を各画素のフィルターの色が付いたカラー画像へ変換します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>NearestNeighbor = 1</p></td>
+<td><p>ニアレストネイバー1：近隣の画素値をコピーします。ニアレストネイバー2とはコピーされる画素の位置が異なります。</p></td>
+</tr>
+<tr class="row-even"><td><p>NearestNeighbor2 = 2</p></td>
+<td><p>ニアレストネイバー2：近隣の画素値をコピーします。ニアレストネイバー1とはコピーされる画素の位置が異なります。</p></td>
+</tr>
+<tr class="row-odd"><td><p>BiLinear = 3</p></td>
+<td><p>バイリニア1：近隣の画素値の平均値を使用します。バイリニア2,3よりも処理にかかる負荷は低めですが、偽色が目立ちます。</p></td>
+</tr>
+<tr class="row-even"><td><p>BiLinear2 = 4</p></td>
+<td><p>バイリニア2：近隣の画素値の平均値を使用します。バイリニア1よりもエッジ部の偽着色が軽減されていますが、処理にかかる負荷は高めになります。</p></td>
+</tr>
+<tr class="row-odd"><td><p>BiCubic = 5</p></td>
+<td><p>バイキュービック：周辺の4x4画素を使用します。</p></td>
+</tr>
+<tr class="row-even"><td><p>Mono = 6</p></td>
+<td><p>モノクロ：色補間処理を行わずに、ベイヤー画像をモノクロ画像へ変換します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>BiLinear3 = 7</p></td>
+<td><p>バイリニア3：近隣の画素値の平均値を使用します。バイリニア2よりもエッジ部の偽着色が軽減されていますが、処理にかかる負荷は高めになります。</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 8</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estchromasuppressionpartselector">
+<h3>EStChromaSuppressionPartSelector<a class="headerlink" href="#estchromasuppressionpartselector" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStChromaSuppressionPartSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStChromaSuppressionPartSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStChromaSuppressionPartSelector" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：クロマサプレス対象</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>LowLuminancePart = 0</p></td>
+<td><p>低輝度部</p></td>
+</tr>
+<tr class="row-odd"><td><p>HighLuminancePart = 1</p></td>
+<td><p>高輝度部</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 2</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estcolortransformationvalueselector">
+<h3>EStColorTransformationValueSelector<a class="headerlink" href="#estcolortransformationvalueselector" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStColorTransformationValueSelector">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStColorTransformationValueSelector</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStColorTransformationValueSelector" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：色変換行列構成要素</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Gain_00 = 0</p></td>
+<td><p>赤算出用赤乗数 Rout = Rin x Gain00 + Gin x Gain01 + Bin x Gain02 + Offset0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gain_01 = 1</p></td>
+<td><p>赤算出用緑乗数 Rout = Rin x Gain00 + Gin x Gain01 + Bin x Gain02 + Offset0</p></td>
+</tr>
+<tr class="row-even"><td><p>Gain_02 = 2</p></td>
+<td><p>赤算出用青乗数 Rout = Rin x Gain00 + Gin x Gain01 + Bin x Gain02 + Offset0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Offset_0 = 3</p></td>
+<td><p>赤算出用オフセット Rout = Rin x Gain00 + Gin x Gain01 + Bin x Gain02 + Offset0</p></td>
+</tr>
+<tr class="row-even"><td><p>Gain_10 = 4</p></td>
+<td><p>緑算出用赤乗数 Gout = Rin x Gain00 + Gin x Gain01 + Bin x Gain02 + Offset0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gain_11 = 5</p></td>
+<td><p>緑算出用緑乗数 Gout = Rin x Gain00 + Gin x Gain01 + Bin x Gain02 + Offset0</p></td>
+</tr>
+<tr class="row-even"><td><p>Gain_12 = 6</p></td>
+<td><p>緑算出用青乗数 Gout = Rin x Gain00 + Gin x Gain01 + Bin x Gain02 + Offset0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Offset_1 = 7</p></td>
+<td><p>緑算出用オフセット Gout = Rin x Gain00 + Gin x Gain01 + Bin x Gain02 + Offset0</p></td>
+</tr>
+<tr class="row-even"><td><p>Gain_20 = 8</p></td>
+<td><p>青算出用赤乗数 Bout = Rin x Gain00 + Gin x Gain01 + Bin x Gain02 + Offset0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gain_21 = 9</p></td>
+<td><p>青算出用緑乗数 Bout = Rin x Gain00 + Gin x Gain01 + Bin x Gain02 + Offset0</p></td>
+</tr>
+<tr class="row-even"><td><p>Gain_22 = 10</p></td>
+<td><p>青算出用青乗数 Bout = Rin x Gain00 + Gin x Gain01 + Bin x Gain02 + Offset0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Offset_2 = 11</p></td>
+<td><p>青算出用オフセット Bout = Rin x Gain00 + Gin x Gain01 + Bin x Gain02 + Offset0</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 12</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estconvertertype">
+<h3>EStConverterType<a class="headerlink" href="#estconvertertype" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStConverterType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStConverterType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStConverterType" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：コンバーターのタイプ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PixelFormat = 0</p></td>
+<td><p>ピクセルフォーマットコンバーター</p></td>
+</tr>
+<tr class="row-odd"><td><p>Reverse = 1</p></td>
+<td><p>反転回転コンバーター</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 2</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estdefectivepixeldetectionaveragingarea">
+<h3>EStDefectivePixelDetectionAveragingArea<a class="headerlink" href="#estdefectivepixeldetectionaveragingarea" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStDefectivePixelDetectionAveragingArea">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStDefectivePixelDetectionAveragingArea</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStDefectivePixelDetectionAveragingArea" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：欠陥画素検出時エリア指定</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AroundTheTargetPixel = 0</p></td>
+<td><p>周辺画素</p></td>
+</tr>
+<tr class="row-odd"><td><p>WholeImage = 1</p></td>
+<td><p>画像全体</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 2</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estdefectivepixeldetectionstatus">
+<h3>EStDefectivePixelDetectionStatus<a class="headerlink" href="#estdefectivepixeldetectionstatus" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStDefectivePixelDetectionStatus">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStDefectivePixelDetectionStatus</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStDefectivePixelDetectionStatus" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 59%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：欠陥画素検出状態</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NotRun = 0</p></td>
+<td><p>未実行</p></td>
+</tr>
+<tr class="row-odd"><td><p>Succeeded = 1</p></td>
+<td><p>成功した</p></td>
+</tr>
+<tr class="row-even"><td><p>TooManyDefectivePixelDetectedFailed = 2</p></td>
+<td><p>検出された欠陥画素が多すぎて失敗した</p></td>
+</tr>
+<tr class="row-odd"><td><p>Failed = 3</p></td>
+<td><p>失敗した</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 4</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estdefectivepixeldetectionthresholdtarget">
+<h3>EStDefectivePixelDetectionThresholdTarget<a class="headerlink" href="#estdefectivepixeldetectionthresholdtarget" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStDefectivePixelDetectionThresholdTarget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStDefectivePixelDetectionThresholdTarget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStDefectivePixelDetectionThresholdTarget" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：欠陥画素検出閾値対象指定</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Mono = 0</p></td>
+<td><p>モノクロ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Red = 1</p></td>
+<td><p>赤</p></td>
+</tr>
+<tr class="row-even"><td><p>GreenR = 2</p></td>
+<td><p>緑(赤ライン)</p></td>
+</tr>
+<tr class="row-odd"><td><p>GreenB = 3</p></td>
+<td><p>緑(青ライン)</p></td>
+</tr>
+<tr class="row-even"><td><p>Blue = 4</p></td>
+<td><p>青</p></td>
+</tr>
+<tr class="row-odd"><td><p>Count = 5</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estfilertype">
+<h3>EStFilerType<a class="headerlink" href="#estfilertype" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStFilerType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStFilerType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStFilerType" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ファイラーのタイプ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>StillImage = 0</p></td>
+<td><p>静止画ファイル</p></td>
+</tr>
+<tr class="row-odd"><td><p>Video = 1</p></td>
+<td><p>ビデオファイル</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 2</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estfiltertype">
+<h3>EStFilterType<a class="headerlink" href="#estfiltertype" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStFilterType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStFilterType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStFilterType" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：画像フィルターのタイプ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>GammaCorrection = 0</p></td>
+<td><p>ガンマ補正フィルター</p></td>
+</tr>
+<tr class="row-odd"><td><p>ColorTransformation = 1</p></td>
+<td><p>色変換フィルター</p></td>
+</tr>
+<tr class="row-even"><td><p>EdgeEnhancement = 2</p></td>
+<td><p>輪郭強調フィルター</p></td>
+</tr>
+<tr class="row-odd"><td><p>BalanceRatio = 3</p></td>
+<td><p>バランスレートフィルター</p></td>
+</tr>
+<tr class="row-even"><td><p>NoiseReduction = 4</p></td>
+<td><p>ノイズ軽減フィルター</p></td>
+</tr>
+<tr class="row-odd"><td><p>FlatFieldCorrection = 5</p></td>
+<td><p>FFC(フィールドフラットコレクション)フィルター</p></td>
+</tr>
+<tr class="row-even"><td><p>ChromaSuppression = 6</p></td>
+<td><p>クロマサプレスフィルター</p></td>
+</tr>
+<tr class="row-odd"><td><p>SNMeasurement = 7</p></td>
+<td><p>SN測定フィルター</p></td>
+</tr>
+<tr class="row-even"><td><p>GraphData = 8</p></td>
+<td><p>グラフデータフィルター</p></td>
+</tr>
+<tr class="row-odd"><td><p>ImageAveraging = 9</p></td>
+<td><p>画像平均化フィルター</p></td>
+</tr>
+<tr class="row-even"><td><p>DefectivePixelDetection = 10</p></td>
+<td><p>欠陥画素検出フィルター</p></td>
+</tr>
+<tr class="row-odd"><td><p>LevelAdjustment = 11</p></td>
+<td><p>レベル調整フィルター</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 12</p></td>
+<td><p>対応フィルター数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estflatfieldcorrectionmode">
+<h3>EStFlatFieldCorrectionMode<a class="headerlink" href="#estflatfieldcorrectionmode" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStFlatFieldCorrectionMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStFlatFieldCorrectionMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStFlatFieldCorrectionMode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：フラットフィールド補正モード</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Off = 0</p></td>
+<td><p>オフ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Multiplication = 1</p></td>
+<td><p>乗算</p></td>
+</tr>
+<tr class="row-even"><td><p>Addition = 2</p></td>
+<td><p>加算</p></td>
+</tr>
+<tr class="row-odd"><td><p>Count = 3</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estgraphdatafileformat">
+<h3>EStGraphDataFileFormat<a class="headerlink" href="#estgraphdatafileformat" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStGraphDataFileFormat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStGraphDataFileFormat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStGraphDataFileFormat" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：グラフデータファイルフォーマット</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>StApiRaw = 0</p></td>
+<td><p>StApi 独自フォーマット</p></td>
+</tr>
+<tr class="row-odd"><td><p>CSV = 1</p></td>
+<td><p>CSV</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 2</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estgraphdatainfouint32">
+<h3>EStGraphDataInfoUint32<a class="headerlink" href="#estgraphdatainfouint32" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStGraphDataInfoUint32">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStGraphDataInfoUint32</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStGraphDataInfoUint32" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：グラフデータ情報</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PixelComponent = 0</p></td>
+<td><p>ピクセル構成要素値</p></td>
+</tr>
+<tr class="row-odd"><td><p>TheoreticalMaximum = 1</p></td>
+<td><p>グラフデータの理論上の最大値。ヒストグラム(Histogram)の場合は、対象画素の数を表します。 縦方向の積算値(VerticalIntegration)の場合は、縦方向の対象画素の数を表します。 横方向の積算値(HorizontalIntegration)の場合は、横方向の対象画素の数を表します。</p></td>
+</tr>
+<tr class="row-even"><td><p>IndexOfMaximumValue = 2</p></td>
+<td><p>最大値のインディックス値。ヒストグラム(Histogram)の場合は、度数が最大となった画素値を表します。 縦方向の積算値(VerticalIntegration)の場合は、積算値が最大となった横方向の位置を表します。 横方向の積算値(HorizontalIntegration)の場合は、積算値が最大となった縦方向の位置を表します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>MaximumValue = 3</p></td>
+<td><p>最大値。ヒストグラム(Histogram)の場合は、最大度数を表します。 縦方向の積算値(VerticalIntegration)の場合は、最大となった積算値を表します。 横方向の積算値(HorizontalIntegration)の場合は、最大となった積算値を表します。</p></td>
+</tr>
+<tr class="row-even"><td><p>IntegrationCount = 4</p></td>
+<td><p>画素の数。ヒストグラム(Histogram)の場合は、対応していません。 縦方向の積算値(VerticalIntegration )および横方向の積算値(HorizontalIntegration )の場合は、対象となった画素の数を表します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Count = 5</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estgraphdatainfofloat64">
+<h3>EStGraphDataInfoFloat64<a class="headerlink" href="#estgraphdatainfofloat64" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStGraphDataInfoFloat64">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStGraphDataInfoFloat64</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStGraphDataInfoFloat64" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：グラフデータ情報</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Count = 0</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estgraphdatatype">
+<h3>EStGraphDataType<a class="headerlink" href="#estgraphdatatype" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStGraphDataType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStGraphDataType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStGraphDataType" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：グラフデータタイプ</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Unknown = 0</p></td>
+<td><p>不明</p></td>
+</tr>
+<tr class="row-odd"><td><p>Histogram = 1</p></td>
+<td><p>ヒストグラム。色ごとに、画素値の出現回数をカウントします。</p></td>
+</tr>
+<tr class="row-even"><td><p>VerticalIntegration = 2</p></td>
+<td><p>縦方向の積算値。色ごとに、縦方向に画素値を積算します。</p></td>
+</tr>
+<tr class="row-odd"><td><p>HorizontalIntegration = 3</p></td>
+<td><p>横方向の積算値。色ごとに、横方向に画素値を積算します。</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 4</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estleveladjustmentcorrectionpointsinterpolationmode">
+<h3>EStLevelAdjustmentCorrectionPointsInterpolationMode<a class="headerlink" href="#estleveladjustmentcorrectionpointsinterpolationmode" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStLevelAdjustmentCorrectionPointsInterpolationMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStLevelAdjustmentCorrectionPointsInterpolationMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStLevelAdjustmentCorrectionPointsInterpolationMode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 77%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：レベル調整補正点補間</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Linear = 0</p></td>
+<td><p>直線</p></td>
+</tr>
+<tr class="row-odd"><td><p>Curve = 1</p></td>
+<td><p>曲線</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 2</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estleveladjustmentmode">
+<h3>EStLevelAdjustmentMode<a class="headerlink" href="#estleveladjustmentmode" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStLevelAdjustmentMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStLevelAdjustmentMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStLevelAdjustmentMode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：レベル調整モード</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Off = 0</p></td>
+<td><p>オフ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Manual_Points = 1</p></td>
+<td><p>手動</p></td>
+</tr>
+<tr class="row-even"><td><p>Auto_RangeAdjustment = 2</p></td>
+<td><p>自動範囲調整</p></td>
+</tr>
+<tr class="row-odd"><td><p>Auto_HistogramEqualization = 3</p></td>
+<td><p>ヒストグラム平坦化</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 4</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estnoisereductionmode">
+<h3>EStNoiseReductionMode<a class="headerlink" href="#estnoisereductionmode" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStNoiseReductionMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStNoiseReductionMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStNoiseReductionMode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ノイズリダクションモード</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Off = 0</p></td>
+<td><p>オフ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Simple = 1</p></td>
+<td><p>簡単(キャリブレーション不要)</p></td>
+</tr>
+<tr class="row-even"><td><p>SubtractingLightShieldingImage = 2</p></td>
+<td><p>遮光時の画像を減算(要キャリブレーション)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Count = 3</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estroimode">
+<h3>EStROIMode<a class="headerlink" href="#estroimode" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStROIMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStROIMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStROIMode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ROIモード</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>WholeImage = 0</p></td>
+<td><p>画像全体</p></td>
+</tr>
+<tr class="row-odd"><td><p>Manual = 1</p></td>
+<td><p>手動(オフセットとサイズを設定する)</p></td>
+</tr>
+<tr class="row-even"><td><p>CenterOfImage = 2</p></td>
+<td><p>画像の中央(サイズのみ設定する)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Count = 3</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estrotationmode">
+<h3>EStRotationMode<a class="headerlink" href="#estrotationmode" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStRotationMode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStRotationMode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStRotationMode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：回転モード</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Off = 0</p></td>
+<td><p>オフ</p></td>
+</tr>
+<tr class="row-odd"><td><p>Clockwise90 = 1</p></td>
+<td><p>90度時計回り</p></td>
+</tr>
+<tr class="row-even"><td><p>Counterclockwise90 = 2</p></td>
+<td><p>90度反時計回り</p></td>
+</tr>
+<tr class="row-odd"><td><p>Count = 3</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="eststillimagefileformat">
+<h3>EStStillImageFileFormat<a class="headerlink" href="#eststillimagefileformat" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStStillImageFileFormat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStStillImageFileFormat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStStillImageFileFormat" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：静止画ファイルフォーマット</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>StApiRaw = 0</p></td>
+<td><p>StApi 独自フォーマット</p></td>
+</tr>
+<tr class="row-odd"><td><p>Bitmap = 1</p></td>
+<td><p>ビットマップ</p></td>
+</tr>
+<tr class="row-even"><td><p>JPEG = 2</p></td>
+<td><p>JPEG</p></td>
+</tr>
+<tr class="row-odd"><td><p>TIFF = 3</p></td>
+<td><p>Tiff</p></td>
+</tr>
+<tr class="row-even"><td><p>PNG = 4</p></td>
+<td><p>PNG</p></td>
+</tr>
+<tr class="row-odd"><td><p>CSV = 5</p></td>
+<td><p>CSV</p></td>
+</tr>
+<tr class="row-even"><td><p>Count = 6</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estvideofilecompression">
+<h3>EStVideoFileCompression<a class="headerlink" href="#estvideofilecompression" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStVideoFileCompression">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStVideoFileCompression</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStVideoFileCompression" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ビデオファイルの圧縮</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Uncompressed = 0</p></td>
+<td><p>非圧縮</p></td>
+</tr>
+<tr class="row-odd"><td><p>MotionJPEG = 1</p></td>
+<td><p>モーションJPEG</p></td>
+</tr>
+<tr class="row-even"><td><p>VP8 = 2</p></td>
+<td><p>VP8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Count = 3</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+<section id="estvideofileformat">
+<h3>EStVideoFileFormat<a class="headerlink" href="#estvideofileformat" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.EStVideoFileFormat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">EStVideoFileFormat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.EStVideoFileFormat" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/enum.html#enum.Enum" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>列挙型：ビデオファイルフォーマット</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AVI1 = 0</p></td>
+<td><p>AVI 1.0 (ファイルサイズは最大2Gバイトになります)</p></td>
+</tr>
+<tr class="row-odd"><td><p>AVI2 = 1</p></td>
+<td><p>AVI 2.0 (ファイルサイズは最大1Tバイトになります)</p></td>
+</tr>
+<tr class="row-even"><td><p>WebM = 2</p></td>
+<td><p>WebM</p></td>
+</tr>
+<tr class="row-odd"><td><p>Count = 3</p></td>
+<td><p>列挙子数</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">列挙型リファレンス</a><ul>
+<li><a class="reference internal" href="#genicam-related">GenICam関連の列挙型</a><ul>
+<li><a class="reference internal" href="#egcaccessmode">EGCAccessMode</a></li>
+<li><a class="reference internal" href="#egccachingmode">EGCCachingMode</a></li>
+<li><a class="reference internal" href="#egccallbacksuppressmode">EGCCallbackSuppressMode</a></li>
+<li><a class="reference internal" href="#egccallbacktype">EGCCallbackType</a></li>
+<li><a class="reference internal" href="#egcdisplaynotation">EGCDisplayNotation</a></li>
+<li><a class="reference internal" href="#egcendianess">EGCEndianess</a></li>
+<li><a class="reference internal" href="#egcincmode">EGCIncMode</a></li>
+<li><a class="reference internal" href="#egcinterfacetype">EGCInterfaceType</a></li>
+<li><a class="reference internal" href="#egclinktype">EGCLinkType</a></li>
+<li><a class="reference internal" href="#egcnamespace">EGCNamespace</a></li>
+<li><a class="reference internal" href="#egcrepresentation">EGCRepresentation</a></li>
+<li><a class="reference internal" href="#egcsign">EGCSign</a></li>
+<li><a class="reference internal" href="#egcstandardnamespace">EGCStandardNamespace</a></li>
+<li><a class="reference internal" href="#egcvisibility">EGCVisibility</a></li>
+<li><a class="reference internal" href="#egcyesno">EGCYesNo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gentl-related">GenTL関連の列挙型</a><ul>
+<li><a class="reference internal" href="#etlacqstartflags">ETLAcqStartFlags</a></li>
+<li><a class="reference internal" href="#etlacqstopflags">ETLAcqStopFlags</a></li>
+<li><a class="reference internal" href="#etlcharencoding">ETLCharEncoding</a></li>
+<li><a class="reference internal" href="#etldeviceaccessflags">ETLDeviceAccessFlags</a></li>
+<li><a class="reference internal" href="#etldeviceaccessstatus">ETLDeviceAccessStatus</a></li>
+<li><a class="reference internal" href="#etlerror">ETLError</a></li>
+<li><a class="reference internal" href="#etlpayloadtypeinfoid">ETLPayloadTypeInfoID</a></li>
+<li><a class="reference internal" href="#etlpixelendiannessid">ETLPixelEndiannessID</a></li>
+<li><a class="reference internal" href="#etlpixelformatnamespaceid">ETLPixelFormatNamespaceID</a></li>
+<li><a class="reference internal" href="#etlurlschemeid">ETLURLSchemeID</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#stapi-related-all">一般なStApi関連の列挙型</a><ul>
+<li><a class="reference internal" href="#estcallbacktype">EStCallbackType</a></li>
+<li><a class="reference internal" href="#estinterfacetype">EStInterfaceType</a></li>
+<li><a class="reference internal" href="#estmemoryinitialization">EStMemoryInitialization</a></li>
+<li><a class="reference internal" href="#estoperationtype">EStOperationType</a></li>
+<li><a class="reference internal" href="#estorderofpolarizedfilters">EStOrderOfPolarizedFilters</a></li>
+<li><a class="reference internal" href="#estpixelcolorfilter">EStPixelColorFilter</a></li>
+<li><a class="reference internal" href="#estpixelcomponent">EStPixelComponent</a></li>
+<li><a class="reference internal" href="#estpixelformatnamingconvention">EStPixelFormatNamingConvention</a></li>
+<li><a class="reference internal" href="#estsystemvendor">EStSystemVendor</a></li>
+<li><a class="reference internal" href="#esttimeouthandling">EStTimeoutHandling</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#stapi-ip-related">StApi IP関連の列挙型</a><ul>
+<li><a class="reference internal" href="#estbalanceratioselector">EStBalanceRatioSelector</a></li>
+<li><a class="reference internal" href="#estbalancewhiteauto">EStBalanceWhiteAuto</a></li>
+<li><a class="reference internal" href="#estbayerinterpolationmethod">EStBayerInterpolationMethod</a></li>
+<li><a class="reference internal" href="#estchromasuppressionpartselector">EStChromaSuppressionPartSelector</a></li>
+<li><a class="reference internal" href="#estcolortransformationvalueselector">EStColorTransformationValueSelector</a></li>
+<li><a class="reference internal" href="#estconvertertype">EStConverterType</a></li>
+<li><a class="reference internal" href="#estdefectivepixeldetectionaveragingarea">EStDefectivePixelDetectionAveragingArea</a></li>
+<li><a class="reference internal" href="#estdefectivepixeldetectionstatus">EStDefectivePixelDetectionStatus</a></li>
+<li><a class="reference internal" href="#estdefectivepixeldetectionthresholdtarget">EStDefectivePixelDetectionThresholdTarget</a></li>
+<li><a class="reference internal" href="#estfilertype">EStFilerType</a></li>
+<li><a class="reference internal" href="#estfiltertype">EStFilterType</a></li>
+<li><a class="reference internal" href="#estflatfieldcorrectionmode">EStFlatFieldCorrectionMode</a></li>
+<li><a class="reference internal" href="#estgraphdatafileformat">EStGraphDataFileFormat</a></li>
+<li><a class="reference internal" href="#estgraphdatainfouint32">EStGraphDataInfoUint32</a></li>
+<li><a class="reference internal" href="#estgraphdatainfofloat64">EStGraphDataInfoFloat64</a></li>
+<li><a class="reference internal" href="#estgraphdatatype">EStGraphDataType</a></li>
+<li><a class="reference internal" href="#estleveladjustmentcorrectionpointsinterpolationmode">EStLevelAdjustmentCorrectionPointsInterpolationMode</a></li>
+<li><a class="reference internal" href="#estleveladjustmentmode">EStLevelAdjustmentMode</a></li>
+<li><a class="reference internal" href="#estnoisereductionmode">EStNoiseReductionMode</a></li>
+<li><a class="reference internal" href="#estroimode">EStROIMode</a></li>
+<li><a class="reference internal" href="#estrotationmode">EStRotationMode</a></li>
+<li><a class="reference internal" href="#eststillimagefileformat">EStStillImageFileFormat</a></li>
+<li><a class="reference internal" href="#estvideofilecompression">EStVideoFileCompression</a></li>
+<li><a class="reference internal" href="#estvideofileformat">EStVideoFileFormat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="ref_genicam.html"
+                          title="前の章へ">GenICam GenApiクラス</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="license.html"
+                          title="次の章へ">ライセンス情報</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="license.html" title="ライセンス情報"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="ref_genicam.html" title="GenICam GenApiクラス"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reference.html" >StApi Python(stapipy)リファレンス</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">列挙型リファレンス</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

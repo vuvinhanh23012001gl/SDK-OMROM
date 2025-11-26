@@ -1,0 +1,2740 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>GenICam GenApiクラス &#8212; StApi Python 1.2.2 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="列挙型リファレンス" href="enumeration.html" />
+    <link rel="prev" title="画像処理の関数とクラス" href="ref_stapi_ip.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="enumeration.html" title="列挙型リファレンス"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="ref_stapi_ip.html" title="画像処理の関数とクラス"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reference.html" accesskey="U">StApi Python(stapipy)リファレンス</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GenICam GenApiクラス</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="genicam-genapi-classes">
+<h1>GenICam GenApiクラス<a class="headerlink" href="#genicam-genapi-classes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="pyiboolean">
+<h2>PyIBoolean<a class="headerlink" href="#pyiboolean" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIBoolean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIBoolean" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>IBooleanインターフェイスにアクセスするためのクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIBoolean.access_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>プロパティー：アクセスモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIBoolean.from_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyIBoolean.get_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードの値を取得します。 <cite>verify</cite> か <cite>ignore_cache</cite> のうち少なくても一方の引数はTrueにしてください。両方の引数がFalse場合は、valueプロパティーを使用してください。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIBoolean.is_value_cache_valid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>プロパティー：キャッシュが有効かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIBoolean.node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>プロパティー：インターフェイスと関係ないノード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIBoolean.set_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードの値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIBoolean.to_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値（str型）</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIBoolean.value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIBoolean.value: bool</p>
+<p>プロパティー：現在のノード値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>値が返されます。ベリファイとキャッシュ無視のフラグがFalse状態で値の読み込みを行います。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。書き込みの際、ベリファイフラグがTrueとなります。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyicategory">
+<h2>PyICategory<a class="headerlink" href="#pyicategory" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyICategory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyICategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyICategory" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>ICategoryインターフェイスにアクセスするためのクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICategory.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyICategory.access_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>プロパティー：アクセスモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICategory.feature_list">
+<span class="sig-name descname"><span class="pre">feature_list</span></span><a class="headerlink" href="#stapipy.PyICategory.feature_list" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyICategory.feature_list: list</p>
+<p>プロパティー：カテゴリ内の全フィーチャーが返されます。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>フィーチャーノードのリストが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>list of PyNode</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyICategory.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyICategory.from_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICategory.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyICategory.is_value_cache_valid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>プロパティー：キャッシュが有効かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICategory.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyICategory.node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>プロパティー：インターフェイスと関係ないノード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyICategory.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyICategory.to_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値（str型）</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyicommand">
+<h2>PyICommand<a class="headerlink" href="#pyicommand" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyICommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyICommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyICommand" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>ICommandインターフェイスにアクセスするためのクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICommand.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyICommand.access_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>プロパティー：アクセスモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyICommand.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyICommand.execute" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>コマンドノードを実行します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ベリファイフラグ</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyICommand.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyICommand.from_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyICommand.is_done">
+<span class="sig-name descname"><span class="pre">is_done</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyICommand.is_done" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>実行完了かどうかを確認します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ベリファイフラグ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>実行が完了したらTrueが返されます。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICommand.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyICommand.is_value_cache_valid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>プロパティー：キャッシュが有効かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICommand.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyICommand.node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>プロパティー：インターフェイスと関係ないノード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyICommand.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyICommand.to_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値（str型）</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyienumeration">
+<h2>PyIEnumeration<a class="headerlink" href="#pyienumeration" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIEnumeration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumeration" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>IEnumerationインターフェイスにアクセスするためのクラス</p>
+<p>列挙型エントリは、シンボリック値または数値のいずれかを介して反復可能です。</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.access_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>プロパティー：アクセスモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.current_entry">
+<span class="sig-name descname"><span class="pre">current_entry</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.current_entry" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIEnumeration.current_entry: PyNode</p>
+<p>プロパティー：現在の列挙型のエントリ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>現在の列挙型のエントリのPyNodeが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.entries">
+<span class="sig-name descname"><span class="pre">entries</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.entries" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIEnumeration.entries: list</p>
+<p>プロパティー：列挙型のエントリのリスト</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>列挙型のエントリのPyNodeリストが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>list of PyNode</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.entries_count">
+<span class="sig-name descname"><span class="pre">entries_count</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.entries_count" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIEnumeration.entries_count: int</p>
+<p>プロパティー：列挙型のエントリ数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumeration.from_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.get_int_value">
+<span class="sig-name descname"><span class="pre">get_int_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int64_t</span></span></span><a class="headerlink" href="#stapipy.PyIEnumeration.get_int_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>数字型の値を取得します。 <cite>verify</cite> か <cite>ignore_cache</cite> のうち少なくても一方の引数はTrueにしてください。両方の引数がFalse場合は、valueプロパティーを使用してください。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ベリファイフラグ</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値（int型）</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.is_value_cache_valid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>プロパティー：キャッシュが有効かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>プロパティー：インターフェイスと関係ないノード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.set_entry_value">
+<span class="sig-name descname"><span class="pre">set_entry_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyIEnumEntry</span> <span class="pre">enum_entry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumeration.set_entry_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>エントリオブジェクトを使用して列挙の値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enum_entry</strong> (<a class="reference internal" href="#stapipy.PyIEnumEntry" title="stapipy.PyIEnumEntry"><em>PyIEnumEntry</em></a>) -- 列挙型のエントリオブジェクト</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ベリファイフラグ</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.set_int_value">
+<span class="sig-name descname"><span class="pre">set_int_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int64_t</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumeration.set_int_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>数値を使用して列挙の値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 数値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ベリファイフラグ</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.set_symbolic_value">
+<span class="sig-name descname"><span class="pre">set_symbolic_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumeration.set_symbolic_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>シンボリック値を使用して列挙値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- シンボリック値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ベリファイフラグ</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.symbolics_list">
+<span class="sig-name descname"><span class="pre">symbolics_list</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.symbolics_list" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIEnumeration.symbolics_list: list</p>
+<p>プロパティー：列挙型エントリのシンボリック値のリスト</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>リストが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIEnumeration.to_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値（str型）</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIEnumeration.value: int</p>
+<p>プロパティー：現在の列挙の整数値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>値が返されます。ベリファイとキャッシュ無視のフラグがFalse状態で値の読み込みを行います。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。書き込みの際、ベリファイフラグがTrueとなります。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyienumentry">
+<h2>PyIEnumEntry<a class="headerlink" href="#pyienumentry" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIEnumEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumEntry" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>IEnumEntryインターフェイスにアクセスするためのクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.access_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>プロパティー：アクセスモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumEntry.from_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.is_self_clearing">
+<span class="sig-name descname"><span class="pre">is_self_clearing</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.is_self_clearing" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIEnumEntry.is_self_clearing: bool</p>
+<p>プロパティー：列挙型のエントリのセルフクリアフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>フラグが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.is_value_cache_valid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>プロパティー：キャッシュが有効かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>プロパティー：インターフェイスと関係ないノード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.numeric_value">
+<span class="sig-name descname"><span class="pre">numeric_value</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.numeric_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIEnumEntry.numeric_value: float</p>
+<p>プロパティー：この列挙型エントリのfloat値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>数値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.symbolic_value">
+<span class="sig-name descname"><span class="pre">symbolic_value</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.symbolic_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIEnumEntry.symbolic_value: str</p>
+<p>プロパティー：この列挙型のエントリのシンボリック（str）型の値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>シンボリック値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.to_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値（str型）</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIEnumEntry.value: int</p>
+<p>プロパティー：この列挙型エントリの整数値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>数値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyifloat">
+<h2>PyIFloat<a class="headerlink" href="#pyifloat" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIFloat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIFloat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIFloat" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>IFloatインターフェイスにアクセスするためのクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIFloat.access_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>プロパティー：アクセスモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.display_notation">
+<span class="sig-name descname"><span class="pre">display_notation</span></span><a class="headerlink" href="#stapipy.PyIFloat.display_notation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIFloat.display_notation: EGCDisplayNotation</p>
+<p>プロパティー：文字列に変換する表示表記</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCDisplayNotation" title="stapipy.EGCDisplayNotation">EGCDisplayNotation</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.display_precision">
+<span class="sig-name descname"><span class="pre">display_precision</span></span><a class="headerlink" href="#stapipy.PyIFloat.display_precision" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIFloat.display_precision: int</p>
+<p>プロパティー：文字列に変換するときの精度</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.enum_alias">
+<span class="sig-name descname"><span class="pre">enum_alias</span></span><a class="headerlink" href="#stapipy.PyIFloat.enum_alias" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIFloat.enum_alias: PyNode</p>
+<p>プロパティー： 列挙型インターフェイスを持つノードエイリアス</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードエイリアスが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIFloat.from_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.get_valid_values">
+<span class="sig-name descname"><span class="pre">get_valid_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">bounded=True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyIFloat.get_valid_values" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>有効な値が定義されている場合は、その値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>bounded</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 制限付きフラグ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>有効な値のリストが返されます。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>list of float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">double</span></span></span><a class="headerlink" href="#stapipy.PyIFloat.get_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードの値を取得します。 <cite>verify</cite> か <cite>ignore_cache</cite> のうち少なくても一方の引数はTrueにしてください。両方の引数がFalse場合は、valueプロパティーを使用してください。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.has_inc">
+<span class="sig-name descname"><span class="pre">has_inc</span></span><a class="headerlink" href="#stapipy.PyIFloat.has_inc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIFloat.has_inc: bool</p>
+<p>プロパティー：このノードが一定の増分を持つかどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.inc">
+<span class="sig-name descname"><span class="pre">inc</span></span><a class="headerlink" href="#stapipy.PyIFloat.inc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIFloat.inc: float</p>
+<p>プロパティー：一定の増分</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.inc_mode">
+<span class="sig-name descname"><span class="pre">inc_mode</span></span><a class="headerlink" href="#stapipy.PyIFloat.inc_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIFloat.inc_mode: EGCIncMode</p>
+<p>プロパティー：インクリメントモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCIncMode" title="stapipy.EGCIncMode">EGCIncMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.int_alias">
+<span class="sig-name descname"><span class="pre">int_alias</span></span><a class="headerlink" href="#stapipy.PyIFloat.int_alias" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIFloat.int_alias: PyNode</p>
+<p>プロパティー：整数インターフェイスを持つノードエイリアス</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>整数インターフェイスを持つノードエイリアスが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIFloat.is_value_cache_valid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>プロパティー：キャッシュが有効かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.max">
+<span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#stapipy.PyIFloat.max" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIFloat.max: float</p>
+<p>プロパティー：最大許容値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.min">
+<span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#stapipy.PyIFloat.min" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIFloat.min: float</p>
+<p>プロパティー：最小許容値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIFloat.node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>プロパティー：インターフェイスと関係ないノード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.representation">
+<span class="sig-name descname"><span class="pre">representation</span></span><a class="headerlink" href="#stapipy.PyIFloat.representation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIFloat.representation: EGCRepresentation</p>
+<p>プロパティー：ノードの推奨表現</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCRepresentation" title="stapipy.EGCRepresentation">EGCRepresentation</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">double</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIFloat.set_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードの値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIFloat.to_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値（str型）</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.unit">
+<span class="sig-name descname"><span class="pre">unit</span></span><a class="headerlink" href="#stapipy.PyIFloat.unit" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIFloat.unit: str</p>
+<p>プロパティー：単位名</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIFloat.value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIFloat.value: float</p>
+<p>プロパティー：現在のノード値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>値が返されます。ベリファイとキャッシュ無視のフラグがFalse状態で値の読み込みを行います。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。書き込みの際、ベリファイフラグがTrueとなります。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyiinteger">
+<h2>PyIInteger<a class="headerlink" href="#pyiinteger" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIInteger">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIInteger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIInteger" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>IIntegerインターフェイスにアクセスするためのクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIInteger.access_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>プロパティー：アクセスモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.float_alias">
+<span class="sig-name descname"><span class="pre">float_alias</span></span><a class="headerlink" href="#stapipy.PyIInteger.float_alias" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIInteger.float_alias: PyNode</p>
+<p>プロパティー：floatインターフェイスを持つノードエイリアス</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>floatインターフェイスを持つノードが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIInteger.from_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.get_valid_values">
+<span class="sig-name descname"><span class="pre">get_valid_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">bounded=True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyIInteger.get_valid_values" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>有効な値が定義されている場合は、その値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>bounded</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- 制限付きフラグ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>有効な値のリストが返されます。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>list of int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int64_t</span></span></span><a class="headerlink" href="#stapipy.PyIInteger.get_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードの値を取得します。 <cite>verify</cite> か <cite>ignore_cache</cite> のうち少なくても一方の引数はTrueにしてください。両方の引数がFalse場合は、valueプロパティーを使用してください。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.inc">
+<span class="sig-name descname"><span class="pre">inc</span></span><a class="headerlink" href="#stapipy.PyIInteger.inc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIInteger.inc: int</p>
+<p>プロパティー：一定の増分</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.inc_mode">
+<span class="sig-name descname"><span class="pre">inc_mode</span></span><a class="headerlink" href="#stapipy.PyIInteger.inc_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIInteger.inc_mode: EGCIncMode</p>
+<p>プロパティー：インクリメントモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCIncMode" title="stapipy.EGCIncMode">EGCIncMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIInteger.is_value_cache_valid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>プロパティー：キャッシュが有効かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.max">
+<span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#stapipy.PyIInteger.max" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIInteger.max: int</p>
+<p>プロパティー：最大許容値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.min">
+<span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#stapipy.PyIInteger.min" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIInteger.min: int</p>
+<p>プロパティー：最小許容値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIInteger.node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>プロパティー：インターフェイスと関係ないノード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.representation">
+<span class="sig-name descname"><span class="pre">representation</span></span><a class="headerlink" href="#stapipy.PyIInteger.representation" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIInteger.representation: EGCRepresentation</p>
+<p>プロパティー：ノードの推奨表現</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCRepresentation" title="stapipy.EGCRepresentation">EGCRepresentation</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int64_t</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIInteger.set_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードの値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIInteger.to_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値（str型）</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.unit">
+<span class="sig-name descname"><span class="pre">unit</span></span><a class="headerlink" href="#stapipy.PyIInteger.unit" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIInteger.unit: str</p>
+<p>プロパティー：単位名</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIInteger.value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIInteger.value: int</p>
+<p>プロパティー：現在のノード値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>値が返されます。ベリファイとキャッシュ無視のフラグがFalse状態で値の読み込みを行います。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。書き込みの際、ベリファイフラグがTrueとなります。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyiregister">
+<h2>PyIRegister<a class="headerlink" href="#pyiregister" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIRegister">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIRegister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIRegister" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>IRegisterインターフェイスにアクセスするためのクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIRegister.access_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>プロパティー：アクセスモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.address">
+<span class="sig-name descname"><span class="pre">address</span></span><a class="headerlink" href="#stapipy.PyIRegister.address" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIRegister.address: int</p>
+<p>プロパティー：レジスタアドレス</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIRegister.from_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.get_address">
+<span class="sig-name descname"><span class="pre">get_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int64_t</span></span></span><a class="headerlink" href="#stapipy.PyIRegister.get_address" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>レジスタアドレスを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>レジスタアドレス</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.get_length">
+<span class="sig-name descname"><span class="pre">get_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int64_t</span></span></span><a class="headerlink" href="#stapipy.PyIRegister.get_length" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>レジスタデータのサイズを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>レジスタデータのサイズ</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><span class="pre">bytes</span></a></span></span><a class="headerlink" href="#stapipy.PyIRegister.get_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードの値を取得します。 <cite>verify</cite> か <cite>ignore_cache</cite> のうち少なくても一方の引数はTrueにしてください。両方の引数がFalse場合は、valueプロパティーを使用してください。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIRegister.is_value_cache_valid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>プロパティー：キャッシュが有効かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.length">
+<span class="sig-name descname"><span class="pre">length</span></span><a class="headerlink" href="#stapipy.PyIRegister.length" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIRegister.length: int</p>
+<p>プロパティー：レジスタデータのサイズ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIRegister.node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>プロパティー：インターフェイスと関係ないノード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bytes</span> <span class="pre">buffer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIRegister.set_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードの値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buffer</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><em>bytes</em></a>) -- 設定するデータ</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIRegister.to_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値（str型）</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIRegister.value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIRegister.value: bytes</p>
+<p>プロパティー：現在のノード値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>値が返されます。ベリファイとキャッシュ無視のフラグがFalse状態で値の読み込みを行います。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。書き込みの際、ベリファイフラグがTrueとなります。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyistring">
+<h2>PyIString<a class="headerlink" href="#pyistring" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIString">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIString" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>IStringインターフェイスにアクセスするためのクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIString.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIString.access_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>プロパティー：アクセスモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIString.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIString.from_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIString.get_max_length">
+<span class="sig-name descname"><span class="pre">get_max_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int64_t</span></span></span><a class="headerlink" href="#stapipy.PyIString.get_max_length" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>文字列の最大サイズを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>文字列の最大サイズ</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIString.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIString.get_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードの値を取得します。 <cite>verify</cite> か <cite>ignore_cache</cite> のうち少なくても一方の引数はTrueにしてください。両方の引数がFalse場合は、valueプロパティーを使用してください。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIString.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIString.is_value_cache_valid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>プロパティー：キャッシュが有効かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIString.max_length">
+<span class="sig-name descname"><span class="pre">max_length</span></span><a class="headerlink" href="#stapipy.PyIString.max_length" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIString.max_length: int</p>
+<p>プロパティー：文字列の最大サイズ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>文字列の最大サイズが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIString.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIString.node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>プロパティー：インターフェイスと関係ないノード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIString.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIString.set_value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードの値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIString.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIString.to_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値（str型）</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIString.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIString.value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIString.value: str</p>
+<p>プロパティー：現在のノード値</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>値が返されます。ベリファイとキャッシュ無視のフラグがFalse状態で値の読み込みを行います。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。書き込みの際、ベリファイフラグがTrueとなります。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyivalue">
+<h2>PyIValue<a class="headerlink" href="#pyivalue" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIValue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIValue</span></span><a class="headerlink" href="#stapipy.PyIValue" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>インターフェイスクラスの基本クラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIValue.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIValue.access_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>プロパティー：アクセスモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIValue.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIValue.from_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- 設定する値</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を書き込んだ後にベリファイを実行するかどうかを示すフラグ（デフォルトはTrue）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIValue.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIValue.is_value_cache_valid" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>プロパティー：キャッシュが有効かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIValue.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIValue.node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>プロパティー：インターフェイスと関係ないノード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIValue.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIValue.to_string" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>str型の値を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- ノード値を読込むの際、ベリファイを実行するかどうかを示すフラグ（デフォルトはFalse）</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- キャッシュを無視するフラグ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在のノード値（str型）</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyiport">
+<h2>PyIPort<a class="headerlink" href="#pyiport" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIPort" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>IPortインターフェイスにアクセスするためのクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIPort.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIPort.node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyIPort.node: PyNode</p>
+<p>プロパティー：インターフェイスと関係ないノード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ノードが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIPort.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int64_t</span> <span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int64_t</span> <span class="pre">length</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><span class="pre">bytes</span></a></span></span><a class="headerlink" href="#stapipy.PyIPort.read" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定したアドレスから指定したバイト数のデータを読み込みます。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- アクセスするアドレスを指定します。4の倍数である必要あり。</p></li>
+<li><p><strong>length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 読み込むデータのバイト数。4の倍数である必要あり。</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>現在の値</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIPort.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int64_t</span> <span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int64_t</span> <span class="pre">length=0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIPort.write" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定したアドレスに指定したバイト数のデータを書き込みます。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buffer</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><em>bytes</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytearray" title="(in Python v3.12)"><em>bytearray</em></a>) -- 書き込むデータ。長さは4の倍数である必要あり。</p></li>
+<li><p><strong>address</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- アクセスするアドレスを指定します。4の倍数である必要あり。</p></li>
+<li><p><strong>length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 書き込むデータのバイト数。4の倍数である必要あり。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pynodemap">
+<h2>PyNodeMap<a class="headerlink" href="#pynodemap" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyNodeMap</span></span><a class="headerlink" href="#stapipy.PyNodeMap" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>GenApiノードマップクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.device_name">
+<span class="sig-name descname"><span class="pre">device_name</span></span><a class="headerlink" href="#stapipy.PyNodeMap.device_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNodeMap.device_name: str</p>
+<p>プロパティー：デバイス名</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.get_node">
+<span class="sig-name descname"><span class="pre">get_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">node_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNodeMap.get_node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>指定したノード名に対するノードを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>node_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- ノード名</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>ノード。存在しない場合はNone</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.get_nodes_name">
+<span class="sig-name descname"><span class="pre">get_nodes_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">full_qualified=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyNodeMap.get_nodes_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>全ノード名を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>full_qualified</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- fully qualified nameかどうかを示すフラグ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>ノード名のリスト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.invalidate_nodes">
+<span class="sig-name descname"><span class="pre">invalidate_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNodeMap.invalidate_nodes" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>全ノードの値を無効化(invalidate)にします。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.lock">
+<span class="sig-name descname"><span class="pre">lock</span></span><a class="headerlink" href="#stapipy.PyNodeMap.lock" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNodeMap.lock: PyLock</p>
+<p>プロパティー：ノードマップガードのロック</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>ロックが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyLock" title="stapipy.PyLock">PyLock</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.nodes_count">
+<span class="sig-name descname"><span class="pre">nodes_count</span></span><a class="headerlink" href="#stapipy.PyNodeMap.nodes_count" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNodeMap.nodes_count: int</p>
+<p>プロパティー：ノード数</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.poll">
+<span class="sig-name descname"><span class="pre">poll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">elapsed_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNodeMap.poll" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ポーリングタイムがあるノードを更新します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>elapsed_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) -- 経過時間</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.set_suppress_callback_mode">
+<span class="sig-name descname"><span class="pre">set_suppress_callback_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppress_mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNodeMap.set_suppress_callback_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>コールバック抑制モードを設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>suppress_mode</strong> (<a class="reference internal" href="enumeration.html#stapipy.EGCCallbackSuppressMode" title="stapipy.EGCCallbackSuppressMode"><em>EGCCallbackSuppressMode</em></a>) -- コールバック抑制モード</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pynode">
+<h2>PyNode<a class="headerlink" href="#pynode" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyNode</span></span><a class="headerlink" href="#stapipy.PyNode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>GenApiノードクラス</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyNode.access_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.access_mode: EGCAccessMode</p>
+<p>プロパティー：アクセスモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.access_mode_cacheable">
+<span class="sig-name descname"><span class="pre">access_mode_cacheable</span></span><a class="headerlink" href="#stapipy.PyNode.access_mode_cacheable" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.access_mode_cacheable: EGCYesNo</p>
+<p>プロパティー：アクセスモードがキャッシュ可能かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCYesNo" title="stapipy.EGCYesNo">EGCYesNo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.alias">
+<span class="sig-name descname"><span class="pre">alias</span></span><a class="headerlink" href="#stapipy.PyNode.alias" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.alias: PyNode</p>
+<p>プロパティー：ノードエイリアス</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.caching_mode">
+<span class="sig-name descname"><span class="pre">caching_mode</span></span><a class="headerlink" href="#stapipy.PyNode.caching_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.caching_mode: EGCCachingMode</p>
+<p>プロパティー：ノードのキャッシュモード</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCCachingMode" title="stapipy.EGCCachingMode">EGCCachingMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.cast_alias">
+<span class="sig-name descname"><span class="pre">cast_alias</span></span><a class="headerlink" href="#stapipy.PyNode.cast_alias" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.cast_alias: PyNode</p>
+<p>プロパティー：ノードキャストエイリアス</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.children_name">
+<span class="sig-name descname"><span class="pre">children_name</span></span><a class="headerlink" href="#stapipy.PyNode.children_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.children_name: list</p>
+<p>プロパティー：子ノード名のリスト</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>リストが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.deregister_callback">
+<span class="sig-name descname"><span class="pre">deregister_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStRegisteredCallback</span> <span class="pre">registered_cb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNode.deregister_callback" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>全てのコールバック登録を解除します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>registered_cb</strong> (<a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><em>PyStRegisteredCallback</em></a>) -- 登録されたコールバック</p></li>
+<li><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- このPyNodeのコピーモジュールを含む、全てのモジュールにregistered_cbが登録されていれば、その登録を解除するフラグ</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.deregister_callbacks">
+<span class="sig-name descname"><span class="pre">deregister_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNode.deregister_callbacks" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>全てのコールバック登録を解除します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- このPyNodeのコピーモジュールを含む、全てのモジュールにregistered_cbが登録されていれば、その登録を解除するフラグ</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#stapipy.PyNode.description" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.description: str</p>
+<p>プロパティー：ノードの詳細説明</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.device_name">
+<span class="sig-name descname"><span class="pre">device_name</span></span><a class="headerlink" href="#stapipy.PyNode.device_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.device_name: str</p>
+<p>プロパティー：デバイス名</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.display_name">
+<span class="sig-name descname"><span class="pre">display_name</span></span><a class="headerlink" href="#stapipy.PyNode.display_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.display_name: str</p>
+<p>プロパティー：表示名</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.docu_url">
+<span class="sig-name descname"><span class="pre">docu_url</span></span><a class="headerlink" href="#stapipy.PyNode.docu_url" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.docu_url: str</p>
+<p>プロパティー：このノードのドキュメントを指すURL</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.event_id">
+<span class="sig-name descname"><span class="pre">event_id</span></span><a class="headerlink" href="#stapipy.PyNode.event_id" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.event_id: str</p>
+<p>プロパティー：このノードのイベントID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNode.get" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>インターフェイス型に適したクラスのインスタンスを返します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyIBoolean" title="stapipy.PyIBoolean">PyIBoolean</a> or <a class="reference internal" href="#stapipy.PyICommand" title="stapipy.PyICommand">PyICommand</a> or <a class="reference internal" href="#stapipy.PyIEnumEntry" title="stapipy.PyIEnumEntry">PyIEnumEntry</a> or <a class="reference internal" href="#stapipy.PyIEnumeration" title="stapipy.PyIEnumeration">PyIEnumeration</a> or
+<a class="reference internal" href="#stapipy.PyIFloat" title="stapipy.PyIFloat">PyIFloat</a> or <a class="reference internal" href="#stapipy.PyIInteger" title="stapipy.PyIInteger">PyIInteger</a> or <a class="reference internal" href="#stapipy.PyIRegister" title="stapipy.PyIRegister">PyIRegister</a> or <a class="reference internal" href="#stapipy.PyICategory" title="stapipy.PyICategory">PyICategory</a> or <a class="reference internal" href="#stapipy.PyIString" title="stapipy.PyIString">PyIString</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.get_children">
+<span class="sig-name descname"><span class="pre">get_children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">EGCLinkType.ReadingChildren</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyNode.get_children" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>子ノードのリストを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>link_type</strong> (<a class="reference internal" href="enumeration.html#stapipy.EGCLinkType" title="stapipy.EGCLinkType"><em>EGCLinkType</em></a>) -- ノードリンクタイプ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>子ノードのリスト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>list of PyNode</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.get_nodemap">
+<span class="sig-name descname"><span class="pre">get_nodemap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyNodeMap" title="stapipy.PyNodeMap"><span class="pre">PyNodeMap</span></a></span></span><a class="headerlink" href="#stapipy.PyNode.get_nodemap" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードマップを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>ノードマップ</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNodeMap" title="stapipy.PyNodeMap">PyNodeMap</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.get_parents">
+<span class="sig-name descname"><span class="pre">get_parents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyNode.get_parents" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>親ノードのリストを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">戻り値</dt>
+<dd class="field-odd"><p>親ノードのリスト</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>list of PyNode</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.get_property">
+<span class="sig-name descname"><span class="pre">get_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">property_name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)"><span class="pre">tuple</span></a></span></span><a class="headerlink" href="#stapipy.PyNode.get_property" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>プロパティーの値と属性を取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>property_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) -- プロパティー名</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>Tuple型でプロパティー値と属性が返されます。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.get_registered_callbacks">
+<span class="sig-name descname"><span class="pre">get_registered_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyNode.get_registered_callbacks" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>登録されたコールバックを取得します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) -- このPyNodeのコピーモジュールを含む、登録されたコールバックを取得するフラグ</p>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>PyStRegisteredCallbackのリスト またはNone</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>list of PyStRegisteredCallback</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.impose_access_mode">
+<span class="sig-name descname"><span class="pre">impose_access_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNode.impose_access_mode" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>このノードのアクセスモードを設定します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>access_mode</strong> (<a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode"><em>EGCAccessMode</em></a>) -- 設定するアクセスモード</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.invalidate_node">
+<span class="sig-name descname"><span class="pre">invalidate_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNode.invalidate_node" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ノードの値を無効化(Invalidate)にします。</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_available">
+<span class="sig-name descname"><span class="pre">is_available</span></span><a class="headerlink" href="#stapipy.PyNode.is_available" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.is_available: bool</p>
+<p>プロパティー：ノードアクセス可能かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_cachable">
+<span class="sig-name descname"><span class="pre">is_cachable</span></span><a class="headerlink" href="#stapipy.PyNode.is_cachable" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.is_cachable: bool</p>
+<p>プロパティー：ノードがキャッシュ可能かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_deprecated">
+<span class="sig-name descname"><span class="pre">is_deprecated</span></span><a class="headerlink" href="#stapipy.PyNode.is_deprecated" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.is_deprecated: bool</p>
+<p>プロパティー：このノードが廃止予定かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_feature">
+<span class="sig-name descname"><span class="pre">is_feature</span></span><a class="headerlink" href="#stapipy.PyNode.is_feature" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.is_feature: bool</p>
+<p>プロパティー： <cite>Root</cite> カテゴリノードからこのノードをアクセスできるかどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>フラグが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_implemented">
+<span class="sig-name descname"><span class="pre">is_implemented</span></span><a class="headerlink" href="#stapipy.PyNode.is_implemented" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.is_implemented: bool</p>
+<p>プロパティー：ノードが実施されるかどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_readable">
+<span class="sig-name descname"><span class="pre">is_readable</span></span><a class="headerlink" href="#stapipy.PyNode.is_readable" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.is_readable: bool</p>
+<p>プロパティー：ノード値が読み込み可能かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_streamable">
+<span class="sig-name descname"><span class="pre">is_streamable</span></span><a class="headerlink" href="#stapipy.PyNode.is_streamable" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.is_streamable: bool</p>
+<p>プロパティー：ノード値が保存可能かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_writable">
+<span class="sig-name descname"><span class="pre">is_writable</span></span><a class="headerlink" href="#stapipy.PyNode.is_writable" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.is_writable: bool</p>
+<p>プロパティー：ノード値が書き込み可能かどうかを示すフラグ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#stapipy.PyNode.name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.name: str</p>
+<p>プロパティー：ノード名</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.name_full">
+<span class="sig-name descname"><span class="pre">name_full</span></span><a class="headerlink" href="#stapipy.PyNode.name_full" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.name_full: str</p>
+<p>プロパティー：ノードのフルネーム</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><a class="headerlink" href="#stapipy.PyNode.namespace" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.namespace: EGCNamespace</p>
+<p>プロパティー：ノードのネームスペース</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCNamespace" title="stapipy.EGCNamespace">EGCNamespace</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.parents_name">
+<span class="sig-name descname"><span class="pre">parents_name</span></span><a class="headerlink" href="#stapipy.PyNode.parents_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.parents_name: list</p>
+<p>プロパティー：親ノード名のリスト</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>リストが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.polling_time">
+<span class="sig-name descname"><span class="pre">polling_time</span></span><a class="headerlink" href="#stapipy.PyNode.polling_time" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.polling_time: int</p>
+<p>プロパティー：キャッシュ不可能なノードの推奨されるポーリング時間</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.principal_interface_type">
+<span class="sig-name descname"><span class="pre">principal_interface_type</span></span><a class="headerlink" href="#stapipy.PyNode.principal_interface_type" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.principal_interface_type: EGCInterfaceType</p>
+<p>プロパティー：このノード値のインターフェイスタイプ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCInterfaceType" title="stapipy.EGCInterfaceType">EGCInterfaceType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.property_names">
+<span class="sig-name descname"><span class="pre">property_names</span></span><a class="headerlink" href="#stapipy.PyNode.property_names" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.property_names: list</p>
+<p>プロパティー：このノードのプロパティー名のリスト</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>リストが返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.register_callback">
+<span class="sig-name descname"><span class="pre">register_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">EGCCallbackType.InsideLock</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><span class="pre">PyStRegisteredCallback</span></a></span></span><a class="headerlink" href="#stapipy.PyNode.register_callback" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>このノードにコールバック関数を登録します。</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback_func</strong> -- トリガーされる関数</p></li>
+<li><p><strong>user_data</strong> -- ユーザデータ（オプショナル）</p></li>
+<li><p><strong>callback_type</strong> (<a class="reference internal" href="enumeration.html#stapipy.EGCCallbackType" title="stapipy.EGCCallbackType"><em>EGCCallbackType</em></a>) -- コールバックタイプ</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p>登録されたコールバックのオブジェクト</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback">PyStRegisteredCallback</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.tooltip">
+<span class="sig-name descname"><span class="pre">tooltip</span></span><a class="headerlink" href="#stapipy.PyNode.tooltip" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.tooltip: str</p>
+<p>プロパティー：ノードのツールチップ</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">戻り値の型</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyNode.value" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>プロパティー：ノードの値。返すデータタイプはインタフェイスタイプにより異なります。列挙型の場合は、数値が返されます。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>値が返されます。ベリファイとキャッシュ無視のフラグがFalse状態で値の読み込みを行います。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。書き込みの際、ベリファイフラグがTrueとなります。</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.visibility">
+<span class="sig-name descname"><span class="pre">visibility</span></span><a class="headerlink" href="#stapipy.PyNode.visibility" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PyNode.visibility: EGCVisibility</p>
+<p>プロパティー：ノードの可視性</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>戻り値が返されます。</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>値を設定します。</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EGCVisibility" title="stapipy.EGCVisibility">EGCVisibility</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pylock">
+<h2>PyLock<a class="headerlink" href="#pylock" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyLock">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyLock</span></span><a class="headerlink" href="#stapipy.PyLock" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>GenApiロック処理クラス</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyLock.lock">
+<span class="sig-name descname"><span class="pre">lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyLock.lock" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>施錠します。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyLock.try_lock">
+<span class="sig-name descname"><span class="pre">try_lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyLock.try_lock" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>施錠してみます。</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyLock.unlock">
+<span class="sig-name descname"><span class="pre">unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyLock.unlock" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>開錠します。</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">GenICam GenApiクラス</a><ul>
+<li><a class="reference internal" href="#pyiboolean">PyIBoolean</a></li>
+<li><a class="reference internal" href="#pyicategory">PyICategory</a></li>
+<li><a class="reference internal" href="#pyicommand">PyICommand</a></li>
+<li><a class="reference internal" href="#pyienumeration">PyIEnumeration</a></li>
+<li><a class="reference internal" href="#pyienumentry">PyIEnumEntry</a></li>
+<li><a class="reference internal" href="#pyifloat">PyIFloat</a></li>
+<li><a class="reference internal" href="#pyiinteger">PyIInteger</a></li>
+<li><a class="reference internal" href="#pyiregister">PyIRegister</a></li>
+<li><a class="reference internal" href="#pyistring">PyIString</a></li>
+<li><a class="reference internal" href="#pyivalue">PyIValue</a></li>
+<li><a class="reference internal" href="#pyiport">PyIPort</a></li>
+<li><a class="reference internal" href="#pynodemap">PyNodeMap</a></li>
+<li><a class="reference internal" href="#pynode">PyNode</a></li>
+<li><a class="reference internal" href="#pylock">PyLock</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="ref_stapi_ip.html"
+                          title="前の章へ">画像処理の関数とクラス</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="enumeration.html"
+                          title="次の章へ">列挙型リファレンス</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="enumeration.html" title="列挙型リファレンス"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="ref_stapi_ip.html" title="画像処理の関数とクラス"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reference.html" >StApi Python(stapipy)リファレンス</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GenICam GenApiクラス</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,2838 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>GenICam GenApi Classes &#8212; StApi Python 1.2.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Enumeration Reference" href="enumeration.html" />
+    <link rel="prev" title="Image Processing Functions and Classes" href="ref_stapi_ip.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="enumeration.html" title="Enumeration Reference"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ref_stapi_ip.html" title="Image Processing Functions and Classes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reference.html" accesskey="U">StApi Python (stapipy) Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GenICam GenApi Classes</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="genicam-genapi-classes">
+<h1>GenICam GenApi Classes<a class="headerlink" href="#genicam-genapi-classes" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="pyiboolean">
+<h2>PyIBoolean<a class="headerlink" href="#pyiboolean" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIBoolean</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIBoolean" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>Class to access node value which has interface type of IBoolean.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIBoolean.access_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>Property: Access mode of this node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIBoolean.from_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value from string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyIBoolean.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the node value. Use this function only either <cite>verify</cite> or
+<cite>ignore_cache</cite> is True. Otherwise, use .value property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIBoolean.is_value_cache_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>Property: Flag to indicate if the cache is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIBoolean.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>Property: Node independent from the type of the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIBoolean.set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIBoolean.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the string representation of the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value in string representation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIBoolean.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIBoolean.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIBoolean.value: bool</p>
+<p>Property: The current node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value. The value is read with default flags (
+verification and ignore-cache flags are False).</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value. The value is written with default flag (
+verification flag is True).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyicategory">
+<h2>PyICategory<a class="headerlink" href="#pyicategory" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyICategory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyICategory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyICategory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>Class to access node value which has interface type of ICategory.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICategory.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyICategory.access_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>Property: Access mode of this node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICategory.feature_list">
+<span class="sig-name descname"><span class="pre">feature_list</span></span><a class="headerlink" href="#stapipy.PyICategory.feature_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyICategory.feature_list: list</p>
+<p>Property: List of the features within this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the list of the feature node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of PyNode</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyICategory.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyICategory.from_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value from string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICategory.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyICategory.is_value_cache_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>Property: Flag to indicate if the cache is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICategory.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyICategory.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>Property: Node independent from the type of the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyICategory.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyICategory.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the string representation of the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value in string representation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyicommand">
+<h2>PyICommand<a class="headerlink" href="#pyicommand" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyICommand">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyICommand</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyICommand" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>Class to access node value which has interface type of ICommand.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICommand.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyICommand.access_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>Property: Access mode of this node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyICommand.execute">
+<span class="sig-name descname"><span class="pre">execute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyICommand.execute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute the command node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed
+(Default value is False).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyICommand.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyICommand.from_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value from string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyICommand.is_done">
+<span class="sig-name descname"><span class="pre">is_done</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyICommand.is_done" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the execution has been completed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed
+(Default value is True).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if the execution is done. False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICommand.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyICommand.is_value_cache_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>Property: Flag to indicate if the cache is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyICommand.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyICommand.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>Property: Node independent from the type of the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyICommand.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyICommand.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the string representation of the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value in string representation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyienumeration">
+<h2>PyIEnumeration<a class="headerlink" href="#pyienumeration" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIEnumeration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumeration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>Class to access node value which has interface type of IEnumeration.</p>
+<p>The enumeration entries are iterable either through the symbolic value or
+the numeric value.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.access_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>Property: Access mode of this node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.current_entry">
+<span class="sig-name descname"><span class="pre">current_entry</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.current_entry" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIEnumeration.current_entry: PyNode</p>
+<p>Property: Current value (enumeration entry) of this Enumeration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the PyNode of the current Enumeration entry.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.entries">
+<span class="sig-name descname"><span class="pre">entries</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.entries" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIEnumeration.entries: list</p>
+<p>Property: List of the enumeration entries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the list of PyNode of the enumeration entries.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of PyNode</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.entries_count">
+<span class="sig-name descname"><span class="pre">entries_count</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.entries_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIEnumeration.entries_count: int</p>
+<p>Property: Number of enumeration entries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumeration.from_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value from string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.get_int_value">
+<span class="sig-name descname"><span class="pre">get_int_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int64_t</span></span></span><a class="headerlink" href="#stapipy.PyIEnumeration.get_int_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current numeric value of the enumeration node. Use this function
+only either <cite>verify</cite> or <cite>ignore_cache</cite> is True. Otherwise, use .value
+property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed (
+Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored (
+Default is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value in numeric.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.is_value_cache_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>Property: Flag to indicate if the cache is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>Property: Node independent from the type of the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.set_entry_value">
+<span class="sig-name descname"><span class="pre">set_entry_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyIEnumEntry</span> <span class="pre">enum_entry</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumeration.set_entry_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the enumeration using the entry object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enum_entry</strong> (<a class="reference internal" href="#stapipy.PyIEnumEntry" title="stapipy.PyIEnumEntry"><em>PyIEnumEntry</em></a>) – The enumeration entry object.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed (
+Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.set_int_value">
+<span class="sig-name descname"><span class="pre">set_int_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int64_t</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumeration.set_int_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the enumeration using the numeric value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – The numeric value.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed (
+Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.set_symbolic_value">
+<span class="sig-name descname"><span class="pre">set_symbolic_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumeration.set_symbolic_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value of the enumeration using the symbolic value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The symbolic value.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed (
+Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.symbolics_list">
+<span class="sig-name descname"><span class="pre">symbolics_list</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.symbolics_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIEnumeration.symbolics_list: list</p>
+<p>Property: List of the enumeration entries symbolic value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the list.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIEnumeration.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the string representation of the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value in string representation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumeration.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIEnumeration.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIEnumeration.value: int</p>
+<p>Property: Integer value of the current enumeration.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value. The value is read with default flags (
+verification and ignore-cache flags are False).</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value. The value is written with default flag (
+verification flag is True).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyienumentry">
+<h2>PyIEnumEntry<a class="headerlink" href="#pyienumentry" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIEnumEntry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumEntry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>Class to access node value which has interface type of IEnumEntry.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.access_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>Property: Access mode of this node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIEnumEntry.from_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value from string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.is_self_clearing">
+<span class="sig-name descname"><span class="pre">is_self_clearing</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.is_self_clearing" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIEnumEntry.is_self_clearing: bool</p>
+<p>Property: Flag to indicate if this enumeration entry is self clearing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the flag.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.is_value_cache_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>Property: Flag to indicate if the cache is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>Property: Node independent from the type of the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.numeric_value">
+<span class="sig-name descname"><span class="pre">numeric_value</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.numeric_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIEnumEntry.numeric_value: float</p>
+<p>Property: Float value of this enumeration entry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the numeric value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.symbolic_value">
+<span class="sig-name descname"><span class="pre">symbolic_value</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.symbolic_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIEnumEntry.symbolic_value: str</p>
+<p>Property: Symbolic (String) value of this enumeration entry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the symbolic value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the string representation of the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value in string representation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIEnumEntry.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIEnumEntry.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIEnumEntry.value: int</p>
+<p>Property: Integer value of this enumeration entry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the numeric value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyifloat">
+<h2>PyIFloat<a class="headerlink" href="#pyifloat" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIFloat">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIFloat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIFloat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>Class to access node value which has interface type of IFloat.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIFloat.access_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>Property: Access mode of this node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.display_notation">
+<span class="sig-name descname"><span class="pre">display_notation</span></span><a class="headerlink" href="#stapipy.PyIFloat.display_notation" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIFloat.display_notation: EGCDisplayNotation</p>
+<p>Property: The way the float should be converted to a string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCDisplayNotation" title="stapipy.EGCDisplayNotation">EGCDisplayNotation</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.display_precision">
+<span class="sig-name descname"><span class="pre">display_precision</span></span><a class="headerlink" href="#stapipy.PyIFloat.display_precision" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIFloat.display_precision: int</p>
+<p>Property: The precision to be used when converting the float to a
+string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.enum_alias">
+<span class="sig-name descname"><span class="pre">enum_alias</span></span><a class="headerlink" href="#stapipy.PyIFloat.enum_alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIFloat.enum_alias: PyNode</p>
+<p>Property: Node alias which has Enumeration interface type if applicable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node alias with Enumeration interface type.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIFloat.from_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value from string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.get_valid_values">
+<span class="sig-name descname"><span class="pre">get_valid_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">bounded=True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyIFloat.get_valid_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get valid values if the valid values are defined.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>bounded</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if bounded or not.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns the list of the valid values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">double</span></span></span><a class="headerlink" href="#stapipy.PyIFloat.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the node value. Use this function only either <cite>verify</cite> or
+<cite>ignore_cache</cite> is True. Otherwise, use .value property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.has_inc">
+<span class="sig-name descname"><span class="pre">has_inc</span></span><a class="headerlink" href="#stapipy.PyIFloat.has_inc" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIFloat.has_inc: bool</p>
+<p>Property: Flag to indicate if this node has a constant increment.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.inc">
+<span class="sig-name descname"><span class="pre">inc</span></span><a class="headerlink" href="#stapipy.PyIFloat.inc" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIFloat.inc: float</p>
+<p>Property: Constant increment if any.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.inc_mode">
+<span class="sig-name descname"><span class="pre">inc_mode</span></span><a class="headerlink" href="#stapipy.PyIFloat.inc_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIFloat.inc_mode: EGCIncMode</p>
+<p>Property: Increment mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCIncMode" title="stapipy.EGCIncMode">EGCIncMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.int_alias">
+<span class="sig-name descname"><span class="pre">int_alias</span></span><a class="headerlink" href="#stapipy.PyIFloat.int_alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIFloat.int_alias: PyNode</p>
+<p>Property: Node alias which has Integer interface type if applicable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node alias with Integer interface type.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIFloat.is_value_cache_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>Property: Flag to indicate if the cache is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.max">
+<span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#stapipy.PyIFloat.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIFloat.max: float</p>
+<p>Property: The maximum allowed value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.min">
+<span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#stapipy.PyIFloat.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIFloat.min: float</p>
+<p>Property: The minimum allowed value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIFloat.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>Property: Node independent from the type of the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.representation">
+<span class="sig-name descname"><span class="pre">representation</span></span><a class="headerlink" href="#stapipy.PyIFloat.representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIFloat.representation: EGCRepresentation</p>
+<p>Property: Recommended representation for the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCRepresentation" title="stapipy.EGCRepresentation">EGCRepresentation</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">double</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIFloat.set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIFloat.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the string representation of the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value in string representation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.unit">
+<span class="sig-name descname"><span class="pre">unit</span></span><a class="headerlink" href="#stapipy.PyIFloat.unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIFloat.unit: str</p>
+<p>Property: The physical unit name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIFloat.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIFloat.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIFloat.value: float</p>
+<p>Property: The current node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value. The value is read with default flags (
+verification and ignore-cache flags are False).</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value. The value is written with default flag (
+verification flag is True).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyiinteger">
+<h2>PyIInteger<a class="headerlink" href="#pyiinteger" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIInteger">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIInteger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIInteger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>Class to access node value which has interface type of IInteger.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIInteger.access_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>Property: Access mode of this node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.float_alias">
+<span class="sig-name descname"><span class="pre">float_alias</span></span><a class="headerlink" href="#stapipy.PyIInteger.float_alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIInteger.float_alias: PyNode</p>
+<p>Property: Node alias which has Float interface type if applicable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node alias with Float interface type.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIInteger.from_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value from string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.get_valid_values">
+<span class="sig-name descname"><span class="pre">get_valid_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">bounded=True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyIInteger.get_valid_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get valid values if the valid values are defined.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>bounded</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if bounded or not.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns the list of the valid values.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int64_t</span></span></span><a class="headerlink" href="#stapipy.PyIInteger.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the node value. Use this function only either <cite>verify</cite> or
+<cite>ignore_cache</cite> is True. Otherwise, use .value property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.inc">
+<span class="sig-name descname"><span class="pre">inc</span></span><a class="headerlink" href="#stapipy.PyIInteger.inc" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIInteger.inc: int</p>
+<p>Property: Constant increment if any.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.inc_mode">
+<span class="sig-name descname"><span class="pre">inc_mode</span></span><a class="headerlink" href="#stapipy.PyIInteger.inc_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIInteger.inc_mode: EGCIncMode</p>
+<p>Property: Increment mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCIncMode" title="stapipy.EGCIncMode">EGCIncMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIInteger.is_value_cache_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>Property: Flag to indicate if the cache is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.max">
+<span class="sig-name descname"><span class="pre">max</span></span><a class="headerlink" href="#stapipy.PyIInteger.max" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIInteger.max: int</p>
+<p>Property: The maximum allowed value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.min">
+<span class="sig-name descname"><span class="pre">min</span></span><a class="headerlink" href="#stapipy.PyIInteger.min" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIInteger.min: int</p>
+<p>Property: The minimum allowed value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIInteger.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>Property: Node independent from the type of the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.representation">
+<span class="sig-name descname"><span class="pre">representation</span></span><a class="headerlink" href="#stapipy.PyIInteger.representation" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIInteger.representation: EGCRepresentation</p>
+<p>Property: Recommended representation for the node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCRepresentation" title="stapipy.EGCRepresentation">EGCRepresentation</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int64_t</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIInteger.set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIInteger.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the string representation of the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value in string representation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.unit">
+<span class="sig-name descname"><span class="pre">unit</span></span><a class="headerlink" href="#stapipy.PyIInteger.unit" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIInteger.unit: str</p>
+<p>Property: The physical unit name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIInteger.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIInteger.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIInteger.value: int</p>
+<p>Property: The current node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value. The value is read with default flags (
+verification and ignore-cache flags are False).</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value. The value is written with default flag (
+verification flag is True).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyiregister">
+<h2>PyIRegister<a class="headerlink" href="#pyiregister" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIRegister">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIRegister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIRegister" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>Class to access node value which has interface type of IRegister.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIRegister.access_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>Property: Access mode of this node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.address">
+<span class="sig-name descname"><span class="pre">address</span></span><a class="headerlink" href="#stapipy.PyIRegister.address" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIRegister.address: int</p>
+<p>Property: Address of the register.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIRegister.from_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value from string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.get_address">
+<span class="sig-name descname"><span class="pre">get_address</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int64_t</span></span></span><a class="headerlink" href="#stapipy.PyIRegister.get_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the Address of the register.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Address of the register.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.get_length">
+<span class="sig-name descname"><span class="pre">get_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int64_t</span></span></span><a class="headerlink" href="#stapipy.PyIRegister.get_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the Length of the register.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Length of the register data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><span class="pre">bytes</span></a></span></span><a class="headerlink" href="#stapipy.PyIRegister.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the node value. Use this function only either <cite>verify</cite> or
+<cite>ignore_cache</cite> is True. Otherwise, use .value property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIRegister.is_value_cache_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>Property: Flag to indicate if the cache is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.length">
+<span class="sig-name descname"><span class="pre">length</span></span><a class="headerlink" href="#stapipy.PyIRegister.length" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIRegister.length: int</p>
+<p>Property: Length of the register data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIRegister.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>Property: Node independent from the type of the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bytes</span> <span class="pre">buffer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIRegister.set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buffer</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><em>bytes</em></a>) – Data to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIRegister.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the string representation of the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value in string representation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIRegister.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIRegister.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIRegister.value: bytes</p>
+<p>Property: The current node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value. The value is read with default flags (
+verification and ignore-cache flags are False).</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value. The value is written with default flag (
+verification flag is True).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyistring">
+<h2>PyIString<a class="headerlink" href="#pyistring" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIString">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIString</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIString" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#stapipy.PyIValue" title="stapipy.PyIValue"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIValue</span></code></a></p>
+<p>Class to access node value which has interface type of IString.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIString.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIString.access_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>Property: Access mode of this node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIString.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIString.from_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value from string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIString.get_max_length">
+<span class="sig-name descname"><span class="pre">get_max_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int64_t</span></span></span><a class="headerlink" href="#stapipy.PyIString.get_max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves the maximum length of the string in bytes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The maximum length.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIString.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIString.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the node value. Use this function only either <cite>verify</cite> or
+<cite>ignore_cache</cite> is True. Otherwise, use .value property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIString.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIString.is_value_cache_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>Property: Flag to indicate if the cache is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIString.max_length">
+<span class="sig-name descname"><span class="pre">max_length</span></span><a class="headerlink" href="#stapipy.PyIString.max_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIString.max_length: int</p>
+<p>Property: Maximum length of the string value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the maximum length.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIString.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIString.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>Property: Node independent from the type of the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIString.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIString.set_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIString.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIString.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the string representation of the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value in string representation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIString.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyIString.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIString.value: str</p>
+<p>Property: The current node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value. The value is read with default flags (
+verification and ignore-cache flags are False).</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value. The value is written with default flag (
+verification flag is True).</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyivalue">
+<h2>PyIValue<a class="headerlink" href="#pyivalue" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIValue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIValue</span></span><a class="headerlink" href="#stapipy.PyIValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Base class for node value class.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIValue.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyIValue.access_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.access_mode: EGCAccessMode</p>
+<p>Property: Access mode of this node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIValue.from_string">
+<span class="sig-name descname"><span class="pre">from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIValue.from_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the value from string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Value to set.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed after
+writing the node value (Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIValue.is_value_cache_valid">
+<span class="sig-name descname"><span class="pre">is_value_cache_valid</span></span><a class="headerlink" href="#stapipy.PyIValue.is_value_cache_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.is_value_cache_valid: bool</p>
+<p>Property: Flag to indicate if the cache is valid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIValue.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIValue.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIValue.node: PyNode</p>
+<p>Property: Node independent from the type of the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIValue.to_string">
+<span class="sig-name descname"><span class="pre">to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">ignore_cache=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyIValue.to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the string representation of the value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if verification is performed when
+reading the node value (Default is False).</p></li>
+<li><p><strong>ignore_cache</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if cache is ignored
+(Default value is False).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current node value in string representation.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyiport">
+<h2>PyIPort<a class="headerlink" href="#pyiport" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyIPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyIPort</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">PyNode</span> <span class="pre">node</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class to access node value which has interface type of IPort.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyIPort.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyIPort.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyIPort.node: PyNode</p>
+<p>Property: Node independent from the type of the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the node.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIPort.read">
+<span class="sig-name descname"><span class="pre">read</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int64_t</span> <span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int64_t</span> <span class="pre">length</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><span class="pre">bytes</span></a></span></span><a class="headerlink" href="#stapipy.PyIPort.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads length bytes from address of this Port 
+to the allocated memory at buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>address</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Register address to access. 
+Must be multiples of four.</p></li>
+<li><p><strong>length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Number of bytes to be read from Port. 
+Must be multiples of four.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The current value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyIPort.write">
+<span class="sig-name descname"><span class="pre">write</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">buffer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int64_t</span> <span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int64_t</span> <span class="pre">length=0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyIPort.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes length bytes to address of this Port 
+from the preallocated memory at buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buffer</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><em>bytes</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytearray" title="(in Python v3.12)"><em>bytearray</em></a>) – The data is written. Length must be multiples of four.</p></li>
+<li><p><strong>address</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Register address to access. 
+Must be multiples of four.</p></li>
+<li><p><strong>length</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Number of bytes to be written to Port. 
+Must be multiples of four.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pynodemap">
+<h2>PyNodeMap<a class="headerlink" href="#pynodemap" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyNodeMap</span></span><a class="headerlink" href="#stapipy.PyNodeMap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class to access GenApi NodeMap.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.device_name">
+<span class="sig-name descname"><span class="pre">device_name</span></span><a class="headerlink" href="#stapipy.PyNodeMap.device_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNodeMap.device_name: str</p>
+<p>Property: Device name of the nodemap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.get_node">
+<span class="sig-name descname"><span class="pre">get_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">node_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNodeMap.get_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>node_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Node name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The node or None if not found.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.get_nodes_name">
+<span class="sig-name descname"><span class="pre">get_nodes_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">full_qualified=False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyNodeMap.get_nodes_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get name of all nodes in the nodemap.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>full_qualified</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to indicate if the returned name is
+a fully qualified name (Default value is False).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of the node names.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.invalidate_nodes">
+<span class="sig-name descname"><span class="pre">invalidate_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNodeMap.invalidate_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalidate all nodes.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.lock">
+<span class="sig-name descname"><span class="pre">lock</span></span><a class="headerlink" href="#stapipy.PyNodeMap.lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNodeMap.lock: PyLock</p>
+<p>Property: The lock which guards the node map.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the lock.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyLock" title="stapipy.PyLock">PyLock</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.nodes_count">
+<span class="sig-name descname"><span class="pre">nodes_count</span></span><a class="headerlink" href="#stapipy.PyNodeMap.nodes_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNodeMap.nodes_count: int</p>
+<p>Property: Number of nodes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.poll">
+<span class="sig-name descname"><span class="pre">poll</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">elapsed_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNodeMap.poll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fire nodes which has a polling time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>elapsed_time</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – The elapsed time.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNodeMap.set_suppress_callback_mode">
+<span class="sig-name descname"><span class="pre">set_suppress_callback_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">suppress_mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNodeMap.set_suppress_callback_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set suppress callback mode.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>suppress_mode</strong> (<a class="reference internal" href="enumeration.html#stapipy.EGCCallbackSuppressMode" title="stapipy.EGCCallbackSuppressMode"><em>EGCCallbackSuppressMode</em></a>) – Callback suppression mode.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pynode">
+<h2>PyNode<a class="headerlink" href="#pynode" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyNode</span></span><a class="headerlink" href="#stapipy.PyNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class to access GenApi node.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.access_mode">
+<span class="sig-name descname"><span class="pre">access_mode</span></span><a class="headerlink" href="#stapipy.PyNode.access_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.access_mode: EGCAccessMode</p>
+<p>Property: Access mode of this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode">EGCAccessMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.access_mode_cacheable">
+<span class="sig-name descname"><span class="pre">access_mode_cacheable</span></span><a class="headerlink" href="#stapipy.PyNode.access_mode_cacheable" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.access_mode_cacheable: EGCYesNo</p>
+<p>Property: Gets whether the access mode is cached.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCYesNo" title="stapipy.EGCYesNo">EGCYesNo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.alias">
+<span class="sig-name descname"><span class="pre">alias</span></span><a class="headerlink" href="#stapipy.PyNode.alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.alias: PyNode</p>
+<p>Property: Node alias.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.caching_mode">
+<span class="sig-name descname"><span class="pre">caching_mode</span></span><a class="headerlink" href="#stapipy.PyNode.caching_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.caching_mode: EGCCachingMode</p>
+<p>Property: Caching mode of this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCCachingMode" title="stapipy.EGCCachingMode">EGCCachingMode</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.cast_alias">
+<span class="sig-name descname"><span class="pre">cast_alias</span></span><a class="headerlink" href="#stapipy.PyNode.cast_alias" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.cast_alias: PyNode</p>
+<p>Property: Node cast alias.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.children_name">
+<span class="sig-name descname"><span class="pre">children_name</span></span><a class="headerlink" href="#stapipy.PyNode.children_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.children_name: list</p>
+<p>Property: List of the children name if any.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the list.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.deregister_callback">
+<span class="sig-name descname"><span class="pre">deregister_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStRegisteredCallback</span> <span class="pre">registered_cb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNode.deregister_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister all callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>registered_cb</strong> (<a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><em>PyStRegisteredCallback</em></a>) – Registered callback.</p></li>
+<li><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to deregister all callbacks in all copies 
+of this PyNode (Default is False).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.deregister_callbacks">
+<span class="sig-name descname"><span class="pre">deregister_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNode.deregister_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister all callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to deregister all callbacks in all copies 
+of this PyNode (Default is False).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#stapipy.PyNode.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.description: str</p>
+<p>Property: Description of this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.device_name">
+<span class="sig-name descname"><span class="pre">device_name</span></span><a class="headerlink" href="#stapipy.PyNode.device_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.device_name: str</p>
+<p>Property: Device name of this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.display_name">
+<span class="sig-name descname"><span class="pre">display_name</span></span><a class="headerlink" href="#stapipy.PyNode.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.display_name: str</p>
+<p>Property: Display name of this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.docu_url">
+<span class="sig-name descname"><span class="pre">docu_url</span></span><a class="headerlink" href="#stapipy.PyNode.docu_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.docu_url: str</p>
+<p>Property: URL pointing to the documentation of this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.event_id">
+<span class="sig-name descname"><span class="pre">event_id</span></span><a class="headerlink" href="#stapipy.PyNode.event_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.event_id: str</p>
+<p>Property: Event ID of this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.get">
+<span class="sig-name descname"><span class="pre">get</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNode.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Acquire class instance based on the interface type of the node. 
+The returned class varies depending on the interface type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyIBoolean" title="stapipy.PyIBoolean">PyIBoolean</a> or <a class="reference internal" href="#stapipy.PyICommand" title="stapipy.PyICommand">PyICommand</a> or <a class="reference internal" href="#stapipy.PyIEnumEntry" title="stapipy.PyIEnumEntry">PyIEnumEntry</a> or <a class="reference internal" href="#stapipy.PyIEnumeration" title="stapipy.PyIEnumeration">PyIEnumeration</a> or
+<a class="reference internal" href="#stapipy.PyIFloat" title="stapipy.PyIFloat">PyIFloat</a> or <a class="reference internal" href="#stapipy.PyIInteger" title="stapipy.PyIInteger">PyIInteger</a> or <a class="reference internal" href="#stapipy.PyIRegister" title="stapipy.PyIRegister">PyIRegister</a> or <a class="reference internal" href="#stapipy.PyICategory" title="stapipy.PyICategory">PyICategory</a> or <a class="reference internal" href="#stapipy.PyIString" title="stapipy.PyIString">PyIString</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.get_children">
+<span class="sig-name descname"><span class="pre">get_children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">link_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">EGCLinkType.ReadingChildren</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyNode.get_children" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of child nodes if any.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>link_type</strong> (<a class="reference internal" href="enumeration.html#stapipy.EGCLinkType" title="stapipy.EGCLinkType"><em>EGCLinkType</em></a>) – Type of the node link (Default is
+EGCLinkType.ReadingChildren).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of the child nodes.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of PyNode</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.get_nodemap">
+<span class="sig-name descname"><span class="pre">get_nodemap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyNodeMap" title="stapipy.PyNodeMap"><span class="pre">PyNodeMap</span></a></span></span><a class="headerlink" href="#stapipy.PyNode.get_nodemap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the nodemap of this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The nodemap.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyNodeMap" title="stapipy.PyNodeMap">PyNodeMap</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.get_parents">
+<span class="sig-name descname"><span class="pre">get_parents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyNode.get_parents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of parent nodes if any.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of the parent nodes.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of PyNode</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.get_property">
+<span class="sig-name descname"><span class="pre">get_property</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">property_name</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)"><span class="pre">tuple</span></a></span></span><a class="headerlink" href="#stapipy.PyNode.get_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the property value and attribute.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>property_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Name of the property.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Returns tuple of property value and attribute.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.get_registered_callbacks">
+<span class="sig-name descname"><span class="pre">get_registered_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyNode.get_registered_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of registered callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to retrieve all registered callbacks from 
+all copies of this PyNode (Default is False).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of PyStRegisteredCallback or None.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of PyStRegisteredCallback</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.impose_access_mode">
+<span class="sig-name descname"><span class="pre">impose_access_mode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_mode</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNode.impose_access_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Impose access mode to this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>access_mode</strong> (<a class="reference internal" href="enumeration.html#stapipy.EGCAccessMode" title="stapipy.EGCAccessMode"><em>EGCAccessMode</em></a>) – access mode to impose.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.invalidate_node">
+<span class="sig-name descname"><span class="pre">invalidate_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyNode.invalidate_node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invalidate the node.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_available">
+<span class="sig-name descname"><span class="pre">is_available</span></span><a class="headerlink" href="#stapipy.PyNode.is_available" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.is_available: bool</p>
+<p>Property: Flag to indicate if the node is available for access (
+access_mode is not in [<cite>EGCAccessMode.NI</cite>, <cite>EGCAccessMode.NA</cite>]).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_cachable">
+<span class="sig-name descname"><span class="pre">is_cachable</span></span><a class="headerlink" href="#stapipy.PyNode.is_cachable" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.is_cachable: bool</p>
+<p>Property: Flag to indicate if the node is cachable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_deprecated">
+<span class="sig-name descname"><span class="pre">is_deprecated</span></span><a class="headerlink" href="#stapipy.PyNode.is_deprecated" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.is_deprecated: bool</p>
+<p>Property: Flag to indicate if this node feature is deprecated.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_feature">
+<span class="sig-name descname"><span class="pre">is_feature</span></span><a class="headerlink" href="#stapipy.PyNode.is_feature" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.is_feature: bool</p>
+<p>Property: Flag to indicate if this node can be reached via category
+nodes from a category node named <cite>Root</cite></p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the flag.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_implemented">
+<span class="sig-name descname"><span class="pre">is_implemented</span></span><a class="headerlink" href="#stapipy.PyNode.is_implemented" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.is_implemented: bool</p>
+<p>Property: Flag to indicate if the node is implemented (access_mode is
+not <cite>EGCAccessMode.NI</cite>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_readable">
+<span class="sig-name descname"><span class="pre">is_readable</span></span><a class="headerlink" href="#stapipy.PyNode.is_readable" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.is_readable: bool</p>
+<p>Property: Flag to indicate if the node value is readable (access_mode
+in [<cite>EGCAccessMode.RO</cite>, <cite>EGCAccessMode.RW</cite>]).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_streamable">
+<span class="sig-name descname"><span class="pre">is_streamable</span></span><a class="headerlink" href="#stapipy.PyNode.is_streamable" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.is_streamable: bool</p>
+<p>Property: Flag to indicate if the node value is streamable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.is_writable">
+<span class="sig-name descname"><span class="pre">is_writable</span></span><a class="headerlink" href="#stapipy.PyNode.is_writable" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.is_writable: bool</p>
+<p>Property: Flag to indicate if the node is writable (access_mode in
+[<cite>EGCAccessMode.WO</cite>, <cite>EGCAccessMode.RW</cite>]).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#stapipy.PyNode.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.name: str</p>
+<p>Property: Node name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.name_full">
+<span class="sig-name descname"><span class="pre">name_full</span></span><a class="headerlink" href="#stapipy.PyNode.name_full" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.name_full: str</p>
+<p>Property: Node full name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.namespace">
+<span class="sig-name descname"><span class="pre">namespace</span></span><a class="headerlink" href="#stapipy.PyNode.namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.namespace: EGCNamespace</p>
+<p>Property: Node namespace.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCNamespace" title="stapipy.EGCNamespace">EGCNamespace</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.parents_name">
+<span class="sig-name descname"><span class="pre">parents_name</span></span><a class="headerlink" href="#stapipy.PyNode.parents_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.parents_name: list</p>
+<p>Property: List of the parents name of this node if any.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the list.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.polling_time">
+<span class="sig-name descname"><span class="pre">polling_time</span></span><a class="headerlink" href="#stapipy.PyNode.polling_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.polling_time: int</p>
+<p>Property: Recommended polling time (for non-cachable nodes).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.principal_interface_type">
+<span class="sig-name descname"><span class="pre">principal_interface_type</span></span><a class="headerlink" href="#stapipy.PyNode.principal_interface_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.principal_interface_type: EGCInterfaceType</p>
+<p>Property: Interface type of this node value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EGCInterfaceType" title="stapipy.EGCInterfaceType">EGCInterfaceType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.property_names">
+<span class="sig-name descname"><span class="pre">property_names</span></span><a class="headerlink" href="#stapipy.PyNode.property_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.property_names: list</p>
+<p>Property: List of property names of this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the list.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list of str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyNode.register_callback">
+<span class="sig-name descname"><span class="pre">register_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">EGCCallbackType.InsideLock</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><span class="pre">PyStRegisteredCallback</span></a></span></span><a class="headerlink" href="#stapipy.PyNode.register_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback function for this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback_func</strong> – A function to be triggered.</p></li>
+<li><p><strong>user_data</strong> – Data to pass on to the function if needed (Default is
+None).</p></li>
+<li><p><strong>callback_type</strong> (<a class="reference internal" href="enumeration.html#stapipy.EGCCallbackType" title="stapipy.EGCCallbackType"><em>EGCCallbackType</em></a>) – Type of callback to determine
+when the callback function is executed.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An object that holds the registered callback.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback">PyStRegisteredCallback</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.tooltip">
+<span class="sig-name descname"><span class="pre">tooltip</span></span><a class="headerlink" href="#stapipy.PyNode.tooltip" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.tooltip: str</p>
+<p>Property: Tooltip of this node.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyNode.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property: Value of the node. The data type varies depending
+on the interface type of the node. For Enumeration type, the numeric
+value is used.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value. The value is read with default flags (
+verification and ignore-cache flags are False).</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value. The value is written with default flag (
+verification flag is True).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyNode.visibility">
+<span class="sig-name descname"><span class="pre">visibility</span></span><a class="headerlink" href="#stapipy.PyNode.visibility" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyNode.visibility: EGCVisibility</p>
+<p>Property: Node visibility.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EGCVisibility" title="stapipy.EGCVisibility">EGCVisibility</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pylock">
+<h2>PyLock<a class="headerlink" href="#pylock" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyLock">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyLock</span></span><a class="headerlink" href="#stapipy.PyLock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class to access GenApi Lock mechanism.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyLock.lock">
+<span class="sig-name descname"><span class="pre">lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyLock.lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Do lock.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyLock.try_lock">
+<span class="sig-name descname"><span class="pre">try_lock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyLock.try_lock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Try to lock.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyLock.unlock">
+<span class="sig-name descname"><span class="pre">unlock</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyLock.unlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unlock.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">GenICam GenApi Classes</a><ul>
+<li><a class="reference internal" href="#pyiboolean">PyIBoolean</a></li>
+<li><a class="reference internal" href="#pyicategory">PyICategory</a></li>
+<li><a class="reference internal" href="#pyicommand">PyICommand</a></li>
+<li><a class="reference internal" href="#pyienumeration">PyIEnumeration</a></li>
+<li><a class="reference internal" href="#pyienumentry">PyIEnumEntry</a></li>
+<li><a class="reference internal" href="#pyifloat">PyIFloat</a></li>
+<li><a class="reference internal" href="#pyiinteger">PyIInteger</a></li>
+<li><a class="reference internal" href="#pyiregister">PyIRegister</a></li>
+<li><a class="reference internal" href="#pyistring">PyIString</a></li>
+<li><a class="reference internal" href="#pyivalue">PyIValue</a></li>
+<li><a class="reference internal" href="#pyiport">PyIPort</a></li>
+<li><a class="reference internal" href="#pynodemap">PyNodeMap</a></li>
+<li><a class="reference internal" href="#pynode">PyNode</a></li>
+<li><a class="reference internal" href="#pylock">PyLock</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="ref_stapi_ip.html"
+                          title="previous chapter">Image Processing Functions and Classes</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="enumeration.html"
+                          title="next chapter">Enumeration Reference</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="enumeration.html" title="Enumeration Reference"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ref_stapi_ip.html" title="Image Processing Functions and Classes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reference.html" >StApi Python (stapipy) Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">GenICam GenApi Classes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

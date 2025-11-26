@@ -1,0 +1,3172 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Transport Layer Classes &#8212; StApi Python 1.2.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Image Processing Functions and Classes" href="ref_stapi_ip.html" />
+    <link rel="prev" title="Common Functions and Classes" href="ref_stapi_common.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ref_stapi_ip.html" title="Image Processing Functions and Classes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ref_stapi_common.html" title="Common Functions and Classes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reference.html" accesskey="U">StApi Python (stapipy) Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Transport Layer Classes</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="transport-layer-classes">
+<h1>Transport Layer Classes<a class="headerlink" href="#transport-layer-classes" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="system-module">
+<h2>System Module<a class="headerlink" href="#system-module" title="Permalink to this headline">¶</a></h2>
+<section id="pystsystem">
+<h3>PyStSystem<a class="headerlink" href="#pystsystem" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStSystem</span></span><a class="headerlink" href="#stapipy.PyStSystem" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for GenTL System Module.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.create_first_device">
+<span class="sig-name descname"><span class="pre">create_first_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ETLDeviceAccessFlags.AccessControl</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice"><span class="pre">PyStDevice</span></a></span></span><a class="headerlink" href="#stapipy.PyStSystem.create_first_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open the first detected device module of GenTL and acquire the module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>access_flags</strong> (<a class="reference internal" href="enumeration.html#stapipy.ETLDeviceAccessFlags" title="stapipy.ETLDeviceAccessFlags"><em>ETLDeviceAccessFlags</em></a>) – The mode of access (Default
+value is ETLDeviceAccessFlags.AccessControl).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Device module.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice">PyStDevice</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.deregister_callback">
+<span class="sig-name descname"><span class="pre">deregister_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStRegisteredCallback</span> <span class="pre">registered_cb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStSystem.deregister_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister a callback.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>registered_cb</strong> (<a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><em>PyStRegisteredCallback</em></a>) – Registered callback.</p></li>
+<li><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to search the registered_cb in all copies 
+of this PyStSystem (Default is False).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.deregister_callbacks">
+<span class="sig-name descname"><span class="pre">deregister_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStSystem.deregister_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister all callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to deregister all callbacks in all copies 
+of this PyStSystem (Default is False).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.get_interface">
+<span class="sig-name descname"><span class="pre">get_interface</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStInterface" title="stapipy.PyStInterface"><span class="pre">PyStInterface</span></a></span></span><a class="headerlink" href="#stapipy.PyStSystem.get_interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open interface module of GenTL and acquire the module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Interface index from 0 to 
+<a class="reference internal" href="#stapipy.PyStSystem.interface_count" title="stapipy.PyStSystem.interface_count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">interface_count</span></code></a> - 1.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Interface module.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStInterface" title="stapipy.PyStInterface">PyStInterface</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.get_registered_callbacks">
+<span class="sig-name descname"><span class="pre">get_registered_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyStSystem.get_registered_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of registered callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to retrieve all registered callbacks from 
+all copies of this PyStSystem (Default is False).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of PyStRegisteredCallback or None.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of PyStRegisteredCallback</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.info">
+<span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#stapipy.PyStSystem.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystem.info: PyStSystemInfo</p>
+<p>Property: Info of this module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStSystemInfo" title="stapipy.PyStSystemInfo">PyStSystemInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.interface_count">
+<span class="sig-name descname"><span class="pre">interface_count</span></span><a class="headerlink" href="#stapipy.PyStSystem.interface_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystem.interface_count: int</p>
+<p>Property: Number of detected interfaces. This property should not be
+accessed before calling update_interface_list().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.port">
+<span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#stapipy.PyStSystem.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystem.port: PyStPort</p>
+<p>Property: Port of this module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the port.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStPort" title="stapipy.PyStPort">PyStPort</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.register_callback">
+<span class="sig-name descname"><span class="pre">register_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><span class="pre">PyStRegisteredCallback</span></a></span></span><a class="headerlink" href="#stapipy.PyStSystem.register_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback function for this PyStSystem.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback_func</strong> – A function to be triggered.</p></li>
+<li><p><strong>user_data</strong> – Data to pass on to the function if needed (Default is
+None).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An object that holds the registered callback.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback">PyStRegisteredCallback</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStSystem.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the resource used by this PyStSystem module. Any registered
+callbacks will be deregistered.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.start_event_acquisition">
+<span class="sig-name descname"><span class="pre">start_event_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStSystem.start_event_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start event acquisition thread. 
+This function must be called when a callback is registered.
+To stop the event acquisition thread, call stop_event_acquisition().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.stop_event_acquisition">
+<span class="sig-name descname"><span class="pre">stop_event_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStSystem.stop_event_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop event acquisition thread. 
+This function must be called to stop the event acquisition thread if
+the event acquisition thread has been started.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.update_interface_list">
+<span class="sig-name descname"><span class="pre">update_interface_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyStSystem.update_interface_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update interface list by re-scanning interfaces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if the interface list was changed and false otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystem.vendor">
+<span class="sig-name descname"><span class="pre">vendor</span></span><a class="headerlink" href="#stapipy.PyStSystem.vendor" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystem.vendor: EStSystemVendor</p>
+<p>Property: The vendor of the system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EStSystemVendor" title="stapipy.EStSystemVendor">EStSystemVendor</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystsysteminfo">
+<h3>PyStSystemInfo<a class="headerlink" href="#pystsysteminfo" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStSystemInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStSystemInfo</span></span><a class="headerlink" href="#stapipy.PyStSystemInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class to provide System Information.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystemInfo.char_encoding">
+<span class="sig-name descname"><span class="pre">char_encoding</span></span><a class="headerlink" href="#stapipy.PyStSystemInfo.char_encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystemInfo.char_encoding: ETLCharEncoding</p>
+<p>Property: Value of GenTL TL_INFO_CHAR_ENCODING (Char encoding of the
+GenTL Producer).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.ETLCharEncoding" title="stapipy.ETLCharEncoding">ETLCharEncoding</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystemInfo.display_name">
+<span class="sig-name descname"><span class="pre">display_name</span></span><a class="headerlink" href="#stapipy.PyStSystemInfo.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystemInfo.display_name: str</p>
+<p>Property: Value of GenTL TL_INFO_DISPLAYNAME (GenTL producer name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystemInfo.gentl_version_major">
+<span class="sig-name descname"><span class="pre">gentl_version_major</span></span><a class="headerlink" href="#stapipy.PyStSystemInfo.gentl_version_major" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystemInfo.gentl_version_major: int</p>
+<p>Property: Value of GenTL TL_INFO_VERSION_MAJOR (Major version of the
+GenTL standard of which this GenTL Producer complies with).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystemInfo.gentl_version_minor">
+<span class="sig-name descname"><span class="pre">gentl_version_minor</span></span><a class="headerlink" href="#stapipy.PyStSystemInfo.gentl_version_minor" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystemInfo.gentl_version_minor: int</p>
+<p>Property: Value of GenTL TL_INFO_VERSION_MINOR (Minor version of the
+GenTL standard of which this GenTL Producer complies with).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystemInfo.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#stapipy.PyStSystemInfo.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystemInfo.model: str</p>
+<p>Property: Value of GenTL TL_INFO_MODEL (GenTL Producer model).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystemInfo.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#stapipy.PyStSystemInfo.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystemInfo.name: str</p>
+<p>Property: Value of GenTL TL_INFO_NAME (Filename and the extension of 
+the GenTL file library).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystemInfo.path_name">
+<span class="sig-name descname"><span class="pre">path_name</span></span><a class="headerlink" href="#stapipy.PyStSystemInfo.path_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystemInfo.path_name: str</p>
+<p>Property: Value of GenTL TL_INFO_PATHNAME (Full path including the
+filename and extension of the GenTL file library).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystemInfo.tl_id">
+<span class="sig-name descname"><span class="pre">tl_id</span></span><a class="headerlink" href="#stapipy.PyStSystemInfo.tl_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystemInfo.tl_id: str</p>
+<p>Property: Value of GenTL TL_INFO_ID (GenTL Producer ID).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystemInfo.tl_type">
+<span class="sig-name descname"><span class="pre">tl_type</span></span><a class="headerlink" href="#stapipy.PyStSystemInfo.tl_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystemInfo.tl_type: str</p>
+<p>Property: Value of GenTL TL_INFO_TLTYPE (Supported transport layer 
+type).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystemInfo.vendor">
+<span class="sig-name descname"><span class="pre">vendor</span></span><a class="headerlink" href="#stapipy.PyStSystemInfo.vendor" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystemInfo.vendor: str</p>
+<p>Property: Value of GenTL TL_INFO_VENDOR (GenTL Producer vendor name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStSystemInfo.version">
+<span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#stapipy.PyStSystemInfo.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStSystemInfo.version: str</p>
+<p>Property: Value of GenTL TL_INFO_VERSION (GenTL Producer version).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystsystemlist">
+<h3>PyStSystemList<a class="headerlink" href="#pystsystemlist" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStSystemList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStSystemList</span></span><a class="headerlink" href="#stapipy.PyStSystemList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for System module list.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystemList.create_first_device">
+<span class="sig-name descname"><span class="pre">create_first_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ETLDeviceAccessFlags.AccessControl</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice"><span class="pre">PyStDevice</span></a></span></span><a class="headerlink" href="#stapipy.PyStSystemList.create_first_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open the first detected device module of GenTL and acquire the module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>access_flags</strong> (<a class="reference internal" href="enumeration.html#stapipy.ETLDeviceAccessFlags" title="stapipy.ETLDeviceAccessFlags"><em>ETLDeviceAccessFlags</em></a>) – The mode of access (Default
+value is ETLDeviceAccessFlags.AccessControl).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Device module.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice">PyStDevice</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystemList.deregister">
+<span class="sig-name descname"><span class="pre">deregister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStSystem" title="stapipy.PyStSystem"><span class="pre">PyStSystem</span></a></span></span><a class="headerlink" href="#stapipy.PyStSystemList.deregister" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unregister an element in a list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – Specify the position of the element of the list to be unregistered.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The element to be unregistered.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStSystem" title="stapipy.PyStSystem">PyStSystem</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystemList.register">
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStSystem</span> <span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStSystemList.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register an element in a list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>item</strong> – Element to register</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The number of elements in the list.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStSystemList.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStSystemList.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the resource used by this PyStSystemList class.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="interface-module">
+<h2>Interface Module<a class="headerlink" href="#interface-module" title="Permalink to this headline">¶</a></h2>
+<section id="pystinterface">
+<h3>PyStInterface<a class="headerlink" href="#pystinterface" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStInterface">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStInterface</span></span><a class="headerlink" href="#stapipy.PyStInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for GenTL Interface module.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.create_device_by_id">
+<span class="sig-name descname"><span class="pre">create_device_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">device_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_flags=ETLDeviceAccessFlags.AccessControl</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice"><span class="pre">PyStDevice</span></a></span></span><a class="headerlink" href="#stapipy.PyStInterface.create_device_by_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open device module of GenTL and acquire the module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>device_id</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – Device ID.</p></li>
+<li><p><strong>access_flags</strong> (<a class="reference internal" href="enumeration.html#stapipy.ETLDeviceAccessFlags" title="stapipy.ETLDeviceAccessFlags"><em>ETLDeviceAccessFlags</em></a>) – The mode of access (Default
+value is ETLDeviceAccessFlags.AccessControl).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Device module.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice">PyStDevice</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.create_device_by_index">
+<span class="sig-name descname"><span class="pre">create_device_by_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_flags=ETLDeviceAccessFlags.AccessControl</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice"><span class="pre">PyStDevice</span></a></span></span><a class="headerlink" href="#stapipy.PyStInterface.create_device_by_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open device module of GenTL and acquire the module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Device index from 0 to 
+<a class="reference internal" href="#stapipy.PyStInterface.device_count" title="stapipy.PyStInterface.device_count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">device_count</span></code></a> - 1.</p></li>
+<li><p><strong>access_flags</strong> (<a class="reference internal" href="enumeration.html#stapipy.ETLDeviceAccessFlags" title="stapipy.ETLDeviceAccessFlags"><em>ETLDeviceAccessFlags</em></a>) – The mode of access (Default
+value is ETLDeviceAccessFlags.AccessControl).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Device module.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice">PyStDevice</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.create_first_device">
+<span class="sig-name descname"><span class="pre">create_first_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ETLDeviceAccessFlags.AccessControl</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice"><span class="pre">PyStDevice</span></a></span></span><a class="headerlink" href="#stapipy.PyStInterface.create_first_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open the first detected device module of GenTL and acquire the module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>access_flags</strong> (<a class="reference internal" href="enumeration.html#stapipy.ETLDeviceAccessFlags" title="stapipy.ETLDeviceAccessFlags"><em>ETLDeviceAccessFlags</em></a>) – The mode of access (Default
+value is ETLDeviceAccessFlags.AccessControl).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The Device module.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice">PyStDevice</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.deregister_callback">
+<span class="sig-name descname"><span class="pre">deregister_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStRegisteredCallback</span> <span class="pre">registered_cb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStInterface.deregister_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister a callback.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>registered_cb</strong> (<a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><em>PyStRegisteredCallback</em></a>) – Registered callback.</p></li>
+<li><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to search the registered_cb in all copies 
+of this PyStInterface (Default is False).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.deregister_callbacks">
+<span class="sig-name descname"><span class="pre">deregister_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStInterface.deregister_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister all callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to deregister all callbacks in all copies 
+of this PyStInterface (Default is False).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.device_count">
+<span class="sig-name descname"><span class="pre">device_count</span></span><a class="headerlink" href="#stapipy.PyStInterface.device_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStInterface.device_count: int</p>
+<p>Property: Number of detected devices. This property should not be
+accessed before calling update_device_list().</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.get_device_info">
+<span class="sig-name descname"><span class="pre">get_device_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStDeviceInfo" title="stapipy.PyStDeviceInfo"><span class="pre">PyStDeviceInfo</span></a></span></span><a class="headerlink" href="#stapipy.PyStInterface.get_device_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get device information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Device index from 0 to 
+<a class="reference internal" href="#stapipy.PyStInterface.device_count" title="stapipy.PyStInterface.device_count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">device_count</span></code></a> - 1.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Device information.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStDeviceInfo" title="stapipy.PyStDeviceInfo">PyStDeviceInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.get_registered_callbacks">
+<span class="sig-name descname"><span class="pre">get_registered_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyStInterface.get_registered_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of registered callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to retrieve all registered callbacks from 
+all copies of this PyStInterface (Default is False).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of PyStRegisteredCallback or None.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of PyStRegisteredCallback</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.info">
+<span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#stapipy.PyStInterface.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStInterface.info: PyStInterfaceInfo</p>
+<p>Property: Info of this module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStInterfaceInfo" title="stapipy.PyStInterfaceInfo">PyStInterfaceInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.interface_type">
+<span class="sig-name descname"><span class="pre">interface_type</span></span><a class="headerlink" href="#stapipy.PyStInterface.interface_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStInterface.interface_type: EStInterfaceType</p>
+<p>Property: Type of the camera interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EStInterfaceType" title="stapipy.EStInterfaceType">EStInterfaceType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.is_device_available">
+<span class="sig-name descname"><span class="pre">is_device_available</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flag</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyStInterface.is_device_available" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if device is accessible.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Device index from 0 to 
+<a class="reference internal" href="#stapipy.PyStInterface.device_count" title="stapipy.PyStInterface.device_count"><code class="xref py py-attr docutils literal notranslate"><span class="pre">device_count</span></code></a> - 1.</p></li>
+<li><p><strong>flag</strong> (<a class="reference internal" href="enumeration.html#stapipy.ETLDeviceAccessFlags" title="stapipy.ETLDeviceAccessFlags"><em>ETLDeviceAccessFlags</em></a>) – The access flag of the device.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Flag to indicate if device is available or not.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.port">
+<span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#stapipy.PyStInterface.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStInterface.port: PyStPort</p>
+<p>Property: Port of this module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the port.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStPort" title="stapipy.PyStPort">PyStPort</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.register_callback">
+<span class="sig-name descname"><span class="pre">register_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><span class="pre">PyStRegisteredCallback</span></a></span></span><a class="headerlink" href="#stapipy.PyStInterface.register_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback function for this PyStInterface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback_func</strong> – A function to be triggered.</p></li>
+<li><p><strong>user_data</strong> – Data to pass on to the function if needed (Default is
+None).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An object that holds the registered callback.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback">PyStRegisteredCallback</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.start_event_acquisition">
+<span class="sig-name descname"><span class="pre">start_event_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStInterface.start_event_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start event acquisition thread. 
+This function must be called when a callback is registered.
+To stop the event acquisition thread, call stop_event_acquisition().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.stop_event_acquisition">
+<span class="sig-name descname"><span class="pre">stop_event_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStInterface.stop_event_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop event acquisition thread. 
+This function must be called to stop the event acquisition thread if
+the event acquisition thread has been started.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.update_device_list">
+<span class="sig-name descname"><span class="pre">update_device_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyStInterface.update_device_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update device list by re-scanning devices.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>True if device list is updated and false otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStInterface.update_device_list_timeout">
+<span class="sig-name descname"><span class="pre">update_device_list_timeout</span></span><a class="headerlink" href="#stapipy.PyStInterface.update_device_list_timeout" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStInterface.update_device_list_timeout: int</p>
+<p>Property: Timeout in milliseconds (ms) when updating device list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystinterfaceinfo">
+<h3>PyStInterfaceInfo<a class="headerlink" href="#pystinterfaceinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStInterfaceInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStInterfaceInfo</span></span><a class="headerlink" href="#stapipy.PyStInterfaceInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class to provide Interface information.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStInterfaceInfo.display_name">
+<span class="sig-name descname"><span class="pre">display_name</span></span><a class="headerlink" href="#stapipy.PyStInterfaceInfo.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStInterfaceInfo.display_name: str</p>
+<p>Property: Value of GenTL INTERFACE_INFO_DISPLAYNAME (Interface
+display name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStInterfaceInfo.interface_id">
+<span class="sig-name descname"><span class="pre">interface_id</span></span><a class="headerlink" href="#stapipy.PyStInterfaceInfo.interface_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStInterfaceInfo.interface_id: str</p>
+<p>Property: Value of GenTL INTERFACE_INFO_ID (Interface ID).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStInterfaceInfo.tl_type">
+<span class="sig-name descname"><span class="pre">tl_type</span></span><a class="headerlink" href="#stapipy.PyStInterfaceInfo.tl_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStInterfaceInfo.tl_type: str</p>
+<p>Property: Value of GenTL INTERFACE_INFO_TLTYPE (Transport layer type).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="device-module">
+<h2>Device Module<a class="headerlink" href="#device-module" title="Permalink to this headline">¶</a></h2>
+<section id="pystdevice">
+<h3>PyStDevice<a class="headerlink" href="#pystdevice" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStDevice">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStDevice</span></span><a class="headerlink" href="#stapipy.PyStDevice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for GenTL Device module.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.acquisition_start">
+<span class="sig-name descname"><span class="pre">acquisition_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDevice.acquisition_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute AcquisitionStart command to start data transmission</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.acquisition_stop">
+<span class="sig-name descname"><span class="pre">acquisition_stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDevice.acquisition_stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute AcquisitionStop command to stop data transmission</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.create_datastream">
+<span class="sig-name descname"><span class="pre">create_datastream</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">index=0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStDataStream" title="stapipy.PyStDataStream"><span class="pre">PyStDataStream</span></a></span></span><a class="headerlink" href="#stapipy.PyStDevice.create_datastream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open DataStream module of GenTL and acquire the module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Index of the DataStream to open, 
+from 0 to <code class="xref py py-attr docutils literal notranslate"><span class="pre">datastream_count</span></code> - 1.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The DataStream module.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStDataStream" title="stapipy.PyStDataStream">PyStDataStream</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.datastream_count">
+<span class="sig-name descname"><span class="pre">datastream_count</span></span><a class="headerlink" href="#stapipy.PyStDevice.datastream_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDevice.datastream_count: int</p>
+<p>Property: Number of the DataStream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.deregister_callback">
+<span class="sig-name descname"><span class="pre">deregister_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStRegisteredCallback</span> <span class="pre">registered_cb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDevice.deregister_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister a callback.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>registered_cb</strong> (<a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><em>PyStRegisteredCallback</em></a>) – The registered callback.</p></li>
+<li><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to search the registered_cb in all copies 
+of this PyStDevice (Default is False).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.deregister_callbacks">
+<span class="sig-name descname"><span class="pre">deregister_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDevice.deregister_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister all callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to deregister all callbacks in all copies 
+of this PyStDevice (Default is False).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.get_registered_callbacks">
+<span class="sig-name descname"><span class="pre">get_registered_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyStDevice.get_registered_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of registered callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to retrieve all registered callbacks from 
+all copies of this PyStDevice (Default is False).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of PyStRegisteredCallback or None.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of PyStRegisteredCallback</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.info">
+<span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#stapipy.PyStDevice.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDevice.info: PyStDeviceInfo</p>
+<p>Property: Info of this module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStDeviceInfo" title="stapipy.PyStDeviceInfo">PyStDeviceInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.interface">
+<span class="sig-name descname"><span class="pre">interface</span></span><a class="headerlink" href="#stapipy.PyStDevice.interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDevice.interface: PyStInterface</p>
+<p>Property: The module interface of this device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the module interface.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStInterface" title="stapipy.PyStInterface">PyStInterface</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.is_device_lost">
+<span class="sig-name descname"><span class="pre">is_device_lost</span></span><a class="headerlink" href="#stapipy.PyStDevice.is_device_lost" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDevice.is_device_lost: bool</p>
+<p>Property: Flag to indicate if device is lost.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns True if device is lost. False otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.local_port">
+<span class="sig-name descname"><span class="pre">local_port</span></span><a class="headerlink" href="#stapipy.PyStDevice.local_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDevice.local_port: PyStPort</p>
+<p>Property: Port of this module to apply setting to host side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStPort" title="stapipy.PyStPort">PyStPort</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.register_callback">
+<span class="sig-name descname"><span class="pre">register_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><span class="pre">PyStRegisteredCallback</span></a></span></span><a class="headerlink" href="#stapipy.PyStDevice.register_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback function for this PyStDevice.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback_func</strong> – A function to be triggered.</p></li>
+<li><p><strong>user_data</strong> – Data to pass on to the function if needed (Default is
+None).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An object that holds the registered callback.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback">PyStRegisteredCallback</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDevice.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the resource used by this PyStDevice module. Any registered
+callbacks will be deregistered.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.remote_port">
+<span class="sig-name descname"><span class="pre">remote_port</span></span><a class="headerlink" href="#stapipy.PyStDevice.remote_port" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDevice.remote_port: PyStPort</p>
+<p>Property: Port of the device to apply setting to camera side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStPort" title="stapipy.PyStPort">PyStPort</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.start_event_acquisition">
+<span class="sig-name descname"><span class="pre">start_event_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDevice.start_event_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start event acquisition thread. 
+This function must be called when a callback is registered.
+To stop the event acquisition thread, call stop_event_acquisition().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDevice.stop_event_acquisition">
+<span class="sig-name descname"><span class="pre">stop_event_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDevice.stop_event_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop event acquisition thread. 
+This function must be called to stop the event acquisition thread if
+the event acquisition thread has been started.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystdeviceinfo">
+<h3>PyStDeviceInfo<a class="headerlink" href="#pystdeviceinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStDeviceInfo</span></span><a class="headerlink" href="#stapipy.PyStDeviceInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class to provide Device information.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceInfo.access_status">
+<span class="sig-name descname"><span class="pre">access_status</span></span><a class="headerlink" href="#stapipy.PyStDeviceInfo.access_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDeviceInfo.access_status: ETLDeviceAccessStatus</p>
+<p>Property: Value of GenTL DEVICE_INFO_ACCESS_STATUS (Device access 
+status).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.ETLDeviceAccessStatus" title="stapipy.ETLDeviceAccessStatus">ETLDeviceAccessStatus</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceInfo.device_id">
+<span class="sig-name descname"><span class="pre">device_id</span></span><a class="headerlink" href="#stapipy.PyStDeviceInfo.device_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDeviceInfo.device_id: str</p>
+<p>Property: Value of GenTL DEVICE_INFO_ID (Device ID).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceInfo.display_name">
+<span class="sig-name descname"><span class="pre">display_name</span></span><a class="headerlink" href="#stapipy.PyStDeviceInfo.display_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDeviceInfo.display_name: str</p>
+<p>Property: Value of GenTL DEVICE_INFO_DISPLAYNAME (Device display name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceInfo.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#stapipy.PyStDeviceInfo.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDeviceInfo.model: str</p>
+<p>Property: Value of GenTL DEVICE_INFO_MODEL (Device model).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceInfo.serial_number">
+<span class="sig-name descname"><span class="pre">serial_number</span></span><a class="headerlink" href="#stapipy.PyStDeviceInfo.serial_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDeviceInfo.serial_number: str</p>
+<p>Property: Value of GenTL DEVICE_INFO_SERIAL_NUMBER (Device serial 
+number).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceInfo.timestamp_frequency">
+<span class="sig-name descname"><span class="pre">timestamp_frequency</span></span><a class="headerlink" href="#stapipy.PyStDeviceInfo.timestamp_frequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDeviceInfo.timestamp_frequency: int</p>
+<p>Property: value of GenTL DEVICE_INFO_TIMESTAMP_FREQUENCY (Device 
+timestamp frequency).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceInfo.tl_type">
+<span class="sig-name descname"><span class="pre">tl_type</span></span><a class="headerlink" href="#stapipy.PyStDeviceInfo.tl_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDeviceInfo.tl_type: str</p>
+<p>Property: Value of GenTL DEVICE_INFO_TLTYPE (Transport layer type).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceInfo.user_defined_name">
+<span class="sig-name descname"><span class="pre">user_defined_name</span></span><a class="headerlink" href="#stapipy.PyStDeviceInfo.user_defined_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDeviceInfo.user_defined_name: str</p>
+<p>Property: Value of GenTL DEVICE_INFO_USER_DEFINED_NAME (User defined
+name for the device).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceInfo.vendor">
+<span class="sig-name descname"><span class="pre">vendor</span></span><a class="headerlink" href="#stapipy.PyStDeviceInfo.vendor" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDeviceInfo.vendor: str</p>
+<p>Property: Value of GenTL DEVICE_INFO_VENDOR (Device vendor name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceInfo.version">
+<span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#stapipy.PyStDeviceInfo.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDeviceInfo.version: str</p>
+<p>Property: value of GENTL DEVICE_INFO_VERSION (Device version).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystdevicelist">
+<h3>PyStDeviceList<a class="headerlink" href="#pystdevicelist" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStDeviceList</span></span><a class="headerlink" href="#stapipy.PyStDeviceList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for Device module list.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceList.acquisition_start">
+<span class="sig-name descname"><span class="pre">acquisition_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDeviceList.acquisition_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute AcquisitionStart command to start data transmission</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceList.acquisition_stop">
+<span class="sig-name descname"><span class="pre">acquisition_stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDeviceList.acquisition_stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute AcquisitionStop command to stop data transmission</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceList.deregister">
+<span class="sig-name descname"><span class="pre">deregister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice"><span class="pre">PyStDevice</span></a></span></span><a class="headerlink" href="#stapipy.PyStDeviceList.deregister" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unregister an element in a list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – Specify the position of the element of the list to be unregistered.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The element to be unregistered.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice">PyStDevice</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceList.register">
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStDevice</span> <span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDeviceList.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register an element in a list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>item</strong> – Element to register</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The number of elements in the list.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDeviceList.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDeviceList.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the resource used by this PyStDeviceList class.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="datastream-module">
+<h2>DataStream Module<a class="headerlink" href="#datastream-module" title="Permalink to this headline">¶</a></h2>
+<section id="pystdatastream">
+<h3>PyStDataStream<a class="headerlink" href="#pystdatastream" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStDataStream</span></span><a class="headerlink" href="#stapipy.PyStDataStream" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for GenTL DataStream module.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.buffer_count">
+<span class="sig-name descname"><span class="pre">buffer_count</span></span><a class="headerlink" href="#stapipy.PyStDataStream.buffer_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStream.buffer_count: int</p>
+<p>Property: Number of stream buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the current value.</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.current_bps">
+<span class="sig-name descname"><span class="pre">current_bps</span></span><a class="headerlink" href="#stapipy.PyStDataStream.current_bps" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStream.current_bps: float</p>
+<p>Property: Current data rate (bytes per second).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.current_fps">
+<span class="sig-name descname"><span class="pre">current_fps</span></span><a class="headerlink" href="#stapipy.PyStDataStream.current_fps" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStream.current_fps: float</p>
+<p>Property: Current frame rate (frames per second).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.deregister_callback">
+<span class="sig-name descname"><span class="pre">deregister_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStRegisteredCallback</span> <span class="pre">registered_cb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDataStream.deregister_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister a callback.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>registered_cb</strong> (<a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><em>PyStRegisteredCallback</em></a>) – The registered callback.</p></li>
+<li><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to search the registered_cb in all copies 
+of this PyStDataStream (Default is False).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.deregister_callbacks">
+<span class="sig-name descname"><span class="pre">deregister_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDataStream.deregister_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister all callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to deregister all callbacks in all copies 
+of this PyStDataStream (Default is False).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.device">
+<span class="sig-name descname"><span class="pre">device</span></span><a class="headerlink" href="#stapipy.PyStDataStream.device" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStream.device: PyStDevice</p>
+<p>Property: Device that owns this DataStream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStDevice" title="stapipy.PyStDevice">PyStDevice</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.get_registered_callbacks">
+<span class="sig-name descname"><span class="pre">get_registered_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyStDataStream.get_registered_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of registered callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to retrieve all registered callbacks from 
+all copies of this PyStDataStream (Default is False).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of PyStRegisteredCallback or None.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of PyStRegisteredCallback</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.info">
+<span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#stapipy.PyStDataStream.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStream.info: PyStDataStreamInfo</p>
+<p>Property: Info of this module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStDataStreamInfo" title="stapipy.PyStDataStreamInfo">PyStDataStreamInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.is_grabbing">
+<span class="sig-name descname"><span class="pre">is_grabbing</span></span><a class="headerlink" href="#stapipy.PyStDataStream.is_grabbing" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStream.is_grabbing: bool</p>
+<p>Property: Flag to indicate if data acquisition is on going.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.port">
+<span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#stapipy.PyStDataStream.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStream.port: PyStPort</p>
+<p>Property: Port of this module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the port.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStPort" title="stapipy.PyStPort">PyStPort</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.register_callback">
+<span class="sig-name descname"><span class="pre">register_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><span class="pre">PyStRegisteredCallback</span></a></span></span><a class="headerlink" href="#stapipy.PyStDataStream.register_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback function for this PyStDataStream.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback_func</strong> – A function to be triggered.</p></li>
+<li><p><strong>user_data</strong> – Data to pass on to the function if needed (Default is
+None).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An object that holds the registered callback.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback">PyStRegisteredCallback</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDataStream.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the resource used by this PyStDataStream module. Any registered
+callbacks will be deregistered.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.retrieve_buffer">
+<span class="sig-name descname"><span class="pre">retrieve_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uint32_t</span> <span class="pre">timeout=5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handling_timeout=EStTimeoutHandling.ThrowException</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStStreamBuffer" title="stapipy.PyStStreamBuffer"><span class="pre">PyStStreamBuffer</span></a></span></span><a class="headerlink" href="#stapipy.PyStDataStream.retrieve_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a completed transferred buffer (buffer in the output queue).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Wait time in milliseconds (ms) before timeout 
+(Default value is 5000ms).</p></li>
+<li><p><strong>handling_timeout</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStTimeoutHandling" title="stapipy.EStTimeoutHandling"><em>EStTimeoutHandling</em></a>) – Indicate the operation when
+timeout occurred (Default value is 
+EStTimeoutHandling.ThrowException)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The stream buffer module or None if timeout.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStStreamBuffer" title="stapipy.PyStStreamBuffer">PyStStreamBuffer</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.start_acquisition">
+<span class="sig-name descname"><span class="pre">start_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uint64_t</span> <span class="pre">num_to_acquire=-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_flags=ETLAcqStartFlags.Default</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDataStream.start_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start data acquisition from host side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_to_acquire</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Number of frames to acquire. 
+The acquisition will stop after reaching this number. 
+Nevertheless, <a class="reference internal" href="#stapipy.PyStDataStream.stop_acquisition" title="stapipy.PyStDataStream.stop_acquisition"><code class="xref py py-func docutils literal notranslate"><span class="pre">stop_acquisition()</span></code></a> 
+is still needed to end the image acquisition. 
+For unlimited frames, set to -1 (default value is -1).</p></li>
+<li><p><strong>start_flags</strong> (<a class="reference internal" href="enumeration.html#stapipy.ETLAcqStartFlags" title="stapipy.ETLAcqStartFlags"><em>ETLAcqStartFlags</em></a>) – GenTL start flag for the 
+acquisition engine (Default value is ETLAcqStartFlags.Default).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.start_event_acquisition">
+<span class="sig-name descname"><span class="pre">start_event_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDataStream.start_event_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start event acquisition thread. 
+This function must be called when a callback is registered.
+To stop the event acquisition thread, call stop_event_acquisition().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.stop_acquisition">
+<span class="sig-name descname"><span class="pre">stop_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ETLAcqStopFlags.Default</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDataStream.stop_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop data acquisition from host side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>stop_flags</strong> (<a class="reference internal" href="enumeration.html#stapipy.ETLAcqStopFlags" title="stapipy.ETLAcqStopFlags"><em>ETLAcqStopFlags</em></a>) – GenTL stop flag (Default value is
+ETLAcqStopFlags.Default)..</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStream.stop_event_acquisition">
+<span class="sig-name descname"><span class="pre">stop_event_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDataStream.stop_event_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop event acquisition thread. 
+This function must be called to stop the event acquisition thread if
+the event acquisition thread has been started.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystdatastreaminfo">
+<h3>PyStDataStreamInfo<a class="headerlink" href="#pystdatastreaminfo" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStDataStreamInfo</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class to provide DataStream information.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.buf_alignment">
+<span class="sig-name descname"><span class="pre">buf_alignment</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.buf_alignment" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.buf_alignment: int</p>
+<p>Property: Value of GenTL STREAM_INFO_BUF_ALIGNMENT (Alignment size in
+bytes of the buffer).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.buf_announce_min">
+<span class="sig-name descname"><span class="pre">buf_announce_min</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.buf_announce_min" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.buf_announce_min: int</p>
+<p>Property: Value of GenTL STREAM_INFO_BUF_ANNOUNCE_MIN (Minimum number
+of buffers to announce).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.datastream_id">
+<span class="sig-name descname"><span class="pre">datastream_id</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.datastream_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.datastream_id: str</p>
+<p>Property: Value of GenTL STREAM_INFO_ID (DataStream ID).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.is_grabbing">
+<span class="sig-name descname"><span class="pre">is_grabbing</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.is_grabbing" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.is_grabbing: bool</p>
+<p>Property: Value of GenTL STREAM_INFO_IS_GRABBING (Flag indicating
+whether the acquisition engine at the host side is started or not).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.is_payloadsize_defined">
+<span class="sig-name descname"><span class="pre">is_payloadsize_defined</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.is_payloadsize_defined" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.is_payloadsize_defined: bool</p>
+<p>Property: Value of GenTL STREAM_INFO_DEFINES_PAYLOADSIZE (Flag
+indicating that this data stream defines a payload size independent
+from the remote device).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.num_announced">
+<span class="sig-name descname"><span class="pre">num_announced</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.num_announced" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.num_announced: int</p>
+<p>Property: Value of GenTL STREAM_INFO_NUM_ANNOUNCED (Number of announced
+buffer).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.num_await_delivery">
+<span class="sig-name descname"><span class="pre">num_await_delivery</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.num_await_delivery" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.num_await_delivery: int</p>
+<p>Property: Value of GenTL STREAM_INFO_NUM_AWAIT_DELIVERY (Number of
+buffers in the output buffer queue).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.num_chunks_max">
+<span class="sig-name descname"><span class="pre">num_chunks_max</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.num_chunks_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.num_chunks_max: int</p>
+<p>Property: Value of GenTL STREAM_INFO_NUM_CHUNKS_MAX (Maximum number of
+chunks to be expected in a buffer).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.num_delivered">
+<span class="sig-name descname"><span class="pre">num_delivered</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.num_delivered" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.num_delivered: int</p>
+<p>Property: Value of GenTL STREAM_INFO_NUM_DELIVERED (Number of delivered
+frames).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.num_queued">
+<span class="sig-name descname"><span class="pre">num_queued</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.num_queued" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.num_queued: int</p>
+<p>Property: Value of GenTL STREAM_INFO_NUM_QUEUED (Number of buffers in
+the input pool and the buffers currently being filled).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.num_started">
+<span class="sig-name descname"><span class="pre">num_started</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.num_started" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.num_started: int</p>
+<p>Property: Value of GenTL STREAM_INFO_NUM_STARTED (Number of frames
+started in the acquisition engine).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.num_underrun">
+<span class="sig-name descname"><span class="pre">num_underrun</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.num_underrun" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.num_underrun: int</p>
+<p>Property: Value of GenTL STREAM_INFO_NUM_UNDERRUN (Number of lost frames
+due to buffer underrun).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.payload_size">
+<span class="sig-name descname"><span class="pre">payload_size</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.payload_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.payload_size: int</p>
+<p>Property: Value of GenTL STREAM_INFO_PAYLOAD_SIZE (Size of the expected
+data in bytes).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamInfo.tl_type">
+<span class="sig-name descname"><span class="pre">tl_type</span></span><a class="headerlink" href="#stapipy.PyStDataStreamInfo.tl_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamInfo.tl_type: str</p>
+<p>Property: Value of GenTL STREAM_INFO_TLTYPE (Transport layer type).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystdatastreamlist">
+<h3>PyStDataStreamList<a class="headerlink" href="#pystdatastreamlist" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamList">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStDataStreamList</span></span><a class="headerlink" href="#stapipy.PyStDataStreamList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for DataStream module list.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamList.deregister">
+<span class="sig-name descname"><span class="pre">deregister</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStDataStream" title="stapipy.PyStDataStream"><span class="pre">PyStDataStream</span></a></span></span><a class="headerlink" href="#stapipy.PyStDataStreamList.deregister" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unregister an element in a list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> – Specify the position of the element of the list to be unregistered.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The element to be unregistered.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStDataStream" title="stapipy.PyStDataStream">PyStDataStream</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamList.is_grabbing_all">
+<span class="sig-name descname"><span class="pre">is_grabbing_all</span></span><a class="headerlink" href="#stapipy.PyStDataStreamList.is_grabbing_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamList.is_grabbing_all: bool</p>
+<p>Property: Flag to indicate if all the DataStream are on going.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamList.is_grabbing_any">
+<span class="sig-name descname"><span class="pre">is_grabbing_any</span></span><a class="headerlink" href="#stapipy.PyStDataStreamList.is_grabbing_any" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStDataStreamList.is_grabbing_any: bool</p>
+<p>Property: Flag to indicate if any of DataStream is on going.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamList.register">
+<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStDataStream</span> <span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDataStreamList.register" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register an element in a list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>item</strong> – Element to register</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The number of elements in the list.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamList.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDataStreamList.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the resource used by this PyStDataStreamList class.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamList.retrieve_buffer">
+<span class="sig-name descname"><span class="pre">retrieve_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uint32_t</span> <span class="pre">timeout=5000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">handling_timeout=EStTimeoutHandling.ThrowException</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStStreamBuffer" title="stapipy.PyStStreamBuffer"><span class="pre">PyStStreamBuffer</span></a></span></span><a class="headerlink" href="#stapipy.PyStDataStreamList.retrieve_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a completed transferred buffer (buffer in the output queue).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>timeout</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Wait time in milliseconds (ms) before timeout 
+(Default value is 5000ms).</p></li>
+<li><p><strong>handling_timeout</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStTimeoutHandling" title="stapipy.EStTimeoutHandling"><em>EStTimeoutHandling</em></a>) – Indicate the operation when
+timeout occurred (Default value is 
+EStTimeoutHandling.ThrowException)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The stream buffer module or None if timeout.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStStreamBuffer" title="stapipy.PyStStreamBuffer">PyStStreamBuffer</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamList.start_acquisition">
+<span class="sig-name descname"><span class="pre">start_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uint64_t</span> <span class="pre">num_to_acquire=-1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_flags=ETLAcqStartFlags.Default</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDataStreamList.start_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start data acquisition from host side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_to_acquire</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Number of frames to acquire. 
+The acquisition will stop after reaching this number. 
+Nevertheless, <a class="reference internal" href="#stapipy.PyStDataStreamList.stop_acquisition" title="stapipy.PyStDataStreamList.stop_acquisition"><code class="xref py py-func docutils literal notranslate"><span class="pre">stop_acquisition()</span></code></a> 
+is still needed to end the image acquisition. 
+For unlimited frames, set to -1 (default value is -1).</p></li>
+<li><p><strong>start_flags</strong> (<a class="reference internal" href="enumeration.html#stapipy.ETLAcqStartFlags" title="stapipy.ETLAcqStartFlags"><em>ETLAcqStartFlags</em></a>) – GenTL start flag for the 
+acquisition engine (Default value is ETLAcqStartFlags.Default).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStDataStreamList.stop_acquisition">
+<span class="sig-name descname"><span class="pre">stop_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stop_flags</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">ETLAcqStopFlags.Default</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStDataStreamList.stop_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop data acquisition from host side.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>stop_flags</strong> (<a class="reference internal" href="enumeration.html#stapipy.ETLAcqStopFlags" title="stapipy.ETLAcqStopFlags"><em>ETLAcqStopFlags</em></a>) – GenTL stop flag (Default value is
+ETLAcqStopFlags.Default).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="stream-buffer-module">
+<h2>Stream Buffer Module<a class="headerlink" href="#stream-buffer-module" title="Permalink to this headline">¶</a></h2>
+<section id="pyststreambuffer">
+<h3>PyStStreamBuffer<a class="headerlink" href="#pyststreambuffer" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStStreamBuffer</span></span><a class="headerlink" href="#stapipy.PyStStreamBuffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for GenTL StreamBuffer.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer.datastream">
+<span class="sig-name descname"><span class="pre">datastream</span></span><a class="headerlink" href="#stapipy.PyStStreamBuffer.datastream" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBuffer.datastream: PyStDataStream</p>
+<p>Property: DataStream that owns this StreamBuffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStDataStream" title="stapipy.PyStDataStream">PyStDataStream</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer.deregister_callback">
+<span class="sig-name descname"><span class="pre">deregister_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStRegisteredCallback</span> <span class="pre">registered_cb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all=False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStStreamBuffer.deregister_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister a callback.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>registered_cb</strong> (<a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><em>PyStRegisteredCallback</em></a>) – The registered callback.</p></li>
+<li><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to search the registered_cb in all copies 
+of this PyStStreamBuffer (Default is False).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer.deregister_callbacks">
+<span class="sig-name descname"><span class="pre">deregister_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStStreamBuffer.deregister_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deregister all callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to deregister all callbacks in all copies 
+of this PyStStreamBuffer (Default is False).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer.get_chunk_nodemap">
+<span class="sig-name descname"><span class="pre">get_chunk_nodemap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_genicam.html#stapipy.PyNodeMap" title="stapipy.PyNodeMap"><span class="pre">PyNodeMap</span></a></span></span><a class="headerlink" href="#stapipy.PyStStreamBuffer.get_chunk_nodemap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the chunk nodemap if the buffer contains chunk.
+Otherwise, an exception is raised.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Chunk nodemap of the buffer</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="ref_genicam.html#stapipy.PyNodeMap" title="stapipy.PyNodeMap">PyNodeMap</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer.get_image">
+<span class="sig-name descname"><span class="pre">get_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage"><span class="pre">PyStImage</span></a></span></span><a class="headerlink" href="#stapipy.PyStStreamBuffer.get_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the image in the buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Image object.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStImage" title="stapipy.PyStImage">PyStImage</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer.get_registered_callbacks">
+<span class="sig-name descname"><span class="pre">get_registered_callbacks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_all</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.12)"><span class="pre">list</span></a></span></span><a class="headerlink" href="#stapipy.PyStStreamBuffer.get_registered_callbacks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the list of registered callbacks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>check_all</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – Flag to retrieve all registered callbacks from 
+all copies of this PyStStreamBuffer (Default is False).</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of PyStRegisteredCallback or None.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>list of PyStRegisteredCallback</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer.info">
+<span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#stapipy.PyStStreamBuffer.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBuffer.info: PyStStreamBufferInfo</p>
+<p>Property: Info of this module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStStreamBufferInfo" title="stapipy.PyStStreamBufferInfo">PyStStreamBufferInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer.port">
+<span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#stapipy.PyStStreamBuffer.port" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBuffer.port: PyStPort</p>
+<p>Property: Port of this module.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the port.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStPort" title="stapipy.PyStPort">PyStPort</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer.register_callback">
+<span class="sig-name descname"><span class="pre">register_callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback"><span class="pre">PyStRegisteredCallback</span></a></span></span><a class="headerlink" href="#stapipy.PyStStreamBuffer.register_callback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a callback function for this PyStStreamBuffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback_func</strong> – A function to be triggered.</p></li>
+<li><p><strong>user_data</strong> – Data to pass on to the function if needed (Default is
+None).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An object that holds the registered callback.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_common.html#stapipy.PyStRegisteredCallback" title="stapipy.PyStRegisteredCallback">PyStRegisteredCallback</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStStreamBuffer.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the resource used by the StreamBuffer module. Any registered
+callbacks will be deregistered.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer.start_event_acquisition">
+<span class="sig-name descname"><span class="pre">start_event_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStStreamBuffer.start_event_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start event acquisition thread. 
+This function must be called when a callback is registered.
+To stop the event acquisition thread, call stop_event_acquisition().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBuffer.stop_event_acquisition">
+<span class="sig-name descname"><span class="pre">stop_event_acquisition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStStreamBuffer.stop_event_acquisition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop event acquisition thread. 
+This function must be called to stop the event acquisition thread if
+the event acquisition thread has been started.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pyststreambufferinfo">
+<h3>PyStStreamBufferInfo<a class="headerlink" href="#pyststreambufferinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStStreamBufferInfo</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class to provide StreamBuffer Information.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.buffer_size">
+<span class="sig-name descname"><span class="pre">buffer_size</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.buffer_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.buffer_size: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_SIZE (Size of the buffer in bytes).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.chunk_layout_id">
+<span class="sig-name descname"><span class="pre">chunk_layout_id</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.chunk_layout_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.chunk_layout_id: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_CHUNKLAYOUTID (Chunk layout ID).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.data_size">
+<span class="sig-name descname"><span class="pre">data_size</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.data_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.data_size: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_DATASIZE (Expected data size).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.delivered_chunk_payload_size">
+<span class="sig-name descname"><span class="pre">delivered_chunk_payload_size</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.delivered_chunk_payload_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.delivered_chunk_payload_size: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_DELIVERED_CHUNKPAYLOADSIZE (
+Delivered chunk payload size).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.delivered_image_height">
+<span class="sig-name descname"><span class="pre">delivered_image_height</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.delivered_image_height" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.delivered_image_height: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_DELIVERED_IMAGEHEIGHT (Number of
+image lines in the current buffer).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.filename">
+<span class="sig-name descname"><span class="pre">filename</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.filename: str</p>
+<p>Property: Value of GenTL BUFFER_INFO_FILENAME (File name in case the
+payload contains a file).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.frame_id">
+<span class="sig-name descname"><span class="pre">frame_id</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.frame_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.frame_id: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_FRAMEID (Frame ID of the data).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.has_chunk_data">
+<span class="sig-name descname"><span class="pre">has_chunk_data</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.has_chunk_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.has_chunk_data: bool</p>
+<p>Property: Value of GenTL BUFFER_INFO_CONTAINS_CHUNKDATA (Flag to 
+indicate if the buffer contains chunk data).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.height">
+<span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.height: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_HEIGHT (Height of the data in 
+pixel).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.image_offset">
+<span class="sig-name descname"><span class="pre">image_offset</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.image_offset" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.image_offset: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_IMAGEOFFSET (Offset of the image 
+data in the buffer).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>int.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.is_acquiring">
+<span class="sig-name descname"><span class="pre">is_acquiring</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.is_acquiring" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.is_acquiring: bool</p>
+<p>Property: Value of GenTL BUFFER_INFO_IS_ACQUIRING (Flag to indicate if
+the buffer is currently being filled with data).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.is_data_larger_than_buffer">
+<span class="sig-name descname"><span class="pre">is_data_larger_than_buffer</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.is_data_larger_than_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.is_data_larger_than_buffer: bool</p>
+<p>Property: Value of GenTL BUFFER_INFO_DATA_LARGER_THAN_BUFFER (Flag to
+indicate if the payload would not fit the buffer).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.is_image_present">
+<span class="sig-name descname"><span class="pre">is_image_present</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.is_image_present" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.is_image_present: bool</p>
+<p>Property: Value of GenTL BUFFER_INFO_IMAGEPRESENT (Flag to indicate if
+the current buffer contains image data).
+True is returned if image size and format information is available even in 
+an incomplete state due to packet loss, etc.
+Use it with is_incomplete if you want to use only images in perfect condition.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>bool.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.is_incomplete">
+<span class="sig-name descname"><span class="pre">is_incomplete</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.is_incomplete" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.is_incomplete: bool</p>
+<p>Property: Value of GenTL BUFFER_INFO_IS_INCOMPLETE (Flag to indicate if
+the buffer contains incomplete data).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.is_new_data">
+<span class="sig-name descname"><span class="pre">is_new_data</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.is_new_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.is_new_data: bool</p>
+<p>Property: Value of GenTL BUFFER_INFO_NEW_DATA (Flag to indicate any
+new data since last delivery).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.is_queued">
+<span class="sig-name descname"><span class="pre">is_queued</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.is_queued" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.is_queued: bool</p>
+<p>Property: Value of GenTL BUFFER_INFO_IS_QUEUED (Flag to indicate if 
+the buffer is in the input pool).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.offset_x">
+<span class="sig-name descname"><span class="pre">offset_x</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.offset_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.offset_x: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_XOFFSET (X-Offset of the data in 
+pixel).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.offset_y">
+<span class="sig-name descname"><span class="pre">offset_y</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.offset_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.offset_y: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_YOFFSET (Y-Offset of the data in 
+pixel).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.padding_x">
+<span class="sig-name descname"><span class="pre">padding_x</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.padding_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.padding_x: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_XPADDING (X-Padding of the data).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.padding_y">
+<span class="sig-name descname"><span class="pre">padding_y</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.padding_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.padding_y: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_YPADDING (Y-Padding of the data).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.payload_type">
+<span class="sig-name descname"><span class="pre">payload_type</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.payload_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.payload_type: ETLPayloadTypeInfoID</p>
+<p>Property: Value of GenTL BUFFER_INFO_PAYLOADTYPE (Payload type of the
+data).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.ETLPayloadTypeInfoID" title="stapipy.ETLPayloadTypeInfoID">ETLPayloadTypeInfoID</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.pixel_endianness">
+<span class="sig-name descname"><span class="pre">pixel_endianness</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.pixel_endianness" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.pixel_endianness: ETLPixelEndiannessID</p>
+<p>Property: Value of GenTL BUFFER_INFO_PIXEL_ENDIANESS (Endianess of 
+of the pixel).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.ETLPixelEndiannessID" title="stapipy.ETLPixelEndiannessID">ETLPixelEndiannessID</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.pixel_format">
+<span class="sig-name descname"><span class="pre">pixel_format</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.pixel_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.pixel_format: EStPixelFormatNamingConvention</p>
+<p>Property: Value of GenTL BUFFER_INFO_PIXELFORMAT (Pixel format of the
+image data).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EStPixelFormatNamingConvention" title="stapipy.EStPixelFormatNamingConvention">EStPixelFormatNamingConvention</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.pixel_format_namespace">
+<span class="sig-name descname"><span class="pre">pixel_format_namespace</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.pixel_format_namespace" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.pixel_format_namespace: ETLPixelFormatNamespaceID</p>
+<p>Property: Value of GenTL BUFFER_INFO_PIXELFORMAT_NAMESPACE (Namespace
+of the pixel format of the image data).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.ETLPixelFormatNamespaceID" title="stapipy.ETLPixelFormatNamespaceID">ETLPixelFormatNamespaceID</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.size_filled">
+<span class="sig-name descname"><span class="pre">size_filled</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.size_filled" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.size_filled: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_SIZE_FILLED (Number of bytes
+written into the buffer the last time it has been filled).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.timestamp">
+<span class="sig-name descname"><span class="pre">timestamp</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.timestamp: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_TIMESTAMP(Buffer timestamp).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.timestamp_ns">
+<span class="sig-name descname"><span class="pre">timestamp_ns</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.timestamp_ns" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.timestamp_ns: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_TIMESTAMP_NS (Buffer timestamp in
+the units of 1 ns).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.tl_type">
+<span class="sig-name descname"><span class="pre">tl_type</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.tl_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.tl_type: str</p>
+<p>Property: Value of GenTL BUFFER_INFO_TLTYPE (Transport layer type).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStStreamBufferInfo.width">
+<span class="sig-name descname"><span class="pre">width</span></span><a class="headerlink" href="#stapipy.PyStStreamBufferInfo.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStStreamBufferInfo.width: int</p>
+<p>Property: Value of GenTL BUFFER_INFO_WIDTH (Width of the data in pixel).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="port">
+<h2>Port<a class="headerlink" href="#port" title="Permalink to this headline">¶</a></h2>
+<section id="pystport">
+<h3>PyStPort<a class="headerlink" href="#pystport" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStPort">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStPort</span></span><a class="headerlink" href="#stapipy.PyStPort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for GenTL Port.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPort.info">
+<span class="sig-name descname"><span class="pre">info</span></span><a class="headerlink" href="#stapipy.PyStPort.info" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPort.info: PyStPortInfo</p>
+<p>Property: Port information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the port information.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStPortInfo" title="stapipy.PyStPortInfo">PyStPortInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPort.nodemap">
+<span class="sig-name descname"><span class="pre">nodemap</span></span><a class="headerlink" href="#stapipy.PyStPort.nodemap" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPort.nodemap: PyNodeMap</p>
+<p>Property: NodeMap of this port.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the nodemap.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="ref_genicam.html#stapipy.PyNodeMap" title="stapipy.PyNodeMap">PyNodeMap</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStPort.save_xml_file">
+<span class="sig-name descname"><span class="pre">save_xml_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStPort.save_xml_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the port XML data to a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – File name to store the XML data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPort.url_count">
+<span class="sig-name descname"><span class="pre">url_count</span></span><a class="headerlink" href="#stapipy.PyStPort.url_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPort.url_count: int</p>
+<p>Property: Number of available URLs of this port.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPort.url_index">
+<span class="sig-name descname"><span class="pre">url_index</span></span><a class="headerlink" href="#stapipy.PyStPort.url_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPort.url_index: int</p>
+<p>Property: Index of the Port URL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Setter</dt>
+<dd class="field-even"><p>Sets the value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPort.url_info">
+<span class="sig-name descname"><span class="pre">url_info</span></span><a class="headerlink" href="#stapipy.PyStPort.url_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPort.url_info: PyStPortURLInfo</p>
+<p>Property: Port URL information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the port URL information.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStPortURLInfo" title="stapipy.PyStPortURLInfo">PyStPortURLInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPort.xml_filename">
+<span class="sig-name descname"><span class="pre">xml_filename</span></span><a class="headerlink" href="#stapipy.PyStPort.xml_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPort.xml_filename: str</p>
+<p>Property: XML file name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystportinfo">
+<h3>PyStPortInfo<a class="headerlink" href="#pystportinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStPortInfo</span></span><a class="headerlink" href="#stapipy.PyStPortInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class to provide Port Information.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.is_access_na">
+<span class="sig-name descname"><span class="pre">is_access_na</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.is_access_na" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.is_access_na: bool</p>
+<p>Property: Value of GenTL PORT_INFO_ACCESS_NA (Flag to indicate if
+the port is currently not available).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.is_access_ni">
+<span class="sig-name descname"><span class="pre">is_access_ni</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.is_access_ni" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.is_access_ni: bool</p>
+<p>Property: Value of GenTL PORT_INFO_ACCESS_NI (Flag to indicate if
+the port is not implemented).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.is_access_read">
+<span class="sig-name descname"><span class="pre">is_access_read</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.is_access_read" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.is_access_read: bool</p>
+<p>Property: Value of GenTL PORT_INFO_ACCESS_READ (Flag to indicate if
+read access is allowed).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.is_access_write">
+<span class="sig-name descname"><span class="pre">is_access_write</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.is_access_write" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.is_access_write: bool</p>
+<p>Property: Value of GenTL PORT_INFO_ACCESS_WRITE (Flag to indicate if
+write access is allowed).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.is_big_endian">
+<span class="sig-name descname"><span class="pre">is_big_endian</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.is_big_endian" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.is_big_endian: bool</p>
+<p>Property: Value of GenTL PORT_INFO_BIG_ENDIAN (Flag to indicate
+if the port’s data is big endian).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.is_little_endian">
+<span class="sig-name descname"><span class="pre">is_little_endian</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.is_little_endian" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.is_little_endian: bool</p>
+<p>Property: Value of GenTL PORT_INFO_LITTLE_ENDIAN (Flag to indicate
+if the port’s data is little endian).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.model">
+<span class="sig-name descname"><span class="pre">model</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.model: str</p>
+<p>Property: Value of GenTL PORT_INFO_MODEL (Port model name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.module">
+<span class="sig-name descname"><span class="pre">module</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.module" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.module: str</p>
+<p>Property: Value of GenTL PORT_INFO_MODULE (Port module name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.port_id">
+<span class="sig-name descname"><span class="pre">port_id</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.port_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.port_id: str</p>
+<p>Property: Value of GenTL PORT_INFO_ID (Port ID).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.port_name">
+<span class="sig-name descname"><span class="pre">port_name</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.port_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.port_name: str</p>
+<p>Property: Value of GenTL PORT_INFO_NAME (Port name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.tl_type">
+<span class="sig-name descname"><span class="pre">tl_type</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.tl_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.tl_type: str</p>
+<p>Property: Value of GenTL PORT_INFO_TLTYPE (Transport layer type).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.vendor">
+<span class="sig-name descname"><span class="pre">vendor</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.vendor" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.vendor: str</p>
+<p>Property: Value of GenTL PORT_INFO_VENDOR (Port vendor name).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortInfo.version">
+<span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#stapipy.PyStPortInfo.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortInfo.version: str</p>
+<p>Property: Value of GenTL PORT_INFO_VERSION (Port version).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystporturlinfo">
+<h3>PyStPortURLInfo<a class="headerlink" href="#pystporturlinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStPortURLInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStPortURLInfo</span></span><a class="headerlink" href="#stapipy.PyStPortURLInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class to provide Port URL information.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortURLInfo.file_register_address">
+<span class="sig-name descname"><span class="pre">file_register_address</span></span><a class="headerlink" href="#stapipy.PyStPortURLInfo.file_register_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortURLInfo.file_register_address: int</p>
+<p>Property: Value of GenTL URL_INFO_FILE_REGISTER_ADDRESS (Register 
+address of the XML-File in the device’s register map).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortURLInfo.file_ver_major">
+<span class="sig-name descname"><span class="pre">file_ver_major</span></span><a class="headerlink" href="#stapipy.PyStPortURLInfo.file_ver_major" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortURLInfo.file_ver_major: int</p>
+<p>Property: Value of GenTL URL_INFO_FILE_VER_MAJOR (Major version of
+the XML file this URL refer to).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortURLInfo.file_ver_minor">
+<span class="sig-name descname"><span class="pre">file_ver_minor</span></span><a class="headerlink" href="#stapipy.PyStPortURLInfo.file_ver_minor" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortURLInfo.file_ver_minor: int</p>
+<p>Property: Value of GenTL URL_INFO_FILE_VER_MINOR (Minor version of
+the XML file this URL refer to).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortURLInfo.file_ver_subminor">
+<span class="sig-name descname"><span class="pre">file_ver_subminor</span></span><a class="headerlink" href="#stapipy.PyStPortURLInfo.file_ver_subminor" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortURLInfo.file_ver_subminor: int</p>
+<p>Property: Value of GenTL URL_INFO_FILE_VER_SUBMINOR (SubMinor version of
+the XML file this URL refer to).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortURLInfo.filename">
+<span class="sig-name descname"><span class="pre">filename</span></span><a class="headerlink" href="#stapipy.PyStPortURLInfo.filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortURLInfo.filename: str</p>
+<p>Property: Value of GenTL URL_INFO_FILENAME (Filename of the XML file
+this URL refers to).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortURLInfo.filesize">
+<span class="sig-name descname"><span class="pre">filesize</span></span><a class="headerlink" href="#stapipy.PyStPortURLInfo.filesize" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortURLInfo.filesize: int</p>
+<p>Property: Value of GenTL URL_INFO_FILE_SIZE (File size of the XML file
+this URL refers to).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortURLInfo.schema_ver_major">
+<span class="sig-name descname"><span class="pre">schema_ver_major</span></span><a class="headerlink" href="#stapipy.PyStPortURLInfo.schema_ver_major" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortURLInfo.schema_ver_major: int</p>
+<p>Property: Value of GenTL URL_INFO_SCHEMA_VER_MAJOR (Major version of
+the schema of this URL).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortURLInfo.schema_ver_minor">
+<span class="sig-name descname"><span class="pre">schema_ver_minor</span></span><a class="headerlink" href="#stapipy.PyStPortURLInfo.schema_ver_minor" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortURLInfo.schema_ver_minor: int</p>
+<p>Property: Value of GenTL URL_INFO_SCHEMA_VER_MINOR (Minor version of
+the schema of this URL).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortURLInfo.scheme">
+<span class="sig-name descname"><span class="pre">scheme</span></span><a class="headerlink" href="#stapipy.PyStPortURLInfo.scheme" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortURLInfo.scheme: ETLURLSchemeID</p>
+<p>Property: Value of GenTL URL_INFO_SCHEME (Scheme of the URL).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.ETLURLSchemeID" title="stapipy.ETLURLSchemeID">ETLURLSchemeID</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortURLInfo.sha1_hash">
+<span class="sig-name descname"><span class="pre">sha1_hash</span></span><a class="headerlink" href="#stapipy.PyStPortURLInfo.sha1_hash" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortURLInfo.sha1_hash: bytes</p>
+<p>Property: Value of GenTL URL_INFO_FILE_SHA1_HASH (SHA1 Hash of the XML
+file this URL refer to).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)">bytes</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPortURLInfo.url">
+<span class="sig-name descname"><span class="pre">url</span></span><a class="headerlink" href="#stapipy.PyStPortURLInfo.url" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPortURLInfo.url: str</p>
+<p>Property: Value of GenTL URL_INFO_URL (URL of Port).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Transport Layer Classes</a><ul>
+<li><a class="reference internal" href="#system-module">System Module</a><ul>
+<li><a class="reference internal" href="#pystsystem">PyStSystem</a></li>
+<li><a class="reference internal" href="#pystsysteminfo">PyStSystemInfo</a></li>
+<li><a class="reference internal" href="#pystsystemlist">PyStSystemList</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#interface-module">Interface Module</a><ul>
+<li><a class="reference internal" href="#pystinterface">PyStInterface</a></li>
+<li><a class="reference internal" href="#pystinterfaceinfo">PyStInterfaceInfo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#device-module">Device Module</a><ul>
+<li><a class="reference internal" href="#pystdevice">PyStDevice</a></li>
+<li><a class="reference internal" href="#pystdeviceinfo">PyStDeviceInfo</a></li>
+<li><a class="reference internal" href="#pystdevicelist">PyStDeviceList</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#datastream-module">DataStream Module</a><ul>
+<li><a class="reference internal" href="#pystdatastream">PyStDataStream</a></li>
+<li><a class="reference internal" href="#pystdatastreaminfo">PyStDataStreamInfo</a></li>
+<li><a class="reference internal" href="#pystdatastreamlist">PyStDataStreamList</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#stream-buffer-module">Stream Buffer Module</a><ul>
+<li><a class="reference internal" href="#pyststreambuffer">PyStStreamBuffer</a></li>
+<li><a class="reference internal" href="#pyststreambufferinfo">PyStStreamBufferInfo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#port">Port</a><ul>
+<li><a class="reference internal" href="#pystport">PyStPort</a></li>
+<li><a class="reference internal" href="#pystportinfo">PyStPortInfo</a></li>
+<li><a class="reference internal" href="#pystporturlinfo">PyStPortURLInfo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="ref_stapi_common.html"
+                          title="previous chapter">Common Functions and Classes</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="ref_stapi_ip.html"
+                          title="next chapter">Image Processing Functions and Classes</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ref_stapi_ip.html" title="Image Processing Functions and Classes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ref_stapi_common.html" title="Common Functions and Classes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reference.html" >StApi Python (stapipy) Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Transport Layer Classes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

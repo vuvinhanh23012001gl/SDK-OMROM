@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>リリースノート &#8212; StApi Python 1.2.2 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="prev" title="ライセンス情報" href="license.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="license.html" title="ライセンス情報"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">リリースノート</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="release-notes">
+<h1>リリースノート<a class="headerlink" href="#release-notes" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="id1">
+<h2>リリース: 2024.05.31 (バージョン: 1.2.2)<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>SentechSDK v1.2.2が必要となります。</p></li>
+<li><p>GenApi3.4.2に対応しました。</p></li>
+<li><dl class="simple">
+<dt>サンプルプログラム追加：</dt><dd><ul>
+<li><p>user_memory.py</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Python3.10に対応しました。</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>リリース: 2023.04.14 (バージョン: 1.2.1.1)<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>PyStDeviceListクラス, PyStDataStreamListクラス, PyStSystemListクラスを追加しました。</p></li>
+<li><p>PyStStreamBufferクラスに datastreamプロパティを追加しました。</p></li>
+<li><dl class="simple">
+<dt>サンプルプログラム追加：</dt><dd><ul>
+<li><p>multiple_cameras.py</p></li>
+<li><p>multiple_systems.py</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="id3">
+<h2>リリース: 2022.12.16 (バージョン: 1.2.1)<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>SentechSDK v1.2.1 が必要となります。</p></li>
+<li><p>PyStConverterクラス, PyStFilterクラス, PyStFilerクラスにcopy_settingsメソッドを追加しました。</p></li>
+<li><p>UpdateInterfaceList, UpdateDeviceListでリストが更新された際にコールバックを追加しました。</p></li>
+<li><p>StApi IPフィルターに レベル調整機能 を追加しました。</p></li>
+<li><p>PyStPixelComponentValueクラスにget_value_f(index)メソッドを追加しました。</p></li>
+<li><p>PyStInterfaceクラスにinterface_typeプロパティを追加しました。</p></li>
+<li><p>EStInterfaceType列挙型に VirtualFrameGrabber=16 を追加しました。(Windows版のみ)</p></li>
+<li><p>EStPixelComponent列挙型にMono,R,G,B,Gr,Gb,Yを追加しました。</p></li>
+<li><p>EStPixelFormatNamingConvention列挙型にRGB10,RGB12,RGB14,RGBa10,RGBa12,RGBa14,RGBa16を追加しました。</p></li>
+<li><dl class="simple">
+<dt>以下の列挙型を追加しました。</dt><dd><ul>
+<li><p>EStMemoryInitialization</p></li>
+<li><p>EStDefectivePixelDetectionAveragingArea</p></li>
+<li><p>EStDefectivePixelDetectionThresholdTarget</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>PyStImageクラスに以下を追加しました。</dt><dd><ul>
+<li><p>create_buffer(width, height, pixel_format, initialize_memory)メソッド</p></li>
+<li><p>clear_component_data(pixelcomponent)メソッド</p></li>
+<li><p>import_component_data(pixelcomponent, image)メソッド</p></li>
+<li><p>export_component_data(pixelcomponent)メソッド</p></li>
+<li><p>is_same_image(image)メソッド</p></li>
+<li><p>store_computed_image(operation_type, pixel_format, image1, image2)メソッド</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>PyStPixelFormatInfoクラスに以下を追加しました。</dt><dd><ul>
+<li><p>is_polarizationプロパティ</p></li>
+<li><p>order_of_polarized_filtersプロパティ</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>PyStStillImageFilerクラスにcompression_levelプロパティを追加しました。</p></li>
+<li><dl class="simple">
+<dt>PyStDefectivePixelDetectionFilterクラスに以下を追加しました。</dt><dd><ul>
+<li><p>get_threshold(threshold_target)メソッド</p></li>
+<li><p>set_threshold(threshold_target, value)メソッド</p></li>
+<li><p>defective_pixel_detection_averaging_areaプロパティ</p></li>
+<li><p>peripheral_area_sizeプロパティ</p></li>
+<li><p>maximum_pixel_countプロパティ</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>GenApi3.3対応<span class="classifier">以下のメソッドを追加しました。</span></dt><dd><ul>
+<li><p>PyIRegisterクラス : get_length(verify=False)メソッド</p></li>
+<li><p>PyIRegisterクラス : get_address(verify=False)メソッド</p></li>
+<li><p>PyIStringクラス : get_max_length(verify=False)メソッド</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>GenApi3.4対応<span class="classifier">以下を追加しました。</span></dt><dd><ul>
+<li><p>EGCCallbackSuppressMode列挙型</p></li>
+<li><p>PyNodeMapクラス : set_suppress_callback_mode(suppress_mode)メソッド</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Python3.9に対応しました。</p></li>
+</ul>
+</section>
+<section id="id4">
+<h2>リリース: 2022.09.16 (バージョン: 1.1.2.4)<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>GenApi::IPortに対応するため、PyIPortクラスを追加しました。</p></li>
+</ul>
+</section>
+<section id="id5">
+<h2>リリース: 2022.05.20 (バージョン: 1.1.2.3)<a class="headerlink" href="#id5" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>SentechSDK v1.1.2 Update6に対応するため、以下を追加しました。</dt><dd><ul>
+<li><p>EStSystemVendor列挙型にMatrox, TeledyneDALSA, AvalDataを追加</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="id6">
+<h2>リリース: 2021.12.03 (バージョン: 1.1.2.2)<a class="headerlink" href="#id6" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>SentechSDK v1.1.2 Update5に対応するため、以下を追加しました。</dt><dd><ul>
+<li><p>EStBayerInterpolationMethod列挙型にBiLinear3を追加</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Python3.8に対応しました。</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2>リリース: 2021.10.08 (バージョン: 1.1.2.1)<a class="headerlink" href="#id7" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>SentechSDK v1.1.2 Update4に対応するため、以下を追加しました。</dt><dd><ul>
+<li><p>EStPixelFormatNamingConvention列挙型にCYCbCr420_8_YY_Cb_Cr_Planarを追加</p></li>
+<li><p>EStVideoFileFormat列挙型にWebMを追加 (Windows版のみ)</p></li>
+<li><p>EStVideoFileCompression列挙型にVP8を追加 (Windows版のみ)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>stapipy.get_filter_info(filter_type)関数を追加しました。</p></li>
+<li><p>ドキュメント(docstring)を修正しました。</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>リリース: 2020.07.31 (バージョン: 1.1.2)<a class="headerlink" href="#id8" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>SentechSDK v1.1.2が必要となります。</p></li>
+<li><p>StApi IPフィルターに画素欠検出機能、画像平均機能、グラフ機能を追加しました。</p></li>
+<li><p><cite>bytearray</cite> データから、<cite>PyIStImage</cite> を作成できるように、 PyIStImageにcreate_from_data関数を追加しました。</p></li>
+<li><dl class="simple">
+<dt>偏光センサーに対応するため、以下の列挙型に要素を追加しました。</dt><dd><ul>
+<li><p>EStPixelFormatNamingConvention</p></li>
+<li><p>EStPixelComponent</p></li>
+<li><p>EStPixelColorFilter</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="id9">
+<h2>リリース: 2019.08.30 (バージョン: 1.0.8)<a class="headerlink" href="#id9" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>変更なし。SentechSDK v1.0.8動作確認済みのバージョン。</p></li>
+</ul>
+</section>
+<section id="id10">
+<h2>リリース: 2019.05.31 (バージョン: 1.0.7)<a class="headerlink" href="#id10" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>未実装のGraph列挙子を <code class="xref py py-class docutils literal notranslate"><span class="pre">EStFilterType</span></code> から削除しました。</p></li>
+<li><p>ドキュメント(docstring)の修正。</p></li>
+</ul>
+</section>
+<section id="rc3">
+<h2>リリース：2019.05.17 (バージョン1.0.7rc3)<a class="headerlink" href="#rc3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>下記のStApi IPの画像処理機能を追加します：</dt><dd><ul>
+<li><p>コンバーター：ピクセルフォーマット、反転。</p></li>
+<li><p>フィルター：バランスレート、クロマサプレス、色変換、エッジ強調、フラットフィールド補正、ガンマ補正、ノイズ軽減、SN測定。</p></li>
+<li><p>ファイラー：静止画、動画像。</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>サンプル追加：</dt><dd><ul>
+<li><p>grab_ip_opencv.py</p></li>
+<li><p>save_and_load_image.py</p></li>
+<li><p>save_video.py</p></li>
+<li><p>singleconverter_opencv.py</p></li>
+<li><p>singlefilter_opencv.py</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="rc2">
+<h2>リリース：2019.04.15 (バージョン1.0.7rc2)<a class="headerlink" href="#rc2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>対応する環境を追加しました：</dt><dd><ul>
+<li><p>Windows: Python 3.6.x 32ビットと64ビット。</p></li>
+<li><p>Linux: Python 3.6.x 32ビットと64ビット。</p></li>
+<li><p>MacOS 10.13: Python 3.6.x 64ビット。</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>PyStImageのインスタンスを解放する際、リソースを解放されていない不具合を修正しました。</p></li>
+<li><p>いくつかサンプルプログラムのコメントを更新しました。</p></li>
+<li><p>使いやすくために手順書のリファレンス構造を変更しました。</p></li>
+</ul>
+</section>
+<section id="rc1">
+<h2>リリース：2019.04.11 (バージョン1.0.7rc1)<a class="headerlink" href="#rc1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ul class="simple">
+<li><p>Transport Layer機能（StApi_TL）に対応します。</p></li>
+<li><dl class="simple">
+<dt>対応する環境：</dt><dd><ul>
+<li><p>Windows: Python 3.7.x 32ビットと64ビット。</p></li>
+<li><p>Linux: Python 3.7.x 32ビットと64ビット。</p></li>
+<li><p>MacOS 10.13: Python 3.7.x 64ビット。</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">リリースノート</a><ul>
+<li><a class="reference internal" href="#id1">リリース: 2024.05.31 (バージョン: 1.2.2)</a></li>
+<li><a class="reference internal" href="#id2">リリース: 2023.04.14 (バージョン: 1.2.1.1)</a></li>
+<li><a class="reference internal" href="#id3">リリース: 2022.12.16 (バージョン: 1.2.1)</a></li>
+<li><a class="reference internal" href="#id4">リリース: 2022.09.16 (バージョン: 1.1.2.4)</a></li>
+<li><a class="reference internal" href="#id5">リリース: 2022.05.20 (バージョン: 1.1.2.3)</a></li>
+<li><a class="reference internal" href="#id6">リリース: 2021.12.03 (バージョン: 1.1.2.2)</a></li>
+<li><a class="reference internal" href="#id7">リリース: 2021.10.08 (バージョン: 1.1.2.1)</a></li>
+<li><a class="reference internal" href="#id8">リリース: 2020.07.31 (バージョン: 1.1.2)</a></li>
+<li><a class="reference internal" href="#id9">リリース: 2019.08.30 (バージョン: 1.0.8)</a></li>
+<li><a class="reference internal" href="#id10">リリース: 2019.05.31 (バージョン: 1.0.7)</a></li>
+<li><a class="reference internal" href="#rc3">リリース：2019.05.17 (バージョン1.0.7rc3)</a></li>
+<li><a class="reference internal" href="#rc2">リリース：2019.04.15 (バージョン1.0.7rc2)</a></li>
+<li><a class="reference internal" href="#rc1">リリース：2019.04.11 (バージョン1.0.7rc1)</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="license.html"
+                          title="前の章へ">ライセンス情報</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="license.html" title="ライセンス情報"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">リリースノート</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

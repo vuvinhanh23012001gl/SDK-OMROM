@@ -1,0 +1,393 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>プログラマーズガイド &#8212; StApi Python 1.2.2 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="サンプルプログラム" href="samples.html" />
+    <link rel="prev" title="はじめに" href="introduction.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="samples.html" title="サンプルプログラム"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="はじめに"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">プログラマーズガイド</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>プログラマーズガイド<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="stapi-python-stapipy">
+<h2>StApi Python (stapipy)の構造<a class="headerlink" href="#stapi-python-stapipy" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>StApiは3つの主な機能（カメラ制御のためのトランスポート層）で構成されていますが、
+このstapipyパッケージはトランスポート層(StApi TL)と画像処理(StApi IP)に対してのみPythonバインディングを提供します。</p>
+<p>カメラの設定変更や画像データ、イベントデータ等を取得する機能が提供されます。カメラとの通信にはGenTLモジュールが使用されます。
+SDK付属のGenTLモジュールはUSB3VisionおよびGigEVisionに対応しています。CoaXPress用取り込みボードメーカー製のGenTLモジュールを使用することで
+CoaXPressカメラも利用できます。カメラの設定変更にはGenApiが使用されます。画像処理機能やGUI機能が不要であれば、
+この機能(下図の水色線枠内)だけを使用してアプリケーションを開発できます。</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>モジュール</p></th>
+<th class="head"><p>主な用途</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>System</p></td>
+<td><p>ctiファイル(GenTL用ライブラリファイル)の情報取得に使用されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Interface</p></td>
+<td><p>インターフェースに関する設定や接続されているカメラの情報取得などに使用されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>Device</p></td>
+<td><p>カメラの設定に使用されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>Data Stream</p></td>
+<td><p>画像データ等のストリーミングの設定に使用されます。</p></td>
+</tr>
+<tr class="row-even"><td><p>Stream Buffer</p></td>
+<td><p>ストリーミングに使用されているバッファの情報取得に使用されます。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id2">
+<h2>対応環境<a class="headerlink" href="#id2" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>StApi Python（stapipy）はPython wheel(.whl)の形で配布します。
+このモジュールはStApi（Sentech SDK）のインストールを必要とし、以下のPythonをサポートします。</p>
+<ul class="simple">
+<li><p>Python 3.8.x, 3.9.x, 3.10.x  64bit/32bit (Windows OS)</p></li>
+<li><p>Python 3.8.x, 3.9.x, 3.10.x  64bit (Linux OS)</p></li>
+<li><p>Python 3.8.x, 3.9.x, 3.10.x  ARM64 (Linux OS)</p></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<ul class="simple">
+<li><p>StApi Pythonを使用するためにSentech SDKのインストールが必要になります。Sentech SDKがインストールされていることを確認してください。</p></li>
+<li><p>stapipyを使用するアプリケーションを実行するには、Sentech SDKが提供する環境変数を設定する必要があります。</p></li>
+</ul>
+</div>
+</section>
+<section id="stapi-sentech-sdk">
+<h2>StApi (Sentech SDK)のインストール<a class="headerlink" href="#stapi-sentech-sdk" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Sentech SDKのドキュメントに参照ください。</p>
+</section>
+<section id="stapipy">
+<h2>stapipyのインストール<a class="headerlink" href="#stapipy" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>stapipyをインストールする際、<cite>pip</cite> コマンドを実行ください。例：</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">stapipy</span><span class="o">-</span><span class="mf">1.2.2</span><span class="o">-</span><span class="n">xxx</span><span class="o">-</span><span class="n">yyy</span><span class="o">-</span><span class="n">zzz</span><span class="o">.</span><span class="n">whl</span>
+</pre></div>
+</div>
+<p>xxx-yyyは下記のようなPythonのバージョンとABIです。</p>
+<ul class="simple">
+<li><p>cp38-cp38    : Python 3.8.x</p></li>
+<li><p>cp39-cp39    : Python 3.9.x</p></li>
+<li><p>cp310-cp310  : Python 3.10.x</p></li>
+</ul>
+<p>zzzは下記のようなPythonのプラットフォームです。</p>
+<ul class="simple">
+<li><p>linux_aarch64 : Linux ARM64</p></li>
+<li><p>linux_x86_64 : Linux 64 bit</p></li>
+<li><p>win32 : Windows 32 bit</p></li>
+<li><p>win_amd64 : Windows 64 bit</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>エラー処理<a class="headerlink" href="#id3" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>StApiで例外が発生する際、stapipyはその例外を伝播して <a class="reference internal" href="ref_stapi_common.html#stapipy.PyStError" title="stapipy.PyStError"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStError</span></code></a> を出送します。</p>
+</section>
+<section id="id4">
+<h2>画像データの取得までの流れ<a class="headerlink" href="#id4" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<ol class="arabic">
+<li><p>stapipyをインポート。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">stapipy</span> <span class="k">as</span> <span class="nn">st</span>
+</pre></div>
+</div>
+</li>
+<li><p>StApiライブラリの初期化します。<a class="reference internal" href="ref_stapi_common.html#stapipy.initialize" title="stapipy.initialize"><code class="xref py py-func docutils literal notranslate"><span class="pre">stapipy.initialize()</span></code></a> を呼び出します。</p>
+<p>StApiライブラリを使い終わった後は <a class="reference internal" href="ref_stapi_common.html#stapipy.terminate" title="stapipy.terminate"><code class="xref py py-func docutils literal notranslate"><span class="pre">stapipy.terminate()</span></code></a> を呼び出して終了処理を行います。 <a class="reference internal" href="ref_stapi_common.html#stapipy.terminate" title="stapipy.terminate"><code class="xref py py-func docutils literal notranslate"><span class="pre">stapipy.terminate()</span></code></a> を呼び出した後ではstapipy関連の関数やインスタンスなどをアクセスしないようにご注意ください。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">st</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>システム(GenTLモジュール)をオープンし、 <a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStSystem" title="stapipy.PyStSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStSystem</span></code></a> を取得します。 <a class="reference internal" href="ref_stapi_common.html#stapipy.create_system" title="stapipy.create_system"><code class="xref py py-func docutils literal notranslate"><span class="pre">stapipy.create_system()</span></code></a> を呼び出します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">st_system</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">create_system</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>デバイス(カメラ)をオープンし、<code class="xref py py-class docutils literal notranslate"><span class="pre">PyStDevice</span></code> のインスタンスを取得します。<a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStSystem.create_first_device" title="stapipy.PyStSystem.create_first_device"><code class="xref py py-func docutils literal notranslate"><span class="pre">stapipy.PyStSystem.create_first_device()</span></code></a> を呼び出します。</p>
+<p>下記のコードは最初見つけたカメラをオープンします。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">st_device</span> <span class="o">=</span> <span class="n">st_system</span><span class="o">.</span><span class="n">create_first_device</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>データストリームをオープンし、<code class="xref py py-class docutils literal notranslate"><span class="pre">PyStDataStream</span></code> のインスタンスを取得します。<a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStDevice.create_datastream" title="stapipy.PyStDevice.create_datastream"><code class="xref py py-func docutils literal notranslate"><span class="pre">stapipy.PyStDevice.create_datastream()</span></code></a> を呼び出します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">st_datastream</span> <span class="o">=</span> <span class="n">st_device</span><span class="o">.</span><span class="n">create_datastream</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>ホスト側画像データの取得を開始します。<a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStDataStream.start_acquisition" title="stapipy.PyStDataStream.start_acquisition"><code class="xref py py-func docutils literal notranslate"><span class="pre">stapipy.PyStDataStream.start_acquisition()</span></code></a> を呼び出します。</p>
+<p>下記のコードは100枚画像を取得します。</p>
+</li>
+</ol>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">st_datastream</span><span class="o">.</span><span class="n">start_acquisition</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic" start="7">
+<li><p>カメラ側画像データの出力を開始します。<a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStDevice.acquisition_start" title="stapipy.PyStDevice.acquisition_start"><code class="xref py py-func docutils literal notranslate"><span class="pre">stapipy.PyStDevice.acquisition_start()</span></code></a> を呼び出します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">st_device</span><span class="o">.</span><span class="n">acquisition_start</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>画像データが入ったバッファ:py:class:<cite>stapipy.PyStStreamBuffer</cite> の取得と、使用済バッファのキューへの挿入を繰り返し行います。</p>
+<p>バッファをキューに戻すには、<a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStStreamBuffer" title="stapipy.PyStStreamBuffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStStreamBuffer</span></code></a> のインスタンスを解放する必要があります。
+インスタンスを <a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></a> にするか、<a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStStreamBuffer.release" title="stapipy.PyStStreamBuffer.release"><code class="xref py py-func docutils literal notranslate"><span class="pre">stapipy.PyStStreamBuffer.release()</span></code></a> を呼び出すか、 コンテキストマネージャ（<code class="xref py py-obj docutils literal notranslate"><span class="pre">with</span></code>）を使うことです。</p>
+<p>下記のコードはコンテキストマネージャを使用したバッファの取得と再キューイングの例を示します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">st_datastream</span><span class="o">.</span><span class="n">is_grabbing</span><span class="p">:</span>
+    <span class="k">with</span> <span class="n">st_datastream</span><span class="o">.</span><span class="n">retrieve_buffer</span><span class="p">()</span> <span class="k">as</span> <span class="n">st_buffer</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">st_buffer</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">is_image_present</span><span class="p">:</span>
+            <span class="n">st_image</span> <span class="o">=</span> <span class="n">st_buffer</span><span class="o">.</span><span class="n">get_image</span><span class="p">()</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;BlockID=</span><span class="si">{0}</span><span class="s2"> Size=</span><span class="si">{1}</span><span class="s2"> x </span><span class="si">{2}</span><span class="s2"> First Byte=</span><span class="si">{3}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                  <span class="n">st_buffer</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">frame_id</span><span class="p">,</span>
+                  <span class="n">st_image</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+                  <span class="n">st_image</span><span class="o">.</span><span class="n">height</span><span class="p">,</span>
+                  <span class="n">st_image</span><span class="o">.</span><span class="n">get_image_data</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Image data does not exist.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>カメラ側画像データの出力を停止します。<a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStDevice.acquisition_stop" title="stapipy.PyStDevice.acquisition_stop"><code class="xref py py-func docutils literal notranslate"><span class="pre">stapipy.PyStDevice.acquisition_stop()</span></code></a> を呼び出します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">st_device</span><span class="o">.</span><span class="n">acquisition_stop</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+<li><p>ホスト側画像データの取得を停止します。<a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStDataStream.stop_acquisition" title="stapipy.PyStDataStream.stop_acquisition"><code class="xref py py-func docutils literal notranslate"><span class="pre">stapipy.PyStDataStream.stop_acquisition()</span></code></a> を呼び出します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">st_datastream</span><span class="o">.</span><span class="n">stop_acquisition</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>完全なコードは以下の通りです。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">stapipy</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="n">st</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+<span class="linenos"> 4</span><span class="n">st_system</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">create_system</span><span class="p">()</span>
+<span class="linenos"> 5</span><span class="n">st_device</span> <span class="o">=</span> <span class="n">st_system</span><span class="o">.</span><span class="n">create_first_device</span><span class="p">()</span>
+<span class="linenos"> 6</span><span class="n">st_datastream</span> <span class="o">=</span> <span class="n">st_device</span><span class="o">.</span><span class="n">create_datastream</span><span class="p">()</span>
+<span class="linenos"> 7</span><span class="n">st_datastream</span><span class="o">.</span><span class="n">start_acquisition</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<span class="linenos"> 8</span><span class="n">st_device</span><span class="o">.</span><span class="n">acquisition_start</span><span class="p">()</span>
+<span class="linenos"> 9</span><span class="k">while</span> <span class="n">st_datastream</span><span class="o">.</span><span class="n">is_grabbing</span><span class="p">:</span>
+<span class="linenos">10</span>   <span class="k">with</span> <span class="n">st_datastream</span><span class="o">.</span><span class="n">retrieve_buffer</span><span class="p">()</span> <span class="k">as</span> <span class="n">st_buffer</span><span class="p">:</span>
+<span class="linenos">11</span>       <span class="k">if</span> <span class="n">st_buffer</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">is_image_present</span><span class="p">:</span>
+<span class="linenos">12</span>           <span class="n">st_image</span> <span class="o">=</span> <span class="n">st_buffer</span><span class="o">.</span><span class="n">get_image</span><span class="p">()</span>
+<span class="linenos">13</span>           <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;BlockID=</span><span class="si">{0}</span><span class="s2"> Size=</span><span class="si">{1}</span><span class="s2"> x </span><span class="si">{2}</span><span class="s2"> First Byte=</span><span class="si">{3}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+<span class="linenos">14</span>                 <span class="n">st_buffer</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">frame_id</span><span class="p">,</span>
+<span class="linenos">15</span>                 <span class="n">st_image</span><span class="o">.</span><span class="n">width</span><span class="p">,</span>
+<span class="linenos">16</span>                 <span class="n">st_image</span><span class="o">.</span><span class="n">height</span><span class="p">,</span>
+<span class="linenos">17</span>                 <span class="n">st_image</span><span class="o">.</span><span class="n">get_image_data</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="linenos">18</span>       <span class="k">else</span><span class="p">:</span>
+<span class="linenos">19</span>           <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Image data does not exist.&quot;</span><span class="p">)</span>
+<span class="linenos">20</span><span class="n">st_device</span><span class="o">.</span><span class="n">acquisition_stop</span><span class="p">()</span>
+<span class="linenos">21</span><span class="n">st_datastream</span><span class="o">.</span><span class="n">stop_acquisition</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="genapi">
+<h2>GenApiノードのアクセス<a class="headerlink" href="#genapi" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>stapipyには各GenTLモジュールインスタンス(<a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStSystem" title="stapipy.PyStSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStSystem</span></code></a>,
+<a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStInterface" title="stapipy.PyStInterface"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStInterface</span></code></a>, <a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStDataStream" title="stapipy.PyStDataStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStDataStream</span></code></a>,
+<a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStStreamBuffer" title="stapipy.PyStStreamBuffer"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStStreamBuffer</span></code></a>)に <code class="xref py py-obj docutils literal notranslate"><span class="pre">port</span></code> プロパティーがあります。
+<a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStDevice" title="stapipy.PyStDevice"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStDevice</span></code></a> の場合は、ローカルとリモートポートアクセスがあり、 <a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStDevice.local_port" title="stapipy.PyStDevice.local_port"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stapipy.PyStDevice.local_port</span></code></a> と <a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStDevice.remote_port" title="stapipy.PyStDevice.remote_port"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stapipy.PyStDevice.remote_port</span></code></a> になります。
+ポートクラスの <a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStPort.nodemap" title="stapipy.PyStPort.nodemap"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stapipy.PyStPort.nodemap</span></code></a> プロパティーで <a class="reference internal" href="ref_genicam.html#stapipy.PyNodeMap" title="stapipy.PyNodeMap"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyNodeMap</span></code></a> のインスタンスを取得し、GenApiのノードマップのアクセスができます。</p>
+<p>GenApiのノードマップからGenApiのノードを取得する場合は <a class="reference internal" href="ref_genicam.html#stapipy.PyNodeMap.get_node" title="stapipy.PyNodeMap.get_node"><code class="xref py py-meth docutils literal notranslate"><span class="pre">stapipy.PyNodeMap.get_node()</span></code></a> を呼び出して、<a class="reference internal" href="ref_genicam.html#stapipy.PyNode" title="stapipy.PyNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyNode</span></code></a> を取得し、GenApiのノードをアクセスできます。</p>
+<p>次のコードの6行目と7行目は、リモートデバイスのGenApiノードマップを取得し、「Width」という名前のノードを取得する方法を示します。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">stapipy</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="n">st</span><span class="o">.</span><span class="n">initialize</span><span class="p">()</span>
+<span class="linenos">4</span><span class="n">st_system</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">create_system</span><span class="p">()</span>
+<span class="linenos">5</span><span class="n">st_device</span> <span class="o">=</span> <span class="n">st_system</span><span class="o">.</span><span class="n">create_first_device</span><span class="p">()</span>
+<span class="hll"><span class="linenos">6</span><span class="n">st_nodemap_remote</span> <span class="o">=</span> <span class="n">st_device</span><span class="o">.</span><span class="n">remote_port</span><span class="o">.</span><span class="n">nodemap</span>
+</span><span class="hll"><span class="linenos">7</span><span class="n">width_node</span> <span class="o">=</span> <span class="n">st_nodemap_remote</span><span class="o">.</span><span class="n">get_node</span><span class="p">(</span><span class="s2">&quot;Width&quot;</span><span class="p">)</span>
+</span><span class="linenos">8</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Width:&quot;</span><span class="p">,</span> <span class="n">width_node</span><span class="o">.</span><span class="n">value</span><span class="p">)</span>
+<span class="linenos">9</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Interface type:&quot;</span><span class="p">,</span> <span class="n">width_node</span><span class="o">.</span><span class="n">principal_interface_type</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>単純な使い方では、 <a class="reference internal" href="ref_genicam.html#stapipy.PyNode.value" title="stapipy.PyNode.value"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stapipy.PyNode.value</span></code></a> を使うことで、ノードの特定のインターフェースにアクセスすることなくノード値を直接読み書きすることが可能です。
+包括的な使用法のために、ノードの特定のインターフェースにアクセスすることが必要かもしれません。</p>
+<p>プロパティー <a class="reference internal" href="ref_genicam.html#stapipy.PyNode.principal_interface_type" title="stapipy.PyNode.principal_interface_type"><code class="xref py py-attr docutils literal notranslate"><span class="pre">stapipy.PyNode.principal_interface_type</span></code></a> でノードのインタフェースタイプ(<a class="reference internal" href="enumeration.html#stapipy.EGCInterfaceType" title="stapipy.EGCInterfaceType"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.EGCInterfaceType</span></code></a>)を取得できます。</p>
+<p>次の表は、インターフェイスの種類に対応するクラスの一覧を示します。</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>インタフェースタイプ</p></th>
+<th class="head"><p>クラス</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><cite>IInteger</cite></p></td>
+<td><p><a class="reference internal" href="ref_genicam.html#stapipy.PyIInteger" title="stapipy.PyIInteger"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIInteger</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>IBoolean</cite></p></td>
+<td><p><a class="reference internal" href="ref_genicam.html#stapipy.PyIBoolean" title="stapipy.PyIBoolean"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIBoolean</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>ICommand</cite></p></td>
+<td><p><a class="reference internal" href="ref_genicam.html#stapipy.PyICommand" title="stapipy.PyICommand"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyICommand</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>IFloat</cite></p></td>
+<td><p><a class="reference internal" href="ref_genicam.html#stapipy.PyIFloat" title="stapipy.PyIFloat"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIFloat</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>IString</cite></p></td>
+<td><p><a class="reference internal" href="ref_genicam.html#stapipy.PyIString" title="stapipy.PyIString"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIString</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>IRegister</cite></p></td>
+<td><p><a class="reference internal" href="ref_genicam.html#stapipy.PyIRegister" title="stapipy.PyIRegister"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIRegister</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>ICategory</cite></p></td>
+<td><p><a class="reference internal" href="ref_genicam.html#stapipy.PyICategory" title="stapipy.PyICategory"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyICategory</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>IEnumeration</cite></p></td>
+<td><p><a class="reference internal" href="ref_genicam.html#stapipy.PyIEnumeration" title="stapipy.PyIEnumeration"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIEnumeration</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>IEnumEntry</cite></p></td>
+<td><p><a class="reference internal" href="ref_genicam.html#stapipy.PyIEnumEntry" title="stapipy.PyIEnumEntry"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIEnumEntry</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>IPort</cite></p></td>
+<td><p><a class="reference internal" href="ref_genicam.html#stapipy.PyIPort" title="stapipy.PyIPort"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyIPort</span></code></a></p></td>
+</tr>
+</tbody>
+</table>
+<p>さまざまなユースケースに対応するために、ノードの指定されたインタフェースにアクセスする方法は2つあります。</p>
+<ul>
+<li><p><a class="reference internal" href="ref_genicam.html#stapipy.PyNode" title="stapipy.PyNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyNode</span></code></a> からインターフェース型のクラスインスタンスを作成すること。</p>
+<p>クラスが正しくなければ、例外 <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.12)"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> が発生します。</p>
+<p>この方法はコードの可読性を向上させるために推奨されます。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">PyIInteger</span><span class="p">(</span><span class="n">width_node</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Width min:</span><span class="si">{0}</span><span class="s2">, max:</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">width</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="n">width</span><span class="o">.</span><span class="n">max</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+<li><p><a class="reference internal" href="ref_genicam.html#stapipy.PyNode.get" title="stapipy.PyNode.get"><code class="xref py py-meth docutils literal notranslate"><span class="pre">stapipy.PyNode.get()</span></code></a> を呼び出すこと。</p>
+<p>ノードのインターフェースタイプに応じて、クラスインスタンスの1つが返されます。</p>
+<p>この方法を使用すれば、コードを短くできます。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">width</span> <span class="o">=</span> <span class="n">width_node</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Width min:</span><span class="si">{0}</span><span class="s2">, max:</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">width</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="n">width</span><span class="o">.</span><span class="n">max</span><span class="p">))</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="numpy">
+<h2>取得画像データからNumPy配列を取得する方法<a class="headerlink" href="#numpy" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>Pythonの科学計算および画像処理パッケージには、ほとんどNumPy配列を使用しています。
+PyStImageからNumPy配列を取得する簡単な例については、サンプルプログラム <a class="reference internal" href="samples.html#grab-opencv-py"><span class="std std-ref">grab_opencv.py</span></a> (画像変換にはOpenCVを利用されます) と <a class="reference internal" href="samples.html#grab-ip-opencv-py"><span class="std std-ref">grab_ip_opencv.py</span></a> (画像変換にはStApi IPを利用されます) を参照してください。</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">プログラマーズガイド</a><ul>
+<li><a class="reference internal" href="#stapi-python-stapipy">StApi Python (stapipy)の構造</a></li>
+<li><a class="reference internal" href="#id2">対応環境</a></li>
+<li><a class="reference internal" href="#stapi-sentech-sdk">StApi (Sentech SDK)のインストール</a></li>
+<li><a class="reference internal" href="#stapipy">stapipyのインストール</a></li>
+<li><a class="reference internal" href="#id3">エラー処理</a></li>
+<li><a class="reference internal" href="#id4">画像データの取得までの流れ</a></li>
+<li><a class="reference internal" href="#genapi">GenApiノードのアクセス</a></li>
+<li><a class="reference internal" href="#numpy">取得画像データからNumPy配列を取得する方法</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="introduction.html"
+                          title="前の章へ">はじめに</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="samples.html"
+                          title="次の章へ">サンプルプログラム</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="samples.html" title="サンプルプログラム"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="introduction.html" title="はじめに"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">プログラマーズガイド</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Release Notes &#8212; StApi Python 1.2.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="License Information" href="license.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="license.html" title="License Information"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Release Notes</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="release-notes">
+<h1>Release Notes<a class="headerlink" href="#release-notes" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="release-2024-05-31-version-1-2-2">
+<h2>Release: 2024.05.31 (Version: 1.2.2)<a class="headerlink" href="#release-2024-05-31-version-1-2-2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Change: SentechSDK v1.2.2 must be installed.</p></li>
+<li><p>Added support for GenApi3.4.2.</p></li>
+<li><dl class="simple">
+<dt>Add sample programs:</dt><dd><ul>
+<li><p>user_memory.py</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Added support for Python 3.10.</p></li>
+</ul>
+</section>
+<section id="release-2023-04-14-version-1-2-1-1">
+<h2>Release: 2023.04.14 (Version: 1.2.1.1)<a class="headerlink" href="#release-2023-04-14-version-1-2-1-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Add new classes as follows:</dt><dd><ul>
+<li><p>PyStDeviceList class</p></li>
+<li><p>PyStDataStreamList class</p></li>
+<li><p>PyStSystemList class</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Add datastream property to PyStStreamBuffer class.</p></li>
+<li><dl class="simple">
+<dt>Add sample programs:</dt><dd><ul>
+<li><p>multiple_cameras.py</p></li>
+<li><p>multiple_systems.py</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="release-2022-12-16-version-1-2-1">
+<h2>Release: 2022.12.16 (Version: 1.2.1)<a class="headerlink" href="#release-2022-12-16-version-1-2-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Change: SentechSDK v1.2.1  must be installed.</p></li>
+<li><p>copy_settings method added to PyStConverter, PyStFilter, PyStFiler</p></li>
+<li><p>A callback was added when the list was updated in UpdateInterfaceList and UpdateDeviceList.</p></li>
+<li><p>Add StApi IP Filter: Level adjustment function</p></li>
+<li><p>Add get_value_f(index) method to PyStPixelComponentValue class.</p></li>
+<li><p>Add interface_type property to PyStInterface class.</p></li>
+<li><p>Add VirtualFrameGrabber=16 to EStInterfaceType. (Windows only)</p></li>
+<li><p>The following item is added to the EStPixelComponent: Mono,R,G,B,Gr,Gb,Y</p></li>
+<li><p>The following item is added to the EStPixelFormatNamingConvention: RGB10,RGB12,RGB14,RGBa10,RGBa12,RGBa14,RGBa16.</p></li>
+<li><dl class="simple">
+<dt>Add new enumeration types as follows:</dt><dd><ul>
+<li><p>EStMemoryInitialization</p></li>
+<li><p>EStDefectivePixelDetectionAveragingArea</p></li>
+<li><p>EStDefectivePixelDetectionThresholdTarget</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Add methods to PyStImage class, as follows:</dt><dd><ul>
+<li><p>create_buffer(width, height, pixel_format, initialize_memory) method</p></li>
+<li><p>clear_component_data(pixelcomponent) method</p></li>
+<li><p>import_component_data(pixelcomponent, image) method</p></li>
+<li><p>export_component_data(pixelcomponent) method</p></li>
+<li><p>is_same_image(image) method</p></li>
+<li><p>store_computed_image(operation_type, pixel_format, image1, image2) method</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Add properties to PyStPixelFormatInfo class, as follows:</dt><dd><ul>
+<li><p>is_polarization property</p></li>
+<li><p>order_of_polarized_filters property</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Add compression_level property to PyStStillImageFiler class.</p></li>
+<li><dl class="simple">
+<dt>Add methods and properties to PyStDefectivePixelDetectionFilter class, as follows:</dt><dd><ul>
+<li><p>get_threshold(threshold_target) method</p></li>
+<li><p>set_threshold(threshold_target, value) method</p></li>
+<li><p>defective_pixel_detection_averaging_area property</p></li>
+<li><p>peripheral_area_size property</p></li>
+<li><p>maximum_pixel_count property</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>For GenApi3.3 support.</dt><dd><ul>
+<li><p>Add get_length(verify=False) method to PyIRegister class.</p></li>
+<li><p>Add get_address(verify=False) method to PyIRegister class.</p></li>
+<li><p>Add get_max_length(verify=False) method to PyIString class.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>For GenApi3.4 support.</dt><dd><ul>
+<li><p>Add new enumeration type as follows: EGCCallbackSuppressMode.</p></li>
+<li><p>Add set_suppress_callback_mode(suppress_mode) method to PyNodeMap class.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Added support for Python 3.9.</p></li>
+</ul>
+</section>
+<section id="release-2022-09-16-version-1-1-2-4">
+<h2>Release: 2022.09.16 (Version: 1.1.2.4)<a class="headerlink" href="#release-2022-09-16-version-1-1-2-4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Added PyIPort class to support GenApi::IPort.</p></li>
+</ul>
+</section>
+<section id="release-2022-05-20-version-1-1-2-3">
+<h2>Release: 2022.05.20 (Version: 1.1.2.3)<a class="headerlink" href="#release-2022-05-20-version-1-1-2-3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>For SentechSDK v1.1.2 Update6 support.</dt><dd><ul>
+<li><p>The following items have been added to the EStSystemVendor: Matrox, TeledyneDALSA, AvalData.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="release-2021-12-03-version-1-1-2-2">
+<h2>Release: 2021.12.03 (Version: 1.1.2.2)<a class="headerlink" href="#release-2021-12-03-version-1-1-2-2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>For SentechSDK v1.1.2 Update5 support.</dt><dd><ul>
+<li><p>The following item is added to the EStBayerInterpolationMethod: BiLinear3.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Added support for Python 3.8.</p></li>
+</ul>
+</section>
+<section id="release-2021-10-08-version-1-1-2-1">
+<h2>Release: 2021.10.08 (Version: 1.1.2.1)<a class="headerlink" href="#release-2021-10-08-version-1-1-2-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>For SentechSDK v1.1.2 Update4 support.</dt><dd><ul>
+<li><p>The following pixel format is added to the EStPixelFormatNamingConvention: CYCbCr420_8_YY_Cb_Cr_Planar.</p></li>
+<li><p>The following item is added to the EStVideoFileFormat: WebM. (Windows only)</p></li>
+<li><p>The following item is added to the EStVideoFileCompression: VP8. (Windows only)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Add stapipy.get_filter_info(filter_type) function.</p></li>
+<li><p>Change: minor fixes of docstring (document).</p></li>
+</ul>
+</section>
+<section id="release-2020-07-31-version-1-1-2">
+<h2>Release: 2020.07.31 (Version: 1.1.2)<a class="headerlink" href="#release-2020-07-31-version-1-1-2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Change: SentechSDK v1.1.2  must be installed.</p></li>
+<li><p>Add StApi IP Filter: Defective Pixel Detection.</p></li>
+<li><p>Add StApi IP Filter: Image Averaging</p></li>
+<li><p>Add StApi IP Filter: Graph Data.</p></li>
+<li><p>Add static method create_from_data to PyIStImage to allow generation of PyIStImage from bytearray data.</p></li>
+<li><dl class="simple">
+<dt>Add elements to the following enumeration types to support polarization sensors.</dt><dd><ul>
+<li><p>EStPixelFormatNamingConvention</p></li>
+<li><p>EStPixelComponent</p></li>
+<li><p>EStPixelColorFilter</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="release-2019-08-30-version-1-0-8">
+<h2>Release: 2019.08.30 (Version: 1.0.8)<a class="headerlink" href="#release-2019-08-30-version-1-0-8" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>No changes from last version. Confirmed support for SentechSDK v1.0.8.</p></li>
+</ul>
+</section>
+<section id="release-2019-05-31-version-1-0-7">
+<h2>Release: 2019.05.31 (Version: 1.0.7)<a class="headerlink" href="#release-2019-05-31-version-1-0-7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Remove unimplemented Graph enumerator from <code class="xref py py-class docutils literal notranslate"><span class="pre">EStFilterType</span></code>.</p></li>
+<li><p>Change: minor fixes of docstring (document).</p></li>
+</ul>
+</section>
+<section id="release-2019-05-17-version-1-0-7rc3">
+<h2>Release: 2019.05.17 (Version: 1.0.7rc3)<a class="headerlink" href="#release-2019-05-17-version-1-0-7rc3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Add StApi IP functionality as follows:</dt><dd><ul>
+<li><p>Converter: Pixel format, reverse.</p></li>
+<li><p>Filter: Balance ratio, chroma suppression, color transformation, edge enhancement, flat field correction, Gamma correction, noise reduction, SN measurement.</p></li>
+<li><p>Filer: Still image and video.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Add samples:</dt><dd><ul>
+<li><p>grab_ip_opencv.py</p></li>
+<li><p>save_and_load_image.py</p></li>
+<li><p>save_video.py</p></li>
+<li><p>singleconverter_opencv.py</p></li>
+<li><p>singlefilter_opencv.py</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="release-2019-04-15-version-1-0-7rc2">
+<h2>Release: 2019.04.15 (Version: 1.0.7rc2)<a class="headerlink" href="#release-2019-04-15-version-1-0-7rc2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Add supported environments:</dt><dd><ul>
+<li><p>Windows: Python 3.6.x 32 bit and 64 bit.</p></li>
+<li><p>Linux: Python 3.6.x 32 bit and 64 bit.</p></li>
+<li><p>MacOS 10.13: Python 3.6.x 64 bit.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Fix an issue: in certain cases resource of PyStImage is not properly released when PyStImage instance is destroyed.</p></li>
+<li><p>Change: update comments of sample program.</p></li>
+<li><p>Change: update reference structure of this document.</p></li>
+</ul>
+</section>
+<section id="release-2019-04-11-version-1-0-7rc1">
+<h2>Release: 2019.04.11 (Version: 1.0.7rc1)<a class="headerlink" href="#release-2019-04-11-version-1-0-7rc1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Supports transport layer functions (StApi_TL).</p></li>
+<li><dl class="simple">
+<dt>Supported environments:</dt><dd><ul>
+<li><p>Windows: Python 3.7.x 32 bit and 64 bit.</p></li>
+<li><p>Linux: Python 3.7.x 32 bit and 64 bit.</p></li>
+<li><p>MacOS 10.13: Python 3.7.x 64 bit.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Release Notes</a><ul>
+<li><a class="reference internal" href="#release-2024-05-31-version-1-2-2">Release: 2024.05.31 (Version: 1.2.2)</a></li>
+<li><a class="reference internal" href="#release-2023-04-14-version-1-2-1-1">Release: 2023.04.14 (Version: 1.2.1.1)</a></li>
+<li><a class="reference internal" href="#release-2022-12-16-version-1-2-1">Release: 2022.12.16 (Version: 1.2.1)</a></li>
+<li><a class="reference internal" href="#release-2022-09-16-version-1-1-2-4">Release: 2022.09.16 (Version: 1.1.2.4)</a></li>
+<li><a class="reference internal" href="#release-2022-05-20-version-1-1-2-3">Release: 2022.05.20 (Version: 1.1.2.3)</a></li>
+<li><a class="reference internal" href="#release-2021-12-03-version-1-1-2-2">Release: 2021.12.03 (Version: 1.1.2.2)</a></li>
+<li><a class="reference internal" href="#release-2021-10-08-version-1-1-2-1">Release: 2021.10.08 (Version: 1.1.2.1)</a></li>
+<li><a class="reference internal" href="#release-2020-07-31-version-1-1-2">Release: 2020.07.31 (Version: 1.1.2)</a></li>
+<li><a class="reference internal" href="#release-2019-08-30-version-1-0-8">Release: 2019.08.30 (Version: 1.0.8)</a></li>
+<li><a class="reference internal" href="#release-2019-05-31-version-1-0-7">Release: 2019.05.31 (Version: 1.0.7)</a></li>
+<li><a class="reference internal" href="#release-2019-05-17-version-1-0-7rc3">Release: 2019.05.17 (Version: 1.0.7rc3)</a></li>
+<li><a class="reference internal" href="#release-2019-04-15-version-1-0-7rc2">Release: 2019.04.15 (Version: 1.0.7rc2)</a></li>
+<li><a class="reference internal" href="#release-2019-04-11-version-1-0-7rc1">Release: 2019.04.11 (Version: 1.0.7rc1)</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="license.html"
+                          title="previous chapter">License Information</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="license.html" title="License Information"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Release Notes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

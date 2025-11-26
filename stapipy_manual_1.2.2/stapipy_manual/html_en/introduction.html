@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>In the Beginning &#8212; StApi Python 1.2.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Programmer’s Guide" href="programmersguide.html" />
+    <link rel="prev" title="Welcome to StApi Python’s documentation!" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="programmersguide.html" title="Programmer’s Guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to StApi Python’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">In the Beginning</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="in-the-beginning">
+<h1>In the Beginning<a class="headerlink" href="#in-the-beginning" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="genicam">
+<h2>GenICam<a class="headerlink" href="#genicam" title="Permalink to this headline">¶</a></h2>
+<p>The APIs for industrial cameras differ by their interfaces, makers, and board makers.
+To unify the application development for cameras with different interfaces,
+EMVA (European Machine Vision Association) has established the GenICam Standard
+(<a class="reference external" href="http://www.genicam.org">http://www.genicam.org</a>) which consists of various conventions. One of the convention
+is to standardize camera’s API through GenICam GenTL standard. By using a dynamic
+library file (cti extension) complying with the GenTL standard, it is possible to
+develop an application independent of the camera’s interfaces or makers.</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Standards</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SFNC (Standard Features Naming Convention)</p></td>
+<td><p>This standard defines the name of the functions and the type of the settings. By following this standard, you can use the same functions with a unified name across different camera makers. For example, the exposure time of cameras is defined as ‘ExposureTime’ with the unit in microseconds.</p></td>
+</tr>
+<tr class="row-odd"><td><p>PFNC (Pixel Format Naming Convention)</p></td>
+<td><p>Defines the name of all pixel formats and the value for identification.</p></td>
+</tr>
+<tr class="row-even"><td><p>GenApi (Application Programming interface)</p></td>
+<td><p>For all the cameras which complies with the GenICam standard, the name of the implemented functions and its register addresses are stored in an XML file. The format and the API for reading and writing the XML file are defined and provided for free. With the XML file and the provided API, users can access the camera settings without the need to know the register address of the functions inside the cameras.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GenCP (Control Protocol)</p></td>
+<td><p>The communication protocol for USB3Vision and Camera Link HS is specified.</p></td>
+</tr>
+<tr class="row-even"><td><p>GenTL (Transport Layer)</p></td>
+<td><p>The API to communicate with camera is defined by this standard. GenTL encapsulates the low-level camera interfaces so that user can control camera without concerning the differences between the camera interfaces or grabber boards. Note that while this is optional for GigEVision and USB3Vision cameras, it is a must-have standard for CoaXPress.</p></td>
+</tr>
+<tr class="row-odd"><td><p>GenTL SFNC (GenTL Standard Features Naming Convention)</p></td>
+<td><p>SFNC for GenTL.</p></td>
+</tr>
+<tr class="row-even"><td><p>GigEVision, USB3Vision, CoaXPress, Camera Link HS</p></td>
+<td><p>Terms and conditions to follow for each interface are defined. With these standards, the image processing library will be able to access cameras from different manufacturers.</p></td>
+</tr>
+</tbody>
+</table>
+<p>These standards are standardized by the following organizations (documents can be obtained from their websites).</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Standard group</p></th>
+<th class="head"><p>URL</p></th>
+<th class="head"><p>Standards</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>EMVA (European Machine Vision Association)</p></td>
+<td><p><a class="reference external" href="http://www.emva.org/">http://www.emva.org/</a></p></td>
+<td><p>GenICam (SFNC, PFNC, GenApi, GenCP, GenTL, GenTL SFNC)</p></td>
+</tr>
+<tr class="row-odd"><td><p>AIA (Automated Imaging Association)</p></td>
+<td><p><a class="reference external" href="http://www.visiononline.org/">http://www.visiononline.org/</a></p></td>
+<td><p>GigEVision, USB3Vision, Camera Link HS</p></td>
+</tr>
+<tr class="row-even"><td><p>JIIA (Japan Industrial Imaging Association)</p></td>
+<td><p><a class="reference external" href="http://www.jiia.org/">http://www.jiia.org/</a></p></td>
+<td><p>CoaXPress</p></td>
+</tr>
+</tbody>
+</table>
+<p>With these standards and the generic API and naming (GenAPI, GenTL, SFNC, PFNC), user can develop applications without dependency to a particular camera interface and manufacturer.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/gentl_structure.gif"><img alt="GenTL application structure." src="_images/gentl_structure.gif" style="width: 493.0px; height: 187.0px;" /></a>
+</figure>
+<p>However, it is necessary to have a deep understanding on GenTL and GenApi before using them.</p>
+</section>
+<section id="stapi">
+<h2>StApi<a class="headerlink" href="#stapi" title="Permalink to this headline">¶</a></h2>
+<p>The StApi simplifies the use of GenTL and GenApi by hiding the complex processes from users.
+The StApi also provides image processing functions and GUI functions to let users focus on their application development without concerning the low-level details of the image acquisition and processing.
+Please refer to the SentechSDK document for the detail of the StApi.</p>
+<p>The StApi supports the following interfaces (manufacturers) of cameras:
+* USB3Vision (GenTL Api by OMRON SENTECH)
+* GigEVision (GenTL Api by OMRON SENTECH)
+* CoaXPress (GenTL Api by Euresys/SiliconSoftware/Kaya/ActiveSilicon*)</p>
+<p>The StApi supports USB3Vision, GigEVision and CoaXPress cameras made by OMRON SENTECH.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The CoaXPress interface has been tested only on Windows.</p>
+</div>
+</section>
+<section id="stapi-python">
+<h2>StApi Python<a class="headerlink" href="#stapi-python" title="Permalink to this headline">¶</a></h2>
+<p>StApi Python (stapipy) provides Python binding to enable using StApi Transport Layer and StApi Image Processing in Python programming language.</p>
+<p>The following diagram shows the relationship of this package and the StApi.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/stapipy_structure.png"><img alt="stapipy application structure." src="_images/stapipy_structure.png" style="width: 491.0px; height: 627.0px;" /></a>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>(*) This current version of stapipy package does not provide functionality of the GUI (StApi GUI).
+However, this does not rule out the possibility that the GUI functionality from StApi are included
+in the future release of stapipy.</p>
+</div>
+<p>The stapipy is part of StApi. Therefore stapipy uses the same versioning number
+as that of StApi: <cite>x.y.z</cite> where <cite>x.y.z</cite> indicates the StApi version of which the stapipy depends on.
+However, if there is a necessity to release a maintenance or feature release after the final release,
+a suffix is added to the end of the version. For example: <cite>1.0.7.1</cite>.
+Versioning of release candidate or post-releases for minor corrections which do not affect the stapipy
+functionalities follows PEP-0440. For example: <cite>1.0.7rc1</cite> denotes a release candidate for <cite>1.0.7</cite>.</p>
+</section>
+<section id="genicam-s-python-binding">
+<h2>GenICam’s Python Binding<a class="headerlink" href="#genicam-s-python-binding" title="Permalink to this headline">¶</a></h2>
+<p>GenICam standard provides a reference implementation of Python binding through the distribution of genicam package in PyPi (<a class="reference external" href="https://pypi.org/project/genicam2/">https://pypi.org/project/genicam2/</a>).
+However, stapipy does not depend on the genicam package because GenICam GenApi Python binding is done internally using different mechanism.
+If users are interested in using the reference implementation of GenICam Python, please refer to the Harvesters package (<a class="reference external" href="https://pypi.org/project/harvesters/">https://pypi.org/project/harvesters/</a>).</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">In the Beginning</a><ul>
+<li><a class="reference internal" href="#genicam">GenICam</a></li>
+<li><a class="reference internal" href="#stapi">StApi</a></li>
+<li><a class="reference internal" href="#stapi-python">StApi Python</a></li>
+<li><a class="reference internal" href="#genicam-s-python-binding">GenICam’s Python Binding</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="index.html"
+                          title="previous chapter">Welcome to StApi Python’s documentation!</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="programmersguide.html"
+                          title="next chapter">Programmer’s Guide</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="programmersguide.html" title="Programmer’s Guide"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to StApi Python’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">In the Beginning</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

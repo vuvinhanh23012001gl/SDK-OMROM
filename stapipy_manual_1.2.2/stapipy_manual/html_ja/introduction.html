@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>はじめに &#8212; StApi Python 1.2.2 ドキュメント</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="next" title="プログラマーズガイド" href="programmersguide.html" />
+    <link rel="prev" title="StApi Pythonドキュメントにようこそ" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="programmersguide.html" title="プログラマーズガイド"
+             accesskey="N">次へ</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="StApi Pythonドキュメントにようこそ"
+             accesskey="P">前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">はじめに</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1>はじめに<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="genicam">
+<h2>GenICam<a class="headerlink" href="#genicam" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>カメラや取り込みボードごとにインターフェースが異なっている場合、使用するカメラや取り込みボードに
+応じて、アプリケーションの開発が必要となります。使用するカメラや取り込みボードに依存しない、汎用
+的なインターフェース[GenICam (Generic Interface for Cameras) <a class="reference external" href="http://www.genicam.org">http://www.genicam.org</a>]
+を実現するためにさまざまな規格が策定されています。</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>規格</p></th>
+<th class="head"><p>内容</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SFNC (Standard Features Naming Convention)</p></td>
+<td><p>機能の名称や設定値の型などが規定されています。この規格により、使用するカメラのメーカーが異なっても、同じ機能は同じ名称で提供されるようになります。例えば露光時間は、 ExposureTime という名称が使用されており、us単位の実数で設定されます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>PFNC (Pixel Format Naming Convention)</p></td>
+<td><p>ピクセルフォーマットの名称や識別用の値について規定されています。</p></td>
+</tr>
+<tr class="row-even"><td><p>GenApi (Application Programming interface)</p></td>
+<td><p>一般にGenICam対応と呼ばれるカメラでは、カメラ内部にXMLファイルというテキストファイルが保存されており、そのファイルに対応している機能の名称や実装されているアドレス等が明記されています。この規格ではXMLファイルの書式やその処理に使用されるAPIが規定さており、XMLファイルの処理に利用可能なAPIが無償で配布されています。カメラから取得したXMLファイルとこのAPIを使用することで、ユーザーはカメラ内部のアドレスを意識せずに、カメラの設定を行うことができます。</p></td>
+</tr>
+<tr class="row-odd"><td><p>GenCP (Control Protocol)</p></td>
+<td><p>USB3VisionやCamera Link HSで採用されている通信プロトコルが規定されています。</p></td>
+</tr>
+<tr class="row-even"><td><p>GenTL (Transport Layer)</p></td>
+<td><p>カメラと通信を行うためのAPIが規定されています。この規格により、カメラや取り込みボードに依存しないコードでカメラと通信できるようになります。GigEVisionおよびUSB3Visionではこの規格への対応がオプション扱いとなっているため、一部のカメラメーカーのみ対応しています。CoaXPressではこの規格への対応が必須とされています。</p></td>
+</tr>
+<tr class="row-odd"><td><p>GenTL SFNC (GenTL Standard Features Naming Convention)</p></td>
+<td><p>GenTL用のSFNCです。</p></td>
+</tr>
+<tr class="row-even"><td><p>GigEVision, USB3Vision, CoaXPress, Camera Link HS</p></td>
+<td><p>インターフェースごとに従うべき規約が規定されています。この規格により、画像処理ライブラリが様々なカメラメーカーのカメラにアクセスできるようになります。</p></td>
+</tr>
+</tbody>
+</table>
+<p>これらの規格は下記の団体により規格化されており、WEBサイトから規格書等の入手が可能です。</p>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>規格団体</p></th>
+<th class="head"><p>URL</p></th>
+<th class="head"><p>規格</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>EMVA (European Machine Vision Association)</p></td>
+<td><p><a class="reference external" href="http://www.emva.org/">http://www.emva.org/</a></p></td>
+<td><p>GenICam (SFNC, PFNC, GenApi, GenCP, GenTL, GenTL SFNC)</p></td>
+</tr>
+<tr class="row-odd"><td><p>AIA (Automated Imaging Association)</p></td>
+<td><p><a class="reference external" href="http://www.visiononline.org/">http://www.visiononline.org/</a></p></td>
+<td><p>GigEVision, USB3Vision, Camera Link HS</p></td>
+</tr>
+<tr class="row-even"><td><p>JIIA (Japan Industrial Imaging Association)</p></td>
+<td><p><a class="reference external" href="http://www.jiia.org/">http://www.jiia.org/</a></p></td>
+<td><p>CoaXPress</p></td>
+</tr>
+</tbody>
+</table>
+<p>これらの規格に従い、汎用的なAPI(GenApi, GenTL)および汎用的な名称(SFNC, PFNC)を使用することで、特定のカメラに依存しないアプリケーション開発が可能になります。</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/gentl_structure.gif"><img alt="GenTLアプリケーション構造。" src="_images/gentl_structure.gif" style="width: 493.0px; height: 187.0px;" /></a>
+</figure>
+<p>しかし、汎用的なAPIを直接使用してアプリケーションを開発する場合、GenTLやGenApiの詳細について理解が必要になります。</p>
+</section>
+<section id="stapi">
+<h2>StApi<a class="headerlink" href="#stapi" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>StApiはGenTLやGenApiを使用したカメラ用APIです。StApiはGenTLやGenApiを使用する際に必要となる
+複雑な処理を内部に隠ぺいしているため、GenTLやGenApiを詳細まで理解していなくても使用することができます。
+また、ピクセルフォーマット変換などの画像処理機能やGUI機能も提供されているため、別途画像処理ライブラリを
+用意しなくても、カラー画像のプレビューやファイルへの保存が可能です。 StApiはUSB3Vision, GigEVision
+に対応したSDK付属のGenTLに加え、CoaXPressに対応したEuresys社製、SiliconSoftware社製、Kaya社製およびActiveSilicon社製
+（※）のGenTLに対応しており、これによりUSB3Vision, GigEVision, CoaXPressカメラに対応したアプリケー
+ションを構築できます。</p>
+<p>StApiの詳細についてはSentechSDKドキュメントを参照してください。</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>※ CoaXPressインターフェースでの動作確認は、Windowsでのみ行っております。</p>
+</div>
+</section>
+<section id="stapi-python">
+<h2>StApi Python<a class="headerlink" href="#stapi-python" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>StApi Python（stapipy）は、Pythonプログラミング言語でStApiのTransport Layer(StApi TL)と画像処理(StApi IP)を使用できるようにします。</p>
+<p>次の図は、このパッケージとStApiの関係を示しています。</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="_images/stapipy_structure.png"><img alt="stapipyのアプリケーション構造。" src="_images/stapipy_structure.png" style="width: 491.0px; height: 627.0px;" /></a>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>(*) 本stapipyパッケージにはGUI（StApi GUI）の機能を提供しません。
+ただし、StApiのGUI機能がstapipyの将来のリリースに含まれる可能性を排除するものではありません。</p>
+</div>
+<p>本stapipyはStApiの一部です。そのためstapipyのバージョン(<cite>x.y.z</cite>)はStApiと同様です。
+その <cite>x.y.z</cite> はstapipyが依存するStApiのバージョンを表します。
+ただし、最終リリース後にメンテナンスまたは機能追加リリースする必要がある場合は、バージョンの末尾にサフィックスが追加されます。
+例えば、 <cite>1.0.7.1</cite> です。
+stapipy機能に影響を与えないマイナーな修正のためのリリース候補版またはポストリリースのバージョン管理はPEP-0440に従います。
+例えば、 <cite>1.0.7rc1</cite> は ` 1.0.7` のリリース候補を表します。</p>
+</section>
+<section id="genicampython">
+<h2>GenICamのPythonバインディング<a class="headerlink" href="#genicampython" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>GenICamは、PyPi（<a class="reference external" href="https://pypi.org/project/genicam2/">https://pypi.org/project/genicam2/</a>）でGenICam GenApiのPythonバインディングのリファレンス実装を提供します。
+ただし、stapipyはGenICam GenApi Pythonバインディングが異なるメカニズムを使用しているため、genicamパッケージには依存しません。
+ユーザーがGenICam Pythonのリファレンス実装を使用したい場合は、Harvestersパッケージ（<a class="reference external" href="https://pypi.org/project/harvesters/">https://pypi.org/project/harvesters/</a>）を参照してください。</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">目次</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">はじめに</a><ul>
+<li><a class="reference internal" href="#genicam">GenICam</a></li>
+<li><a class="reference internal" href="#stapi">StApi</a></li>
+<li><a class="reference internal" href="#stapi-python">StApi Python</a></li>
+<li><a class="reference internal" href="#genicampython">GenICamのPythonバインディング</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>前のトピックへ</h4>
+    <p class="topless"><a href="index.html"
+                          title="前の章へ">StApi Pythonドキュメントにようこそ</a></p>
+  </div>
+  <div>
+    <h4>次のトピックへ</h4>
+    <p class="topless"><a href="programmersguide.html"
+                          title="次の章へ">プログラマーズガイド</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">クイック検索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="検索" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>ナビゲーション</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="総合索引"
+             >索引</a></li>
+        <li class="right" >
+          <a href="programmersguide.html" title="プログラマーズガイド"
+             >次へ</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="StApi Pythonドキュメントにようこそ"
+             >前へ</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 ドキュメント</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">はじめに</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

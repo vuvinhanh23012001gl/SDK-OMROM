@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>StApi Python (stapipy) Reference &#8212; StApi Python 1.2.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Common Functions and Classes" href="ref_stapi_common.html" />
+    <link rel="prev" title="Sample Programs" href="samples.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ref_stapi_common.html" title="Common Functions and Classes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="samples.html" title="Sample Programs"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">StApi Python (stapipy) Reference</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="stapi-python-stapipy-reference">
+<h1>StApi Python (stapipy) Reference<a class="headerlink" href="#stapi-python-stapipy-reference" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ref_stapi_common.html">Common Functions and Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_common.html#common-functions">Common Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#initialize">initialize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#terminate">terminate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#get-version">get_version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#create-system">create_system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#get-pixel-format-info">get_pixel_format_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#get-pixel-component-info">get_pixel_component_info</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#create-featurebag">create_featurebag</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_common.html#common-exception">Common Exception</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#pysterror">PyStError</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_common.html#common-classes">Common Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#pystfeaturebag">PyStFeatureBag</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#pystimage">PyStImage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#pystpixelcomponentinfo">PyStPixelComponentInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#pystpixelcomponentvalue">PyStPixelComponentValue</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#pystpixelformatinfo">PyStPixelFormatInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_common.html#pystregisteredcallback">PyStRegisteredCallback</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref_stapi_tl.html">Transport Layer Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_tl.html#system-module">System Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystsystem">PyStSystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystsysteminfo">PyStSystemInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystsystemlist">PyStSystemList</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_tl.html#interface-module">Interface Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystinterface">PyStInterface</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystinterfaceinfo">PyStInterfaceInfo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_tl.html#device-module">Device Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystdevice">PyStDevice</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystdeviceinfo">PyStDeviceInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystdevicelist">PyStDeviceList</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_tl.html#datastream-module">DataStream Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystdatastream">PyStDataStream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystdatastreaminfo">PyStDataStreamInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystdatastreamlist">PyStDataStreamList</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_tl.html#stream-buffer-module">Stream Buffer Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pyststreambuffer">PyStStreamBuffer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pyststreambufferinfo">PyStStreamBufferInfo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_tl.html#port">Port</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystport">PyStPort</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystportinfo">PyStPortInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_tl.html#pystporturlinfo">PyStPortURLInfo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref_stapi_ip.html">Image Processing Functions and Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_ip.html#functions">Functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#create-converter">create_converter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#create-filer">create_filer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#create-filter">create_filter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#get-filter-info">get_filter_info</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_ip.html#converter-classes">Converter Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystconverter">PyStConverter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystconverterinfo">PyStConverterInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystpixelformatconverter">PyStPixelFormatConverter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystreverseconverter">PyStReverseConverter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_ip.html#filter-classes">Filter Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystfilter">PyStFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystfilterinfo">PyStFilterInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystbalanceratiofilter">PyStBalanceRatioFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystchromasuppressionfilter">PyStChromaSuppressionFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystcolortransformationfilter">PyStColorTransformationFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystdefectivepixeldetectionfilter">PyStDefectivePixelDetectionFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystdefectivepixeldetectionresult">PyStDefectivePixelDetectionResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystdefectivepixelinformation">PyStDefectivePixelInformation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystedgeenhancementfilter">PyStEdgeEnhancementFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystflatfieldcorrectionfilter">PyStFlatFieldCorrectionFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystgammacorrectionfilter">PyStGammaCorrectionFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystgraphdatafilter">PyStGraphDataFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystgraphdatalist">PyStGraphDataList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystgraphdata">PyStGraphData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystimageaveragingfilter">PyStImageAveragingFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystleveladjustmentfilter">PyStLevelAdjustmentFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystleveladjustpointinfo">PyStLevelAdjustPointInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystnoisereductionfilter">PyStNoiseReductionFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystsnmeasurementfilter">PyStSNMeasurementFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystsnmeasurementresult">PyStSNMeasurementResult</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystsnmeasurementresultitem">PyStSNMeasurementResultItem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref_stapi_ip.html#filer-classes">Filer Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystfiler">PyStFiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pyststillimagefiler">PyStStillImageFiler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref_stapi_ip.html#pystvideofiler">PyStVideoFiler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref_genicam.html">GenICam GenApi Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pyiboolean">PyIBoolean</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pyicategory">PyICategory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pyicommand">PyICommand</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pyienumeration">PyIEnumeration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pyienumentry">PyIEnumEntry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pyifloat">PyIFloat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pyiinteger">PyIInteger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pyiregister">PyIRegister</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pyistring">PyIString</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pyivalue">PyIValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pyiport">PyIPort</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pynodemap">PyNodeMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pynode">PyNode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ref_genicam.html#pylock">PyLock</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="enumeration.html">Enumeration Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="enumeration.html#genicam-related">GenICam Related</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egcaccessmode">EGCAccessMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egccachingmode">EGCCachingMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egccallbacksuppressmode">EGCCallbackSuppressMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egccallbacktype">EGCCallbackType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egcdisplaynotation">EGCDisplayNotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egcendianess">EGCEndianess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egcincmode">EGCIncMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egcinterfacetype">EGCInterfaceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egclinktype">EGCLinkType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egcnamespace">EGCNamespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egcrepresentation">EGCRepresentation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egcsign">EGCSign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egcstandardnamespace">EGCStandardNamespace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egcvisibility">EGCVisibility</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#egcyesno">EGCYesNo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="enumeration.html#gentl-related">GenTL Related</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#etlacqstartflags">ETLAcqStartFlags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#etlacqstopflags">ETLAcqStopFlags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#etlcharencoding">ETLCharEncoding</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#etldeviceaccessflags">ETLDeviceAccessFlags</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#etldeviceaccessstatus">ETLDeviceAccessStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#etlerror">ETLError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#etlpayloadtypeinfoid">ETLPayloadTypeInfoID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#etlpixelendiannessid">ETLPixelEndiannessID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#etlpixelformatnamespaceid">ETLPixelFormatNamespaceID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#etlurlschemeid">ETLURLSchemeID</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="enumeration.html#stapi-related-all">StApi Related (All)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estcallbacktype">EStCallbackType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estinterfacetype">EStInterfaceType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estmemoryinitialization">EStMemoryInitialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estoperationtype">EStOperationType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estorderofpolarizedfilters">EStOrderOfPolarizedFilters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estpixelcolorfilter">EStPixelColorFilter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estpixelcomponent">EStPixelComponent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estpixelformatnamingconvention">EStPixelFormatNamingConvention</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estsystemvendor">EStSystemVendor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#esttimeouthandling">EStTimeoutHandling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="enumeration.html#stapi-ip-related">StApi IP Related</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estbalanceratioselector">EStBalanceRatioSelector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estbalancewhiteauto">EStBalanceWhiteAuto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estbayerinterpolationmethod">EStBayerInterpolationMethod</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estchromasuppressionpartselector">EStChromaSuppressionPartSelector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estcolortransformationvalueselector">EStColorTransformationValueSelector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estconvertertype">EStConverterType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estdefectivepixeldetectionaveragingarea">EStDefectivePixelDetectionAveragingArea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estdefectivepixeldetectionstatus">EStDefectivePixelDetectionStatus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estdefectivepixeldetectionthresholdtarget">EStDefectivePixelDetectionThresholdTarget</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estfilertype">EStFilerType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estfiltertype">EStFilterType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estflatfieldcorrectionmode">EStFlatFieldCorrectionMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estgraphdatafileformat">EStGraphDataFileFormat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estgraphdatainfouint32">EStGraphDataInfoUint32</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estgraphdatainfofloat64">EStGraphDataInfoFloat64</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estgraphdatatype">EStGraphDataType</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estleveladjustmentcorrectionpointsinterpolationmode">EStLevelAdjustmentCorrectionPointsInterpolationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estleveladjustmentmode">EStLevelAdjustmentMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estnoisereductionmode">EStNoiseReductionMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estroimode">EStROIMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estrotationmode">EStRotationMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#eststillimagefileformat">EStStillImageFileFormat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estvideofilecompression">EStVideoFileCompression</a></li>
+<li class="toctree-l3"><a class="reference internal" href="enumeration.html#estvideofileformat">EStVideoFileFormat</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="samples.html"
+                          title="previous chapter">Sample Programs</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="ref_stapi_common.html"
+                          title="next chapter">Common Functions and Classes</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ref_stapi_common.html" title="Common Functions and Classes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="samples.html" title="Sample Programs"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">StApi Python (stapipy) Reference</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

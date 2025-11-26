@@ -1,0 +1,1228 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Common Functions and Classes &#8212; StApi Python 1.2.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinxdoc.css" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Transport Layer Classes" href="ref_stapi_tl.html" />
+    <link rel="prev" title="StApi Python (stapipy) Reference" href="reference.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ref_stapi_tl.html" title="Transport Layer Classes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="reference.html" title="StApi Python (stapipy) Reference"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reference.html" accesskey="U">StApi Python (stapipy) Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Common Functions and Classes</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="common-functions-and-classes">
+<h1>Common Functions and Classes<a class="headerlink" href="#common-functions-and-classes" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<section id="common-functions">
+<h2>Common Functions<a class="headerlink" href="#common-functions" title="Permalink to this headline">¶</a></h2>
+<section id="initialize">
+<h3>initialize<a class="headerlink" href="#initialize" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="stapipy.initialize">
+<span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">initialize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize StApi.</p>
+<p>This function must be called before using other StApi functions.
+Call terminate() to release the resource of StApi when it is no longer needed.</p>
+</dd></dl>
+
+</section>
+<section id="terminate">
+<h3>terminate<a class="headerlink" href="#terminate" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="stapipy.terminate">
+<span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">terminate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.terminate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Uninitialize StApi.</p>
+<p>Call this function to release resources and de-initialize the StApi.</p>
+</dd></dl>
+
+</section>
+<section id="get-version">
+<h3>get_version<a class="headerlink" href="#get-version" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="stapipy.get_version">
+<span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">get_version</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">as_text=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.get_version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Acquire version of the running StApi. If the version is returned as numeric:
+bit 31-24: major version, bit 23-16: minor version, bit 15-0: subminor
+version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>as_text</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – if True, return the version as string. Otherwise, 
+return the version as numeric int.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Version of the StApi.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str (if <cite>as_text</cite> is <cite>True</cite>) or int (if <cite>as_text</cite> is <cite>False</cite>).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="create-system">
+<h3>create_system<a class="headerlink" href="#create-system" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="stapipy.create_system">
+<span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">create_system</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system_vendor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">EStSystemVendor.Default</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interface_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">EStInterfaceType.All</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStSystem" title="stapipy.PyStSystem"><span class="pre">PyStSystem</span></a></span></span><a class="headerlink" href="#stapipy.create_system" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open the system module and interface module of GenTL.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>system_vendor</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStSystemVendor" title="stapipy.EStSystemVendor"><em>EStSystemVendor</em></a>) – System vendor.</p></li>
+<li><p><strong>interface_type</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStInterfaceType" title="stapipy.EStInterfaceType"><em>EStInterfaceType</em></a>) – Type of the camera interface.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>System module.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStSystem" title="stapipy.PyStSystem">PyStSystem</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="get-pixel-format-info">
+<h3>get_pixel_format_info<a class="headerlink" href="#get-pixel-format-info" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="stapipy.get_pixel_format_info">
+<span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">get_pixel_format_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pixelformat</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStPixelFormatInfo" title="stapipy.PyStPixelFormatInfo"><span class="pre">PyStPixelFormatInfo</span></a></span></span><a class="headerlink" href="#stapipy.get_pixel_format_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get pixel format information of the given pixelformat.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pixelformat</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelFormatNamingConvention" title="stapipy.EStPixelFormatNamingConvention"><em>EStPixelFormatNamingConvention</em></a><em> or </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – pixel format value.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Object that holds pixel format information.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStPixelFormatInfo" title="stapipy.PyStPixelFormatInfo">PyStPixelFormatInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="get-pixel-component-info">
+<h3>get_pixel_component_info<a class="headerlink" href="#get-pixel-component-info" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="stapipy.get_pixel_component_info">
+<span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">get_pixel_component_info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pixelcomponent</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStPixelComponentInfo" title="stapipy.PyStPixelComponentInfo"><span class="pre">PyStPixelComponentInfo</span></a></span></span><a class="headerlink" href="#stapipy.get_pixel_component_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get pixel component information of the given pixelcomponent.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pixelcomponent</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelComponent" title="stapipy.EStPixelComponent"><em>EStPixelComponent</em></a>) – pixel component value.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Object that holds pixel component information.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStPixelComponentInfo" title="stapipy.PyStPixelComponentInfo">PyStPixelComponentInfo</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="create-featurebag">
+<h3>create_featurebag<a class="headerlink" href="#create-featurebag" title="Permalink to this headline">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="stapipy.create_featurebag">
+<span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">create_featurebag</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStFeatureBag" title="stapipy.PyStFeatureBag"><span class="pre">PyStFeatureBag</span></a></span></span><a class="headerlink" href="#stapipy.create_featurebag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a feature bag object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>FeatureBag object.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStFeatureBag" title="stapipy.PyStFeatureBag">PyStFeatureBag</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+<section id="common-exception">
+<h2>Common Exception<a class="headerlink" href="#common-exception" title="Permalink to this headline">¶</a></h2>
+<section id="pysterror">
+<h3>PyStError<a class="headerlink" href="#pysterror" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+<p>This class propagates exceptions raised by the StApi and GenICam.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># code</span>
+<span class="k">except</span> <span class="n">PyStError</span> <span class="k">as</span> <span class="n">st_error</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">st_error</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">other_exception</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">other_exception</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It is also possible to only catch <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a> and check the type of the
+exception.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># code</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">exception</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">exception</span><span class="p">),</span> <span class="n">exception</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</section>
+</section>
+<section id="common-classes">
+<h2>Common Classes<a class="headerlink" href="#common-classes" title="Permalink to this headline">¶</a></h2>
+<section id="pystfeaturebag">
+<h3>PyStFeatureBag<a class="headerlink" href="#pystfeaturebag" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStFeatureBag">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStFeatureBag</span></span><a class="headerlink" href="#stapipy.PyStFeatureBag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class to store and load streamable GenApi nodes to feature bag.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStFeatureBag.load">
+<span class="sig-name descname"><span class="pre">load</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyNodeMap</span> <span class="pre">nodemap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bool</span> <span class="pre">verify=True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStFeatureBag.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load features from the feature bag to the node tree.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodemap</strong> (<a class="reference internal" href="ref_genicam.html#stapipy.PyNodeMap" title="stapipy.PyNodeMap"><em>PyNodeMap</em></a>) – target node tree.</p></li>
+<li><p><strong>verify</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – If True, all streamable features will be verified.
+(Default is True).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStFeatureBag.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">void</span></span></span><a class="headerlink" href="#stapipy.PyStFeatureBag.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the resource used by the FeatureBag. Once released, any call
+to the methods or properties may trigger an exception.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStFeatureBag.save_to_file">
+<span class="sig-name descname"><span class="pre">save_to_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStFeatureBag.save_to_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save the data in the feature bag to a file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – File name to store the data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStFeatureBag.save_to_string">
+<span class="sig-name descname"><span class="pre">save_to_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">unicode</span></span></span><a class="headerlink" href="#stapipy.PyStFeatureBag.save_to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get data from the feature bag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>data from the feature bag.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStFeatureBag.store_file_to_bag">
+<span class="sig-name descname"><span class="pre">store_file_to_bag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStFeatureBag.store_file_to_bag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read data from file and store them to the feature bag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>filename</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The filename to read.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStFeatureBag.store_nodemap_to_bag">
+<span class="sig-name descname"><span class="pre">store_nodemap_to_bag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyNodeMap</span> <span class="pre">nodemap</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">max_num_persist=-1</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int64_t</span></span></span><a class="headerlink" href="#stapipy.PyStFeatureBag.store_nodemap_to_bag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store streamable nodes to the feature bag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nodemap</strong> (<a class="reference internal" href="ref_genicam.html#stapipy.PyNodeMap" title="stapipy.PyNodeMap"><em>PyNodeMap</em></a>) – The NodeMap to store.</p></li>
+<li><p><strong>max_num_presist</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – The maximum number of entries in the
+container; -1 means unlimited (Default is -1).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Number of entries in the feature bag.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStFeatureBag.store_string_to_bag">
+<span class="sig-name descname"><span class="pre">store_string_to_bag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">unicode</span> <span class="pre">features</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStFeatureBag.store_string_to_bag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Store string to the feature bag.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>features</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – The string contents of the setting and its value.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystimage">
+<h3>PyStImage<a class="headerlink" href="#pystimage" title="Permalink to this headline">¶</a></h3>
+<p>Some methods in <a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage"><code class="xref py py-class docutils literal notranslate"><span class="pre">stapipy.PyStImage</span></code></a> behaves differently from the StApi C/C++.
+Please read the method description for the detail.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStImage">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStImage</span></span><a class="headerlink" href="#stapipy.PyStImage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class for Image object. This class is used for representing an image object
+in StApi.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImage.clear_component_data">
+<span class="sig-name descname"><span class="pre">clear_component_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixelcomponent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStImage.clear_component_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clears the data for the specified component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pixelcomponent</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelComponent" title="stapipy.EStPixelComponent"><em>EStPixelComponent</em></a>) – Specify component to clear.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImage.clone">
+<span class="sig-name descname"><span class="pre">clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage"><span class="pre">PyStImage</span></a></span></span><a class="headerlink" href="#stapipy.PyStImage.clone" title="Permalink to this definition">¶</a></dt>
+<dd><p>Make a duplicate image object. This function performs a deep copy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A clone of the current PyStImage including the data.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage">PyStImage</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImage.create_buffer">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_buffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_format</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initialize_memory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">EStMemoryInitialization.DoNothing</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStImage.create_buffer" title="Permalink to this definition">¶</a></dt>
+<dd><p>A static method to create an image buffer based on the given parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Width.</p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Height.</p></li>
+<li><p><strong>pixel_format</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelFormatNamingConvention" title="stapipy.EStPixelFormatNamingConvention"><em>EStPixelFormatNamingConvention</em></a>) – Pixel format.</p></li>
+<li><p><strong>initialize_memory</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStMemoryInitialization" title="stapipy.EStMemoryInitialization"><em>EStMemoryInitialization</em></a>) – Assign the memory initialization method for this buffer.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Generated PyStImage.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage">PyStImage</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImage.create_from_data">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">create_from_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image_width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_height</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_pixel_format</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">image_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStImage.create_from_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>A static method to create PyStImage from a bytearray data. The data will be copied to the PyStImage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>image_width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Width.</p></li>
+<li><p><strong>image_height</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Height.</p></li>
+<li><p><strong>image_pixel_format</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelFormatNamingConvention" title="stapipy.EStPixelFormatNamingConvention"><em>EStPixelFormatNamingConvention</em></a>) – Pixel format.</p></li>
+<li><p><strong>image_data</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytearray" title="(in Python v3.12)"><em>bytearray</em></a>) – image data. The length must match the required memory size of the image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Generated PyStImage.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage">PyStImage</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImage.export_component_data">
+<span class="sig-name descname"><span class="pre">export_component_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixelcomponent</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage"><span class="pre">PyStImage</span></a></span></span><a class="headerlink" href="#stapipy.PyStImage.export_component_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports the data of the specified component as monochrome image data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>pixelcomponent</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelComponent" title="stapipy.EStPixelComponent"><em>EStPixelComponent</em></a>) – Specify source component.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The exported monochrome image.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage">PyStImage</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImage.get_image_data">
+<span class="sig-name descname"><span class="pre">get_image_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStImage.get_image_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the raw image data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>memoryview of the raw image data</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#memoryview" title="(in Python v3.12)">memoryview</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImage.get_pixel_component_value">
+<span class="sig-name descname"><span class="pre">get_pixel_component_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">pos_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">pos_y</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStPixelComponentValue" title="stapipy.PyStPixelComponentValue"><span class="pre">PyStPixelComponentValue</span></a></span></span><a class="headerlink" href="#stapipy.PyStImage.get_pixel_component_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get pixel component value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_x</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Horizontal position of the image.</p></li>
+<li><p><strong>pos_y</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Vertical position of the image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pixel component value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStPixelComponentValue" title="stapipy.PyStPixelComponentValue">PyStPixelComponentValue</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImage.get_roi_image">
+<span class="sig-name descname"><span class="pre">get_roi_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">pos_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">pos_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">height</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage"><span class="pre">PyStImage</span></a></span></span><a class="headerlink" href="#stapipy.PyStImage.get_roi_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get ROI data from the image data. The ROI data is deep-copied from
+the image data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_x</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Horizontal position of the image.</p></li>
+<li><p><strong>pos_y</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Vertical position of the image.</p></li>
+<li><p><strong>width</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Width of the ROI image.</p></li>
+<li><p><strong>height</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Height of the ROI image.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Image object that holds the ROI data.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage">PyStImage</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStImage.height">
+<span class="sig-name descname"><span class="pre">height</span></span><a class="headerlink" href="#stapipy.PyStImage.height" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStImage.height: int</p>
+<p>Property: Height of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImage.import_component_data">
+<span class="sig-name descname"><span class="pre">import_component_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixelcomponent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStImage</span> <span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStImage.import_component_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Imports monochrome image data as data of the specified component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pixelcomponent</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelComponent" title="stapipy.EStPixelComponent"><em>EStPixelComponent</em></a>) – Specify destination component.</p></li>
+<li><p><strong>image</strong> (<a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage"><em>PyStImage</em></a>) – Specify the monochrome image to be imported.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStImage.is_releasable">
+<span class="sig-name descname"><span class="pre">is_releasable</span></span><a class="headerlink" href="#stapipy.PyStImage.is_releasable" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStImage.is_releasable: bool</p>
+<p>Property: Flag to indicate if the image resource is releasable. For
+example, if the image is a clone, the resource is releasable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImage.is_same_image">
+<span class="sig-name descname"><span class="pre">is_same_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStImage</span> <span class="pre">image</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyStImage.is_same_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks whether the stored image data matches.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>image</strong> (<a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage"><em>PyStImage</em></a>) – Image object to be compared.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if there is a match, false otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStImage.line_pitch">
+<span class="sig-name descname"><span class="pre">line_pitch</span></span><a class="headerlink" href="#stapipy.PyStImage.line_pitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStImage.line_pitch: int</p>
+<p>Property: Line pitch (Number of bytes within one line) of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStImage.pixel_format">
+<span class="sig-name descname"><span class="pre">pixel_format</span></span><a class="headerlink" href="#stapipy.PyStImage.pixel_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStImage.pixel_format: EStPixelFormatNamingConvention</p>
+<p>Property: Pixel format of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EStPixelFormatNamingConvention" title="stapipy.EStPixelFormatNamingConvention">EStPixelFormatNamingConvention</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStImage.plane_pitch">
+<span class="sig-name descname"><span class="pre">plane_pitch</span></span><a class="headerlink" href="#stapipy.PyStImage.plane_pitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStImage.plane_pitch: int</p>
+<p>Property: Plane pitch (Number of bytes within one plane) of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImage.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStImage.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release resource of the image if the image is releasable.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStImage.store_computed_image">
+<span class="sig-name descname"><span class="pre">store_computed_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operation_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pixel_format</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStImage</span> <span class="pre">image1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PyStImage</span> <span class="pre">image2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStImage.store_computed_image" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stores the computed image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>operation_type</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStOperationType" title="stapipy.EStOperationType"><em>EStOperationType</em></a>) – Type of operation.</p></li>
+<li><p><strong>pixel_format</strong> (<a class="reference internal" href="enumeration.html#stapipy.EStPixelFormatNamingConvention" title="stapipy.EStPixelFormatNamingConvention"><em>EStPixelFormatNamingConvention</em></a>) – Pixel format of the destination image.</p></li>
+<li><p><strong>image1</strong> (<a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage"><em>PyStImage</em></a>) – Image object of the source iamge1.</p></li>
+<li><p><strong>image2</strong> (<a class="reference internal" href="#stapipy.PyStImage" title="stapipy.PyStImage"><em>PyStImage</em></a>) – Image object of the source iamge2.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStImage.width">
+<span class="sig-name descname"><span class="pre">width</span></span><a class="headerlink" href="#stapipy.PyStImage.width" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStImage.width: int</p>
+<p>Property: Width of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystpixelcomponentinfo">
+<h3>PyStPixelComponentInfo<a class="headerlink" href="#pystpixelcomponentinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStPixelComponentInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStPixelComponentInfo</span></span><a class="headerlink" href="#stapipy.PyStPixelComponentInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class to provide Pixel component information.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelComponentInfo.bit_count">
+<span class="sig-name descname"><span class="pre">bit_count</span></span><a class="headerlink" href="#stapipy.PyStPixelComponentInfo.bit_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelComponentInfo.bit_count: int</p>
+<p>Property: Bits count of the pixel component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelComponentInfo.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#stapipy.PyStPixelComponentInfo.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelComponentInfo.name: str</p>
+<p>Property: Name of the pixel component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelComponentInfo.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyStPixelComponentInfo.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelComponentInfo.value: EStPixelComponent</p>
+<p>Property: Pixel component value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EStPixelComponent" title="stapipy.EStPixelComponent">EStPixelComponent</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystpixelcomponentvalue">
+<h3>PyStPixelComponentValue<a class="headerlink" href="#pystpixelcomponentvalue" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStPixelComponentValue">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStPixelComponentValue</span></span><a class="headerlink" href="#stapipy.PyStPixelComponentValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class to provide access to pixel component.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelComponentValue.count">
+<span class="sig-name descname"><span class="pre">count</span></span><a class="headerlink" href="#stapipy.PyStPixelComponentValue.count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelComponentValue.count: int</p>
+<p>Property: Number of the pixel component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStPixelComponentValue.get_pixel_component">
+<span class="sig-name descname"><span class="pre">get_pixel_component</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">index</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStPixelComponentValue.get_pixel_component" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the pixel component value of the pixel component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Index of the pixel component.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The pixel component value</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStPixelComponent" title="stapipy.EStPixelComponent">EStPixelComponent</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStPixelComponentValue.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int64_t</span></span></span><a class="headerlink" href="#stapipy.PyStPixelComponentValue.get_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the pixel data of the pixel component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Index of the pixel component.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The pixel data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStPixelComponentValue.get_value_f">
+<span class="sig-name descname"><span class="pre">get_value_f</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size_t</span> <span class="pre">index</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">double</span></span></span><a class="headerlink" href="#stapipy.PyStPixelComponentValue.get_value_f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the pixel data of the pixel component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>index</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – Index of the pixel component.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The pixel data</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)">float</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystpixelformatinfo">
+<h3>PyStPixelFormatInfo<a class="headerlink" href="#pystpixelformatinfo" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStPixelFormatInfo</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class to provide information related to the pixel format.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.description">
+<span class="sig-name descname"><span class="pre">description</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.description: str</p>
+<p>Property: Description of the pixel format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.each_component_total_bit_count">
+<span class="sig-name descname"><span class="pre">each_component_total_bit_count</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.each_component_total_bit_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.each_component_total_bit_count: int</p>
+<p>Property: Total bit counts of each component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.each_component_valid_bit_count">
+<span class="sig-name descname"><span class="pre">each_component_valid_bit_count</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.each_component_valid_bit_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.each_component_valid_bit_count: int</p>
+<p>Property: The effective bit counts of each component.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.each_pixel_total_bit_count">
+<span class="sig-name descname"><span class="pre">each_pixel_total_bit_count</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.each_pixel_total_bit_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.each_pixel_total_bit_count: int</p>
+<p>Property: Total bit counts of each pixel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.each_pixel_total_component_count">
+<span class="sig-name descname"><span class="pre">each_pixel_total_component_count</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.each_pixel_total_component_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.each_pixel_total_component_count: int</p>
+<p>Property: The effective bit counts of each pixel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.get_pixel_color_filter">
+<span class="sig-name descname"><span class="pre">get_pixel_color_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">pos_x=0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">int</span> <span class="pre">pos_y=0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.get_pixel_color_filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get pixel color filter (color arrangement data) from a given position.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos_x</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – X-axis offset value in pixel.</p></li>
+<li><p><strong>pos_y</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – y-axis offset value in pixel.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Pixel color filter value.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="enumeration.html#stapipy.EStPixelColorFilter" title="stapipy.EStPixelColorFilter">EStPixelColorFilter</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.is_bayer">
+<span class="sig-name descname"><span class="pre">is_bayer</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.is_bayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.is_bayer: bool</p>
+<p>Property: Flag to indicate if the image data is in Bayer arrangement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.is_color">
+<span class="sig-name descname"><span class="pre">is_color</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.is_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.is_color: bool</p>
+<p>Property: Flag to indicate if the image data contains color information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.is_compressed">
+<span class="sig-name descname"><span class="pre">is_compressed</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.is_compressed" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.is_compressed: bool</p>
+<p>Property: Flag to indicate if the image data is a compressed data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.is_mono">
+<span class="sig-name descname"><span class="pre">is_mono</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.is_mono" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.is_mono: bool</p>
+<p>Property: Flag to indicate if the image data is monochrome.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.is_polarization">
+<span class="sig-name descname"><span class="pre">is_polarization</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.is_polarization" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.is_polarization: bool</p>
+<p>Property: Flag to indicate if the image data is polarization data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.name: str</p>
+<p>Property: Pixel format name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.order_of_polarized_filters">
+<span class="sig-name descname"><span class="pre">order_of_polarized_filters</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.order_of_polarized_filters" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.order_of_polarized_filters: EStOrderOfPolarizedFilters</p>
+<p>Property: Order of polarized filters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EStOrderOfPolarizedFilters" title="stapipy.EStOrderOfPolarizedFilters">EStOrderOfPolarizedFilters</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.pixel_increment_x">
+<span class="sig-name descname"><span class="pre">pixel_increment_x</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.pixel_increment_x" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.pixel_increment_x: int</p>
+<p>Property: The minimum unit (in pixel) of image in horizontal.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.pixel_increment_y">
+<span class="sig-name descname"><span class="pre">pixel_increment_y</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.pixel_increment_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.pixel_increment_y: int</p>
+<p>Property: The minimum unit (in pixel) of image in vertical.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.plane_count">
+<span class="sig-name descname"><span class="pre">plane_count</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.plane_count" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.plane_count: int</p>
+<p>Property: Number of plane.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStPixelFormatInfo.value">
+<span class="sig-name descname"><span class="pre">value</span></span><a class="headerlink" href="#stapipy.PyStPixelFormatInfo.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStPixelFormatInfo.value: EStPixelFormatNamingConvention</p>
+<p>Property: Pixel format value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns the value.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EStPixelFormatNamingConvention" title="stapipy.EStPixelFormatNamingConvention">EStPixelFormatNamingConvention</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="pystregisteredcallback">
+<h3>PyStRegisteredCallback<a class="headerlink" href="#pystregisteredcallback" title="Permalink to this headline">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="stapipy.PyStRegisteredCallback">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stapipy.</span></span><span class="sig-name descname"><span class="pre">PyStRegisteredCallback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback_func</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStRegisteredCallback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.12)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>This class stores information of registered callback.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStRegisteredCallback.callback_type">
+<span class="sig-name descname"><span class="pre">callback_type</span></span><a class="headerlink" href="#stapipy.PyStRegisteredCallback.callback_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStRegisteredCallback.callback_type: EStCallbackType</p>
+<p>Property: callback type (only for callback triggered by StApi).
+If the callback is triggered by GenApi node, None will be returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns callback type.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="enumeration.html#stapipy.EStCallbackType" title="stapipy.EStCallbackType">EStCallbackType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStRegisteredCallback.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#stapipy.PyStRegisteredCallback.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property: Data depending on the EStCallbackType.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns data related to the callback.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.12)">dict</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStRegisteredCallback.error">
+<span class="sig-name descname"><span class="pre">error</span></span><a class="headerlink" href="#stapipy.PyStRegisteredCallback.error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property: a tuple containing error code (int) and description (str)
+if the callback is triggered due to an error. If there is
+no error, a tuple of (None, None) is returned. In case that error code
+is not available, a tuple of (None, str) is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns error code (int) and description (str), or (None, None)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>tuple of (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)">int</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>) or (None, None)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStRegisteredCallback.is_released">
+<span class="sig-name descname"><span class="pre">is_released</span></span><a class="headerlink" href="#stapipy.PyStRegisteredCallback.is_released" title="Permalink to this definition">¶</a></dt>
+<dd><p>PyStRegisteredCallback.is_released: bool</p>
+<p>Property: Flag indicating that the resource used for the callback has
+been released.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns True if the callback resource has been released, False
+otherwise.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStRegisteredCallback.module">
+<span class="sig-name descname"><span class="pre">module</span></span><a class="headerlink" href="#stapipy.PyStRegisteredCallback.module" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property: StApi class that triggered the callback. The class is one of
+the following: PyStSystem, PyStInterface, PyStDevice, PyStDataStream,
+PyStStreamBuffer, PyStVideoFiler.
+If the callback is triggered by StApi node, None will be returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns registered module that triggered the callback, or None.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStSystem" title="stapipy.PyStSystem">PyStSystem</a> or <a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStInterface" title="stapipy.PyStInterface">PyStInterface</a> or <a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStDevice" title="stapipy.PyStDevice">PyStDevice</a> or <a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStDataStream" title="stapipy.PyStDataStream">PyStDataStream</a>                 or <a class="reference internal" href="ref_stapi_tl.html#stapipy.PyStStreamBuffer" title="stapipy.PyStStreamBuffer">PyStStreamBuffer</a> or <a class="reference internal" href="ref_stapi_ip.html#stapipy.PyStVideoFiler" title="stapipy.PyStVideoFiler">PyStVideoFiler</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stapipy.PyStRegisteredCallback.node">
+<span class="sig-name descname"><span class="pre">node</span></span><a class="headerlink" href="#stapipy.PyStRegisteredCallback.node" title="Permalink to this definition">¶</a></dt>
+<dd><p>Property: Node that triggers the callback.
+If the callback is not triggered by a GenApi node, None will be returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Getter</dt>
+<dd class="field-odd"><p>Returns registered node that triggered the callback, or None.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><a class="reference internal" href="ref_genicam.html#stapipy.PyNode" title="stapipy.PyNode">PyNode</a> or None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStRegisteredCallback.pause">
+<span class="sig-name descname"><span class="pre">pause</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#stapipy.PyStRegisteredCallback.pause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporarily stop triggering the callback.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – True to pause. False to un-pause.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if pause command is successfully processed. False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stapipy.PyStRegisteredCallback.release">
+<span class="sig-name descname"><span class="pre">release</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stapipy.PyStRegisteredCallback.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Release the resource used for the callback. Once released, the callback
+cannot be triggered anymore.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Common Functions and Classes</a><ul>
+<li><a class="reference internal" href="#common-functions">Common Functions</a><ul>
+<li><a class="reference internal" href="#initialize">initialize</a></li>
+<li><a class="reference internal" href="#terminate">terminate</a></li>
+<li><a class="reference internal" href="#get-version">get_version</a></li>
+<li><a class="reference internal" href="#create-system">create_system</a></li>
+<li><a class="reference internal" href="#get-pixel-format-info">get_pixel_format_info</a></li>
+<li><a class="reference internal" href="#get-pixel-component-info">get_pixel_component_info</a></li>
+<li><a class="reference internal" href="#create-featurebag">create_featurebag</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#common-exception">Common Exception</a><ul>
+<li><a class="reference internal" href="#pysterror">PyStError</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#common-classes">Common Classes</a><ul>
+<li><a class="reference internal" href="#pystfeaturebag">PyStFeatureBag</a></li>
+<li><a class="reference internal" href="#pystimage">PyStImage</a></li>
+<li><a class="reference internal" href="#pystpixelcomponentinfo">PyStPixelComponentInfo</a></li>
+<li><a class="reference internal" href="#pystpixelcomponentvalue">PyStPixelComponentValue</a></li>
+<li><a class="reference internal" href="#pystpixelformatinfo">PyStPixelFormatInfo</a></li>
+<li><a class="reference internal" href="#pystregisteredcallback">PyStRegisteredCallback</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="reference.html"
+                          title="previous chapter">StApi Python (stapipy) Reference</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="ref_stapi_tl.html"
+                          title="next chapter">Transport Layer Classes</a></p>
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ref_stapi_tl.html" title="Transport Layer Classes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="reference.html" title="StApi Python (stapipy) Reference"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">StApi Python 1.2.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="reference.html" >StApi Python (stapipy) Reference</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Common Functions and Classes</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019-2024, Omron Sentech Co., Ltd..
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>
